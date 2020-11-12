@@ -1,0 +1,5 @@
+<RCC>
+    <qresource prefix="/profil_icon">
+        <file>profile_icon.png</file>
+    </qresource>
+</RCC>
