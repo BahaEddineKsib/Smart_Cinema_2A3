@@ -27,6 +27,7 @@ MainWindow::MainWindow(QWidget *parent)
     ui->ProfilPhoto->setPixmap(ProfilIcon.scaled(100,100,Qt::KeepAspectRatio));
     //ui->label_41->setPixmap(ProfilIcon.scaled(100,100,Qt::KeepAspectRatio));
     ui->label->setPixmap(ProfilIcon.scaled(100,100,Qt::KeepAspectRatio));
+    //GIT TEST
 }
 
 MainWindow::~MainWindow()

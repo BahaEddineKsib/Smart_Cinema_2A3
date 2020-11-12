@@ -1,2 +1,3 @@
 # SmartCinema
 readme
+README
