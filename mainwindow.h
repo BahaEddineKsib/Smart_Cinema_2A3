@@ -32,6 +32,20 @@ private slots:
 
     void on_TicketsButton_clicked();
 
+    void on_BillsButton_clicked();
+
+    void on_MoviesButton_clicked();
+
+    void on_TheatresButton_clicked();
+
+    void on_ClientsButton_clicked();
+
+    void on_SubscriptionsButton_clicked();
+
+    void on_ShowsButton_clicked();
+
+    void on_PollsButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     QTimer *timer;

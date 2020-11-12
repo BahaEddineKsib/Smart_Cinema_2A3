@@ -237,7 +237,7 @@ background-color: rgba(255, 255, 255, 0);</string>
         <rect>
          <x>230</x>
          <y>0</y>
-         <width>181</width>
+         <width>281</width>
          <height>51</height>
         </rect>
        </property>
@@ -252,7 +252,7 @@ background-color: rgba(255, 255, 255, 0);</string>
 background-color: rgba(255, 255, 255, 0);</string>
        </property>
        <property name="text">
-        <string>Employees</string>
+        <string>Profil</string>
        </property>
       </widget>
      </widget>
@@ -805,7 +805,7 @@ QPushButton:focus
 </string>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>10</number>
       </property>
       <widget class="QWidget" name="profil">
        <widget class="QLabel" name="ProfilPhoto">
