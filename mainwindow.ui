@@ -805,7 +805,7 @@ QPushButton:focus
 </string>
       </property>
       <property name="currentIndex">
-       <number>10</number>
+       <number>3</number>
       </property>
       <widget class="QWidget" name="profil">
        <widget class="QLabel" name="ProfilPhoto">
@@ -1399,7 +1399,7 @@ QTabBar::tab:selected
 </string>
         </property>
         <property name="currentIndex">
-         <number>0</number>
+         <number>1</number>
         </property>
         <widget class="QWidget" name="EmployeesTab">
          <property name="styleSheet">
@@ -16393,7 +16393,2291 @@ QPushButton:focus
         </widget>
        </widget>
       </widget>
-      <widget class="QWidget" name="bills"/>
+      <widget class="QWidget" name="bills">
+       <widget class="QTabWidget" name="BillsTabWidget">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>965</width>
+          <height>642</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>965</width>
+          <height>642</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>965</width>
+          <height>642</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QTabWidget::pane {
+    background: transparent;
+    border:0;
+}
+
+QTabBar::tab
+{
+	background-color: rgba(42, 46, 50,0);
+	color:#ffffff;
+	width:100px;
+	font-size:16px;
+	font-family:Calibri;
+
+}
+
+QTabBar::tab:hover
+{
+	background-color:rgb(50, 53, 57);
+		color:rgb(249, 167, 43);
+}
+
+QTabBar::tab:focus
+{
+	background-color: rgb(59, 62, 66);
+	border-style:solid;
+	border-left-width:1px;
+	border-bottom-width:1px;
+	border-color: rgb(249, 167, 43);
+	color:rgb(249, 167, 43);
+}
+QTabBar::tab:selected
+{
+	background-color: rgb(59, 62, 66);
+	border-style:solid;
+	border-left-width:1px;
+	border-bottom-width:1px;
+	border-color:   rgb(249, 167, 43);
+	color:  rgb(249, 167, 43);
+}
+</string>
+        </property>
+        <property name="currentIndex">
+         <number>1</number>
+        </property>
+        <widget class="QWidget" name="AddBillTab">
+         <property name="styleSheet">
+          <string notr="true">border-color: rgba(255, 255, 255, 0);</string>
+         </property>
+         <property name="inputMethodHints">
+          <set>Qt::ImhPreferUppercase</set>
+         </property>
+         <attribute name="title">
+          <string>Add</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_6">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QScrollArea" name="AddBillsScrollArea">
+            <property name="styleSheet">
+             <string notr="true">border-color: rgba(255, 255, 255, 0);
+</string>
+            </property>
+            <property name="widgetResizable">
+             <bool>true</bool>
+            </property>
+            <widget class="QWidget" name="AddBillsScrollAreaWidgetContents">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>963</width>
+               <height>619</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border : 0px;</string>
+             </property>
+             <layout class="QVBoxLayout" name="verticalLayout_9">
+              <property name="leftMargin">
+               <number>300</number>
+              </property>
+              <property name="topMargin">
+               <number>200</number>
+              </property>
+              <property name="rightMargin">
+               <number>300</number>
+              </property>
+              <property name="bottomMargin">
+               <number>200</number>
+              </property>
+              <item>
+               <layout class="QFormLayout" name="AddBillform">
+                <property name="horizontalSpacing">
+                 <number>20</number>
+                </property>
+                <property name="verticalSpacing">
+                 <number>15</number>
+                </property>
+                <item row="0" column="0">
+                 <widget class="QLabel" name="BillProviderTitle">
+                  <property name="font">
+                   <font>
+                    <family>Yu Gothic UI Semilight</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">color: rgb(255, 255, 255);</string>
+                  </property>
+                  <property name="text">
+                   <string>PROVIDER</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="0" column="1">
+                 <widget class="QLineEdit" name="BillProviderNameEdit">
+                  <property name="font">
+                   <font>
+                    <family>Arial Black</family>
+                    <pointsize>9</pointsize>
+                    <weight>75</weight>
+                    <bold>true</bold>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">border: 0px solid rgb(249, 167, 43);
+border-bottom-width: 2px;
+border-radius: px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+                  </property>
+                  <property name="inputMask">
+                   <string/>
+                  </property>
+                  <property name="text">
+                   <string/>
+                  </property>
+                  <property name="placeholderText">
+                   <string>Name</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="1" column="0" colspan="2">
+                 <layout class="QVBoxLayout" name="BillProductsVerticalLayout">
+                  <item>
+                   <layout class="QHBoxLayout" name="BillProductHorizontalLayout">
+                    <item>
+                     <widget class="QComboBox" name="BillProductIdEdit">
+                      <property name="minimumSize">
+                       <size>
+                        <width>90</width>
+                        <height>0</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QComboBox {
+	border: 0px solid #333333;
+
+	background: #00000000;
+	color: #ffffff;
+
+}
+
+QComboBox::drop-down {
+	color: #ffffff;
+
+
+}
+QComboBox::down-arrow {
+	color: #ffffff;
+
+
+}
+ 
+QComboBox QAbstractItemView{
+	/*background-color: #4f4f4f;
+	color: #999999;*/
+ 	color: #ffffff;
+	/*selection-background-color: #999999;
+	selection-color: #4f4f4f;*/
+}
+</string>
+                      </property>
+                      <item>
+                       <property name="text">
+                        <string>PRODUCT ID</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>852</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>025</string>
+                       </property>
+                      </item>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLineEdit" name="BillProductQuantityEdit">
+                      <property name="font">
+                       <font>
+                        <family>Arial Black</family>
+                        <pointsize>9</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">border: 0px solid rgb(249, 167, 43);
+border-bottom-width: 2px;
+border-radius: px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+                      </property>
+                      <property name="inputMask">
+                       <string/>
+                      </property>
+                      <property name="text">
+                       <string>0</string>
+                      </property>
+                      <property name="placeholderText">
+                       <string>Quantity</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                  <item>
+                   <layout class="QHBoxLayout" name="BillProductHorizontalLayout_2">
+                    <item>
+                     <widget class="QComboBox" name="BillProductIdEdit_2">
+                      <property name="minimumSize">
+                       <size>
+                        <width>90</width>
+                        <height>0</height>
+                       </size>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">QComboBox {
+	border: 0px solid #333333;
+
+	background: #00000000;
+	color: #ffffff;
+
+}
+
+QComboBox::drop-down {
+	color: #ffffff;
+
+
+}
+QComboBox::down-arrow {
+	color: #ffffff;
+
+
+}
+ 
+QComboBox QAbstractItemView{
+	/*background-color: #4f4f4f;
+	color: #999999;*/
+ 	color: #ffffff;
+	/*selection-background-color: #999999;
+	selection-color: #4f4f4f;*/
+}
+</string>
+                      </property>
+                      <item>
+                       <property name="text">
+                        <string>PRODUCT ID</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>852</string>
+                       </property>
+                      </item>
+                      <item>
+                       <property name="text">
+                        <string>025</string>
+                       </property>
+                      </item>
+                     </widget>
+                    </item>
+                    <item>
+                     <widget class="QLineEdit" name="BillProductQuantityEdit_2">
+                      <property name="font">
+                       <font>
+                        <family>Arial Black</family>
+                        <pointsize>9</pointsize>
+                        <weight>75</weight>
+                        <bold>true</bold>
+                       </font>
+                      </property>
+                      <property name="styleSheet">
+                       <string notr="true">border: 0px solid rgb(249, 167, 43);
+border-bottom-width: 2px;
+border-radius: px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+                      </property>
+                      <property name="inputMask">
+                       <string/>
+                      </property>
+                      <property name="text">
+                       <string>0</string>
+                      </property>
+                      <property name="placeholderText">
+                       <string>Quantity</string>
+                      </property>
+                     </widget>
+                    </item>
+                   </layout>
+                  </item>
+                 </layout>
+                </item>
+                <item row="3" column="0">
+                 <widget class="QLabel" name="BillSumTitle">
+                  <property name="font">
+                   <font>
+                    <family>Yu Gothic UI Semilight</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">color: rgb(255, 255, 255);</string>
+                  </property>
+                  <property name="text">
+                   <string>SUM:</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="3" column="1">
+                 <widget class="QLabel" name="BillSum">
+                  <property name="font">
+                   <font>
+                    <family>Yu Gothic UI Semilight</family>
+                    <pointsize>14</pointsize>
+                   </font>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">color: rgb(255, 255, 255);</string>
+                  </property>
+                  <property name="text">
+                   <string>25DT</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="2" column="1">
+                 <widget class="QPushButton" name="BillProductAdd">
+                  <property name="maximumSize">
+                   <size>
+                    <width>25</width>
+                    <height>16777215</height>
+                   </size>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton
+{
+	background-color:rgb(50, 53, 57);
+	border-style:solid;
+	border-radius:7px;
+	border-width:1px;
+border-color: rgb(50, 53, 57);
+	color:#ffffff;
+	font-size:16px;
+font-family:Calibri;
+}
+
+QPushButton:hover
+{
+	background-color: #00000000;
+	border-color: rgb(30, 227, 0);
+	/*color:rgb(30, 227, 0);*/
+}
+
+QPushButton:focus
+{
+	background-color:  rgb(30, 227, 0);
+	border-color: rgba(30, 227, 0,0);
+	color:rgb(255, 255, 255);
+}
+</string>
+                  </property>
+                  <property name="text">
+                   <string>+</string>
+                  </property>
+                 </widget>
+                </item>
+                <item row="4" column="0" colspan="2">
+                 <widget class="QPushButton" name="BillAddButton">
+                  <property name="styleSheet">
+                   <string notr="true">QPushButton
+{
+	background-color:rgb(50, 53, 57);
+	border-style:solid;
+	border-radius:7px;
+	border-width:1px;
+border-color: rgb(50, 53, 57);
+	color:#ffffff;
+	font-size:16px;
+font-family:Calibri;
+}
+
+QPushButton:hover
+{
+	background-color: #00000000;
+	border-color: rgb(30, 227, 0);
+	/*color:rgb(30, 227, 0);*/
+}
+
+QPushButton:focus
+{
+	background-color:  rgb(30, 227, 0);
+	border-color: rgba(30, 227, 0,0);
+	color:rgb(255, 255, 255);
+}
+</string>
+                  </property>
+                  <property name="text">
+                   <string>Add A Bill</string>
+                  </property>
+                 </widget>
+                </item>
+               </layout>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="BillsTab">
+         <attribute name="title">
+          <string>Bills</string>
+         </attribute>
+         <layout class="QVBoxLayout" name="verticalLayout_10">
+          <property name="spacing">
+           <number>0</number>
+          </property>
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QScrollArea" name="scrollArea">
+            <property name="widgetResizable">
+             <bool>true</bool>
+            </property>
+            <property name="alignment">
+             <set>Qt::AlignBottom|Qt::AlignHCenter</set>
+            </property>
+            <widget class="QWidget" name="scrollAreaWidgetContents">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>1492</width>
+               <height>602</height>
+              </rect>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_23">
+              <property name="spacing">
+               <number>20</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>80</number>
+              </property>
+              <property name="bottomMargin">
+               <number>80</number>
+              </property>
+              <item>
+               <widget class="QGroupBox" name="BillSearchGroupBox">
+                <property name="minimumSize">
+                 <size>
+                  <width>250</width>
+                  <height>341</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>250</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QGroupBox
+{
+	background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:1, y2:0, stop:0 rgba(42, 46, 50, 255), stop:1 rgba(255, 255, 255, 0));
+border: 0px solid rgb(249, 167, 43);
+/*border-left-width: 1px;*/
+border-right-width: 1px;
+border-radius: 20px;
+}</string>
+                </property>
+                <property name="title">
+                 <string/>
+                </property>
+                <widget class="QWidget" name="formLayoutWidget_4">
+                 <property name="geometry">
+                  <rect>
+                   <x>10</x>
+                   <y>150</y>
+                   <width>231</width>
+                   <height>151</height>
+                  </rect>
+                 </property>
+                 <layout class="QFormLayout" name="formLayout_5">
+                  <property name="horizontalSpacing">
+                   <number>20</number>
+                  </property>
+                  <property name="verticalSpacing">
+                   <number>15</number>
+                  </property>
+                  <item row="0" column="0">
+                   <widget class="QLabel" name="ProfilPersonelAccessEdit_70">
+                    <property name="font">
+                     <font>
+                      <family>Yu Gothic UI Semilight</family>
+                      <pointsize>14</pointsize>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">color: rgb(255, 255, 255);</string>
+                    </property>
+                    <property name="text">
+                     <string>PROVIDER</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="0" column="1">
+                   <widget class="QLineEdit" name="ProfilContactEdit_110">
+                    <property name="font">
+                     <font>
+                      <family>Arial Black</family>
+                      <pointsize>9</pointsize>
+                      <weight>75</weight>
+                      <bold>true</bold>
+                     </font>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">border: 0px solid rgb(249, 167, 43);
+border-bottom-width: 2px;
+border-radius: px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+                    </property>
+                    <property name="inputMask">
+                     <string/>
+                    </property>
+                    <property name="text">
+                     <string/>
+                    </property>
+                    <property name="placeholderText">
+                     <string>Name</string>
+                    </property>
+                   </widget>
+                  </item>
+                  <item row="1" column="0">
+                   <widget class="QComboBox" name="comboBox_11">
+                    <property name="minimumSize">
+                     <size>
+                      <width>90</width>
+                      <height>0</height>
+                     </size>
+                    </property>
+                    <property name="styleSheet">
+                     <string notr="true">QComboBox {
+	border: 0px solid #333333;
+
+	background: #00000000;
+	color: #ffffff;
+
+}
+
+QComboBox::drop-down {
+	color: #ffffff;
+
+
+}
+QComboBox::down-arrow {
+	color: #ffffff;
+
+
+}
+ 
+QComboBox QAbstractItemView{
+	/*background-color: #4f4f4f;
+	color: #999999;*/
+ 	color: #ffffff;
+	/*selection-background-color: #999999;
+	selection-color: #4f4f4f;*/
+}
+</string>
+                    </property>
+                    <item>
+                     <property name="text">
+                      <string>PRODUCT ID</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>852</string>
+                     </property>
+                    </item>
+                    <item>
+                     <property name="text">
+                      <string>025</string>
+                     </property>
+                    </item>
+                   </widget>
+                  </item>
+                  <item row="2" column="0" colspan="2">
+                   <widget class="QPushButton" name="ProfilChangeNameButton_58">
+                    <property name="styleSheet">
+                     <string notr="true">QPushButton
+{
+	background-color:rgb(50, 53, 57);
+	border-style:solid;
+	border-radius:7px;
+	border-width:1px;
+border-color: rgb(50, 53, 57);
+	color:#ffffff;
+	font-size:16px;
+font-family:Calibri;
+}
+
+QPushButton:hover
+{
+	background-color: #00000000;
+	border-color: rgb(30, 227, 0);
+	/*color:rgb(30, 227, 0);*/
+}
+
+QPushButton:focus
+{
+	background-color:  rgb(30, 227, 0);
+	border-color: rgba(30, 227, 0,0);
+	color:rgb(255, 255, 255);
+}
+</string>
+                    </property>
+                    <property name="text">
+                     <string>SEARCH</string>
+                    </property>
+                   </widget>
+                  </item>
+                 </layout>
+                </widget>
+                <widget class="QLabel" name="BillSearchTitle">
+                 <property name="geometry">
+                  <rect>
+                   <x>10</x>
+                   <y>100</y>
+                   <width>81</width>
+                   <height>51</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Yu Gothic UI Light</family>
+                   <pointsize>14</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">color: rgb(249, 167, 43);
+background-color: rgba(255, 255, 255, 0);</string>
+                 </property>
+                 <property name="text">
+                  <string>SEARCH:</string>
+                 </property>
+                </widget>
+               </widget>
+              </item>
+              <item>
+               <widget class="QGroupBox" name="groupBox">
+                <property name="minimumSize">
+                 <size>
+                  <width>391</width>
+                  <height>341</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>391</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QGroupBox
+{
+	background-color: rgba(255, 255, 255, 220);
+border: 1px solid rgb(249, 167, 43);
+/*border-left-width: 1px;*/
+border-bottom-width: 1px;
+border-radius: 20px;
+}</string>
+                </property>
+                <property name="title">
+                 <string/>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_12">
+                 <item>
+                  <layout class="QFormLayout" name="formLayout_3">
+                   <property name="horizontalSpacing">
+                    <number>0</number>
+                   </property>
+                   <property name="verticalSpacing">
+                    <number>15</number>
+                   </property>
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="ProfilPersonelAccessEdit_61">
+                     <property name="font">
+                      <font>
+                       <family>Yu Gothic UI Semilight</family>
+                       <pointsize>14</pointsize>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">color: rgb(0, 0, 0);</string>
+                     </property>
+                     <property name="text">
+                      <string>PROVIDER</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QLineEdit" name="ProfilContactEdit_102">
+                     <property name="font">
+                      <font>
+                       <family>Arial Black</family>
+                       <pointsize>9</pointsize>
+                       <weight>75</weight>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">border: 0px solid rgb(249, 167, 43);
+border-bottom-width: 2px;
+border-radius: px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(0, 0, 0);</string>
+                     </property>
+                     <property name="inputMask">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="placeholderText">
+                      <string>Name</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="0" colspan="2">
+                    <layout class="QVBoxLayout" name="verticalLayout_11">
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_9">
+                       <item>
+                        <widget class="QComboBox" name="comboBox_7">
+                         <property name="minimumSize">
+                          <size>
+                           <width>90</width>
+                           <height>0</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QComboBox {
+	border: 0px solid #333333;
+
+	background: #00000000;
+	color: rgb(0, 0, 0);
+
+}
+
+QComboBox::drop-down {
+	color: rgb(0, 0, 0);
+
+
+}
+QComboBox::down-arrow {
+	color: rgb(0, 0, 0);
+
+
+}
+ 
+QComboBox QAbstractItemView{
+	/*background-color: #4f4f4f;
+	color: #999999;*/
+ 	color: rgb(0, 0, 0);
+	/*selection-background-color: #999999;
+	selection-color: #4f4f4f;*/
+}
+</string>
+                         </property>
+                         <item>
+                          <property name="text">
+                           <string>PRODUCT ID</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>852</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>025</string>
+                          </property>
+                         </item>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLineEdit" name="ProfilContactEdit_103">
+                         <property name="font">
+                          <font>
+                           <family>Arial Black</family>
+                           <pointsize>9</pointsize>
+                           <weight>75</weight>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border: 0px solid rgb(249, 167, 43);
+border-bottom-width: 2px;
+border-radius: px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(0, 0, 0);</string>
+                         </property>
+                         <property name="inputMask">
+                          <string/>
+                         </property>
+                         <property name="text">
+                          <string>0</string>
+                         </property>
+                         <property name="placeholderText">
+                          <string>Quantity</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_29">
+                       <item>
+                        <widget class="QComboBox" name="comboBox_17">
+                         <property name="minimumSize">
+                          <size>
+                           <width>90</width>
+                           <height>0</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QComboBox {
+	border: 0px solid #333333;
+
+	background: #00000000;
+	color: rgb(0, 0, 0);
+
+}
+
+QComboBox::drop-down {
+	color: rgb(0, 0, 0);
+
+
+}
+QComboBox::down-arrow {
+	color: rgb(0, 0, 0);
+
+
+}
+ 
+QComboBox QAbstractItemView{
+	/*background-color: #4f4f4f;
+	color: #999999;*/
+ 	v
+	/*selection-background-color: #999999;
+	selection-color: #4f4f4f;*/
+}
+</string>
+                         </property>
+                         <item>
+                          <property name="text">
+                           <string>PRODUCT ID</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>852</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>025</string>
+                          </property>
+                         </item>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLineEdit" name="ProfilContactEdit_133">
+                         <property name="font">
+                          <font>
+                           <family>Arial Black</family>
+                           <pointsize>9</pointsize>
+                           <weight>75</weight>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border: 0px solid rgb(249, 167, 43);
+border-bottom-width: 2px;
+border-radius: px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(0, 0, 0);</string>
+                         </property>
+                         <property name="inputMask">
+                          <string/>
+                         </property>
+                         <property name="text">
+                          <string>0</string>
+                         </property>
+                         <property name="placeholderText">
+                          <string>Quantity</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_30">
+                       <item>
+                        <widget class="QComboBox" name="comboBox_18">
+                         <property name="minimumSize">
+                          <size>
+                           <width>90</width>
+                           <height>0</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QComboBox {
+	border: 0px solid #333333;
+
+	background: #00000000;
+	color: rgb(0, 0, 0);
+
+}
+
+QComboBox::drop-down {
+	color: rgb(0, 0, 0);
+
+
+}
+QComboBox::down-arrow {
+	color: rgb(0, 0, 0);
+
+
+}
+ 
+QComboBox QAbstractItemView{
+	/*background-color: #4f4f4f;
+	color: #999999;*/
+ 	v
+	/*selection-background-color: #999999;
+	selection-color: #4f4f4f;*/
+}
+</string>
+                         </property>
+                         <item>
+                          <property name="text">
+                           <string>PRODUCT ID</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>852</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>025</string>
+                          </property>
+                         </item>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLineEdit" name="ProfilContactEdit_134">
+                         <property name="font">
+                          <font>
+                           <family>Arial Black</family>
+                           <pointsize>9</pointsize>
+                           <weight>75</weight>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border: 0px solid rgb(249, 167, 43);
+border-bottom-width: 2px;
+border-radius: px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(0, 0, 0);</string>
+                         </property>
+                         <property name="inputMask">
+                          <string/>
+                         </property>
+                         <property name="text">
+                          <string>0</string>
+                         </property>
+                         <property name="placeholderText">
+                          <string>Quantity</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_31">
+                       <item>
+                        <widget class="QComboBox" name="comboBox_20">
+                         <property name="minimumSize">
+                          <size>
+                           <width>90</width>
+                           <height>0</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QComboBox {
+	border: 0px solid #333333;
+
+	background: #00000000;
+	color: rgb(0, 0, 0);
+
+}
+
+QComboBox::drop-down {
+	color: rgb(0, 0, 0);
+
+
+}
+QComboBox::down-arrow {
+	color: rgb(0, 0, 0);
+
+
+}
+ 
+QComboBox QAbstractItemView{
+	/*background-color: #4f4f4f;
+	color: #999999;*/
+ 	v
+	/*selection-background-color: #999999;
+	selection-color: #4f4f4f;*/
+}
+</string>
+                         </property>
+                         <item>
+                          <property name="text">
+                           <string>PRODUCT ID</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>852</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>025</string>
+                          </property>
+                         </item>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLineEdit" name="ProfilContactEdit_135">
+                         <property name="font">
+                          <font>
+                           <family>Arial Black</family>
+                           <pointsize>9</pointsize>
+                           <weight>75</weight>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border: 0px solid rgb(249, 167, 43);
+border-bottom-width: 2px;
+border-radius: px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(0, 0, 0);</string>
+                         </property>
+                         <property name="inputMask">
+                          <string/>
+                         </property>
+                         <property name="text">
+                          <string>0</string>
+                         </property>
+                         <property name="placeholderText">
+                          <string>Quantity</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_32">
+                       <item>
+                        <widget class="QComboBox" name="comboBox_21">
+                         <property name="minimumSize">
+                          <size>
+                           <width>90</width>
+                           <height>0</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QComboBox {
+	border: 0px solid #333333;
+
+	background: #00000000;
+	color: rgb(0, 0, 0);
+
+}
+
+QComboBox::drop-down {
+	color: rgb(0, 0, 0);
+
+
+}
+QComboBox::down-arrow {
+	color: rgb(0, 0, 0);
+
+
+}
+ 
+QComboBox QAbstractItemView{
+	/*background-color: #4f4f4f;
+	color: #999999;*/
+ 	v
+	/*selection-background-color: #999999;
+	selection-color: #4f4f4f;*/
+}
+</string>
+                         </property>
+                         <item>
+                          <property name="text">
+                           <string>PRODUCT ID</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>852</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>025</string>
+                          </property>
+                         </item>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLineEdit" name="ProfilContactEdit_136">
+                         <property name="font">
+                          <font>
+                           <family>Arial Black</family>
+                           <pointsize>9</pointsize>
+                           <weight>75</weight>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border: 0px solid rgb(249, 167, 43);
+border-bottom-width: 2px;
+border-radius: px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(0, 0, 0);</string>
+                         </property>
+                         <property name="inputMask">
+                          <string/>
+                         </property>
+                         <property name="text">
+                          <string>0</string>
+                         </property>
+                         <property name="placeholderText">
+                          <string>Quantity</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_10">
+                       <item>
+                        <widget class="QComboBox" name="comboBox_8">
+                         <property name="minimumSize">
+                          <size>
+                           <width>90</width>
+                           <height>0</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QComboBox {
+	border: 0px solid #333333;
+
+	background: #00000000;
+	color: rgb(0, 0, 0);
+
+}
+
+QComboBox::drop-down {
+	color: rgb(0, 0, 0);
+
+
+}
+QComboBox::down-arrow {
+	color: rgb(0, 0, 0);
+
+
+}
+ 
+QComboBox QAbstractItemView{
+	/*background-color: #4f4f4f;
+	color: #999999;*/
+ 	v
+	/*selection-background-color: #999999;
+	selection-color: #4f4f4f;*/
+}
+</string>
+                         </property>
+                         <item>
+                          <property name="text">
+                           <string>PRODUCT ID</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>852</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>025</string>
+                          </property>
+                         </item>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLineEdit" name="ProfilContactEdit_104">
+                         <property name="font">
+                          <font>
+                           <family>Arial Black</family>
+                           <pointsize>9</pointsize>
+                           <weight>75</weight>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border: 0px solid rgb(249, 167, 43);
+border-bottom-width: 2px;
+border-radius: px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(0, 0, 0);</string>
+                         </property>
+                         <property name="inputMask">
+                          <string/>
+                         </property>
+                         <property name="text">
+                          <string>0</string>
+                         </property>
+                         <property name="placeholderText">
+                          <string>Quantity</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
+                   </item>
+                   <item row="2" column="1">
+                    <widget class="QPushButton" name="ProfilChangeNameButton_44">
+                     <property name="maximumSize">
+                      <size>
+                       <width>25</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton
+{
+	background-color:rgb(50, 53, 57);
+	border-style:solid;
+	border-radius:7px;
+	border-width:1px;
+border-color: rgb(50, 53, 57);
+	color:#ffffff;
+	font-size:16px;
+font-family:Calibri;
+}
+
+QPushButton:hover
+{
+	background-color: #00000000;
+	border-color: rgb(30, 227, 0);
+	color: rgb(0, 0, 0);
+}
+
+QPushButton:focus
+{
+	background-color:  rgb(30, 227, 0);
+	border-color: rgba(30, 227, 0,0);
+	color:rgb(255, 255, 255);
+}
+</string>
+                     </property>
+                     <property name="text">
+                      <string>+</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="0">
+                    <widget class="QLabel" name="ProfilPersonelAccessEdit_65">
+                     <property name="font">
+                      <font>
+                       <family>Yu Gothic UI Semilight</family>
+                       <pointsize>14</pointsize>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">color: rgb(0, 0, 0);</string>
+                     </property>
+                     <property name="text">
+                      <string>SUM:</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="1">
+                    <widget class="QLabel" name="ProfilPersonelAccessEdit_66">
+                     <property name="font">
+                      <font>
+                       <family>Yu Gothic UI Semilight</family>
+                       <pointsize>14</pointsize>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">color: rgb(0, 0, 0);</string>
+                     </property>
+                     <property name="text">
+                      <string>25DT</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="4" column="0" colspan="2">
+                    <widget class="QPushButton" name="ProfilChangeNameButton_54">
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton
+{
+	background-color:rgb(50, 53, 57);
+	border-style:solid;
+	border-radius:7px;
+	border-width:1px;
+border-color: rgb(50, 53, 57);
+	color:#ffffff;
+	font-size:16px;
+font-family:Calibri;
+}
+
+QPushButton:hover
+{
+	background-color: #00000000;
+	border-color: rgb(30, 227, 0);
+	/*color:rgb(30, 227, 0);*/
+}
+
+QPushButton:focus
+{
+	background-color:  rgb(30, 227, 0);
+	border-color: rgba(30, 227, 0,0);
+	color:rgb(255, 255, 255);
+}
+</string>
+                     </property>
+                     <property name="text">
+                      <string>UPDATE</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="5" column="0" colspan="2">
+                    <widget class="QPushButton" name="ProfilChangeNameButton_36">
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton
+{
+	background-color:rgb(50, 53, 57);
+	border-style:solid;
+	border-radius:7px;
+	border-width:1px;
+border-color: rgb(50, 53, 57);
+	color:#ffffff;
+	font-size:16px;
+font-family:Calibri;
+}
+
+QPushButton:hover
+{
+	background-color: #00000000;
+	border-color:red;
+	/*color:rgb(30, 227, 0);*/
+}
+
+QPushButton:focus
+{
+	background-color:  red;
+	border-color: red;
+	color:rgb(255, 255, 255);
+}
+</string>
+                     </property>
+                     <property name="text">
+                      <string>Delete</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QGroupBox" name="groupBox_4">
+                <property name="minimumSize">
+                 <size>
+                  <width>391</width>
+                  <height>341</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>391</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QGroupBox
+{
+	background-color: rgba(255, 255, 255, 220);
+border: 1px solid rgb(249, 167, 43);
+/*border-left-width: 1px;*/
+border-bottom-width: 1px;
+border-radius: 20px;
+}</string>
+                </property>
+                <property name="title">
+                 <string/>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_17">
+                 <item>
+                  <layout class="QFormLayout" name="formLayout_7">
+                   <property name="horizontalSpacing">
+                    <number>0</number>
+                   </property>
+                   <property name="verticalSpacing">
+                    <number>15</number>
+                   </property>
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="ProfilPersonelAccessEdit_74">
+                     <property name="font">
+                      <font>
+                       <family>Yu Gothic UI Semilight</family>
+                       <pointsize>14</pointsize>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">color: rgb(0, 0, 0);</string>
+                     </property>
+                     <property name="text">
+                      <string>PROVIDER</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QLineEdit" name="ProfilContactEdit_129">
+                     <property name="font">
+                      <font>
+                       <family>Arial Black</family>
+                       <pointsize>9</pointsize>
+                       <weight>75</weight>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">border: 0px solid rgb(249, 167, 43);
+border-bottom-width: 2px;
+border-radius: px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(0, 0, 0);</string>
+                     </property>
+                     <property name="inputMask">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="placeholderText">
+                      <string>Name</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="0" colspan="2">
+                    <layout class="QVBoxLayout" name="verticalLayout_18">
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_26">
+                       <item>
+                        <widget class="QComboBox" name="comboBox_14">
+                         <property name="minimumSize">
+                          <size>
+                           <width>90</width>
+                           <height>0</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QComboBox {
+	border: 0px solid #333333;
+
+	background: #00000000;
+	color: rgb(0, 0, 0);
+
+}
+
+QComboBox::drop-down {
+	color: rgb(0, 0, 0);
+
+
+}
+QComboBox::down-arrow {
+	color: rgb(0, 0, 0);
+
+
+}
+ 
+QComboBox QAbstractItemView{
+	/*background-color: #4f4f4f;
+	color: #999999;*/
+ 	color: rgb(0, 0, 0);
+	/*selection-background-color: #999999;
+	selection-color: #4f4f4f;*/
+}
+</string>
+                         </property>
+                         <item>
+                          <property name="text">
+                           <string>PRODUCT ID</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>852</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>025</string>
+                          </property>
+                         </item>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLineEdit" name="ProfilContactEdit_130">
+                         <property name="font">
+                          <font>
+                           <family>Arial Black</family>
+                           <pointsize>9</pointsize>
+                           <weight>75</weight>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border: 0px solid rgb(249, 167, 43);
+border-bottom-width: 2px;
+border-radius: px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(0, 0, 0);</string>
+                         </property>
+                         <property name="inputMask">
+                          <string/>
+                         </property>
+                         <property name="text">
+                          <string>0</string>
+                         </property>
+                         <property name="placeholderText">
+                          <string>Quantity</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_27">
+                       <item>
+                        <widget class="QComboBox" name="comboBox_15">
+                         <property name="minimumSize">
+                          <size>
+                           <width>90</width>
+                           <height>0</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QComboBox {
+	border: 0px solid #333333;
+
+	background: #00000000;
+	color: rgb(0, 0, 0);
+
+}
+
+QComboBox::drop-down {
+	color: rgb(0, 0, 0);
+
+
+}
+QComboBox::down-arrow {
+	color: rgb(0, 0, 0);
+
+
+}
+ 
+QComboBox QAbstractItemView{
+	/*background-color: #4f4f4f;
+	color: #999999;*/
+ 	v
+	/*selection-background-color: #999999;
+	selection-color: #4f4f4f;*/
+}
+</string>
+                         </property>
+                         <item>
+                          <property name="text">
+                           <string>PRODUCT ID</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>852</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>025</string>
+                          </property>
+                         </item>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLineEdit" name="ProfilContactEdit_131">
+                         <property name="font">
+                          <font>
+                           <family>Arial Black</family>
+                           <pointsize>9</pointsize>
+                           <weight>75</weight>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border: 0px solid rgb(249, 167, 43);
+border-bottom-width: 2px;
+border-radius: px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(0, 0, 0);</string>
+                         </property>
+                         <property name="inputMask">
+                          <string/>
+                         </property>
+                         <property name="text">
+                          <string>0</string>
+                         </property>
+                         <property name="placeholderText">
+                          <string>Quantity</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
+                   </item>
+                   <item row="2" column="1">
+                    <widget class="QPushButton" name="ProfilChangeNameButton_60">
+                     <property name="maximumSize">
+                      <size>
+                       <width>25</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton
+{
+	background-color:rgb(50, 53, 57);
+	border-style:solid;
+	border-radius:7px;
+	border-width:1px;
+border-color: rgb(50, 53, 57);
+	color:#ffffff;
+	font-size:16px;
+font-family:Calibri;
+}
+
+QPushButton:hover
+{
+	background-color: #00000000;
+	border-color: rgb(30, 227, 0);
+	color: rgb(0, 0, 0);
+}
+
+QPushButton:focus
+{
+	background-color:  rgb(30, 227, 0);
+	border-color: rgba(30, 227, 0,0);
+	color:rgb(255, 255, 255);
+}
+</string>
+                     </property>
+                     <property name="text">
+                      <string>+</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="0">
+                    <widget class="QLabel" name="ProfilPersonelAccessEdit_75">
+                     <property name="font">
+                      <font>
+                       <family>Yu Gothic UI Semilight</family>
+                       <pointsize>14</pointsize>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">color: rgb(0, 0, 0);</string>
+                     </property>
+                     <property name="text">
+                      <string>SUM:</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="1">
+                    <widget class="QLabel" name="ProfilPersonelAccessEdit_76">
+                     <property name="font">
+                      <font>
+                       <family>Yu Gothic UI Semilight</family>
+                       <pointsize>14</pointsize>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">color: rgb(0, 0, 0);</string>
+                     </property>
+                     <property name="text">
+                      <string>25DT</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="4" column="0" colspan="2">
+                    <widget class="QPushButton" name="ProfilChangeNameButton_61">
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton
+{
+	background-color:rgb(50, 53, 57);
+	border-style:solid;
+	border-radius:7px;
+	border-width:1px;
+border-color: rgb(50, 53, 57);
+	color:#ffffff;
+	font-size:16px;
+font-family:Calibri;
+}
+
+QPushButton:hover
+{
+	background-color: #00000000;
+	border-color: rgb(30, 227, 0);
+	/*color:rgb(30, 227, 0);*/
+}
+
+QPushButton:focus
+{
+	background-color:  rgb(30, 227, 0);
+	border-color: rgba(30, 227, 0,0);
+	color:rgb(255, 255, 255);
+}
+</string>
+                     </property>
+                     <property name="text">
+                      <string>UPDATE</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="5" column="0" colspan="2">
+                    <widget class="QPushButton" name="ProfilChangeNameButton_62">
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton
+{
+	background-color:rgb(50, 53, 57);
+	border-style:solid;
+	border-radius:7px;
+	border-width:1px;
+border-color: rgb(50, 53, 57);
+	color:#ffffff;
+	font-size:16px;
+font-family:Calibri;
+}
+
+QPushButton:hover
+{
+	background-color: #00000000;
+	border-color:red;
+	/*color:rgb(30, 227, 0);*/
+}
+
+QPushButton:focus
+{
+	background-color:  red;
+	border-color: red;
+	color:rgb(255, 255, 255);
+}
+</string>
+                     </property>
+                     <property name="text">
+                      <string>Delete</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+              <item>
+               <widget class="QGroupBox" name="groupBox_3">
+                <property name="minimumSize">
+                 <size>
+                  <width>391</width>
+                  <height>341</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>391</width>
+                  <height>16777215</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">QGroupBox
+{
+	background-color: rgba(255, 255, 255, 220);
+border: 1px solid rgb(249, 167, 43);
+/*border-left-width: 1px;*/
+border-bottom-width: 1px;
+border-radius: 20px;
+}</string>
+                </property>
+                <property name="title">
+                 <string/>
+                </property>
+                <layout class="QVBoxLayout" name="verticalLayout_15">
+                 <item>
+                  <layout class="QFormLayout" name="formLayout_6">
+                   <property name="horizontalSpacing">
+                    <number>0</number>
+                   </property>
+                   <property name="verticalSpacing">
+                    <number>15</number>
+                   </property>
+                   <item row="0" column="0">
+                    <widget class="QLabel" name="ProfilPersonelAccessEdit_71">
+                     <property name="font">
+                      <font>
+                       <family>Yu Gothic UI Semilight</family>
+                       <pointsize>14</pointsize>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">color: rgb(0, 0, 0);</string>
+                     </property>
+                     <property name="text">
+                      <string>PROVIDER</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="0" column="1">
+                    <widget class="QLineEdit" name="ProfilContactEdit_114">
+                     <property name="font">
+                      <font>
+                       <family>Arial Black</family>
+                       <pointsize>9</pointsize>
+                       <weight>75</weight>
+                       <bold>true</bold>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">border: 0px solid rgb(249, 167, 43);
+border-bottom-width: 2px;
+border-radius: px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(0, 0, 0);</string>
+                     </property>
+                     <property name="inputMask">
+                      <string/>
+                     </property>
+                     <property name="text">
+                      <string/>
+                     </property>
+                     <property name="placeholderText">
+                      <string>Name</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="1" column="0" colspan="2">
+                    <layout class="QVBoxLayout" name="verticalLayout_16">
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_24">
+                       <item>
+                        <widget class="QComboBox" name="comboBox_12">
+                         <property name="minimumSize">
+                          <size>
+                           <width>90</width>
+                           <height>0</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QComboBox {
+	border: 0px solid #333333;
+
+	background: #00000000;
+	color: rgb(0, 0, 0);
+
+}
+
+QComboBox::drop-down {
+	color: rgb(0, 0, 0);
+
+
+}
+QComboBox::down-arrow {
+	color: rgb(0, 0, 0);
+
+
+}
+ 
+QComboBox QAbstractItemView{
+	/*background-color: #4f4f4f;
+	color: #999999;*/
+ 	color: rgb(0, 0, 0);
+	/*selection-background-color: #999999;
+	selection-color: #4f4f4f;*/
+}
+</string>
+                         </property>
+                         <item>
+                          <property name="text">
+                           <string>PRODUCT ID</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>852</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>025</string>
+                          </property>
+                         </item>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLineEdit" name="ProfilContactEdit_116">
+                         <property name="font">
+                          <font>
+                           <family>Arial Black</family>
+                           <pointsize>9</pointsize>
+                           <weight>75</weight>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border: 0px solid rgb(249, 167, 43);
+border-bottom-width: 2px;
+border-radius: px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(0, 0, 0);</string>
+                         </property>
+                         <property name="inputMask">
+                          <string/>
+                         </property>
+                         <property name="text">
+                          <string>0</string>
+                         </property>
+                         <property name="placeholderText">
+                          <string>Quantity</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                     <item>
+                      <layout class="QHBoxLayout" name="horizontalLayout_25">
+                       <item>
+                        <widget class="QComboBox" name="comboBox_13">
+                         <property name="minimumSize">
+                          <size>
+                           <width>90</width>
+                           <height>0</height>
+                          </size>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">QComboBox {
+	border: 0px solid #333333;
+
+	background: #00000000;
+	color: rgb(0, 0, 0);
+
+}
+
+QComboBox::drop-down {
+	color: rgb(0, 0, 0);
+
+
+}
+QComboBox::down-arrow {
+	color: rgb(0, 0, 0);
+
+
+}
+ 
+QComboBox QAbstractItemView{
+	/*background-color: #4f4f4f;
+	color: #999999;*/
+ 	v
+	/*selection-background-color: #999999;
+	selection-color: #4f4f4f;*/
+}
+</string>
+                         </property>
+                         <item>
+                          <property name="text">
+                           <string>PRODUCT ID</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>852</string>
+                          </property>
+                         </item>
+                         <item>
+                          <property name="text">
+                           <string>025</string>
+                          </property>
+                         </item>
+                        </widget>
+                       </item>
+                       <item>
+                        <widget class="QLineEdit" name="ProfilContactEdit_120">
+                         <property name="font">
+                          <font>
+                           <family>Arial Black</family>
+                           <pointsize>9</pointsize>
+                           <weight>75</weight>
+                           <bold>true</bold>
+                          </font>
+                         </property>
+                         <property name="styleSheet">
+                          <string notr="true">border: 0px solid rgb(249, 167, 43);
+border-bottom-width: 2px;
+border-radius: px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(0, 0, 0);</string>
+                         </property>
+                         <property name="inputMask">
+                          <string/>
+                         </property>
+                         <property name="text">
+                          <string>0</string>
+                         </property>
+                         <property name="placeholderText">
+                          <string>Quantity</string>
+                         </property>
+                        </widget>
+                       </item>
+                      </layout>
+                     </item>
+                    </layout>
+                   </item>
+                   <item row="2" column="1">
+                    <widget class="QPushButton" name="ProfilChangeNameButton_57">
+                     <property name="maximumSize">
+                      <size>
+                       <width>25</width>
+                       <height>16777215</height>
+                      </size>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton
+{
+	background-color:rgb(50, 53, 57);
+	border-style:solid;
+	border-radius:7px;
+	border-width:1px;
+border-color: rgb(50, 53, 57);
+	color:#ffffff;
+	font-size:16px;
+font-family:Calibri;
+}
+
+QPushButton:hover
+{
+	background-color: #00000000;
+	border-color: rgb(30, 227, 0);
+	color: rgb(0, 0, 0);
+}
+
+QPushButton:focus
+{
+	background-color:  rgb(30, 227, 0);
+	border-color: rgba(30, 227, 0,0);
+	color:rgb(255, 255, 255);
+}
+</string>
+                     </property>
+                     <property name="text">
+                      <string>+</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="0">
+                    <widget class="QLabel" name="ProfilPersonelAccessEdit_72">
+                     <property name="font">
+                      <font>
+                       <family>Yu Gothic UI Semilight</family>
+                       <pointsize>14</pointsize>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">color: rgb(0, 0, 0);</string>
+                     </property>
+                     <property name="text">
+                      <string>SUM:</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="3" column="1">
+                    <widget class="QLabel" name="ProfilPersonelAccessEdit_73">
+                     <property name="font">
+                      <font>
+                       <family>Yu Gothic UI Semilight</family>
+                       <pointsize>14</pointsize>
+                      </font>
+                     </property>
+                     <property name="styleSheet">
+                      <string notr="true">color: rgb(0, 0, 0);</string>
+                     </property>
+                     <property name="text">
+                      <string>25DT</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="4" column="0" colspan="2">
+                    <widget class="QPushButton" name="ProfilChangeNameButton_59">
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton
+{
+	background-color:rgb(50, 53, 57);
+	border-style:solid;
+	border-radius:7px;
+	border-width:1px;
+border-color: rgb(50, 53, 57);
+	color:#ffffff;
+	font-size:16px;
+font-family:Calibri;
+}
+
+QPushButton:hover
+{
+	background-color: #00000000;
+	border-color: rgb(30, 227, 0);
+	/*color:rgb(30, 227, 0);*/
+}
+
+QPushButton:focus
+{
+	background-color:  rgb(30, 227, 0);
+	border-color: rgba(30, 227, 0,0);
+	color:rgb(255, 255, 255);
+}
+</string>
+                     </property>
+                     <property name="text">
+                      <string>UPDATE</string>
+                     </property>
+                    </widget>
+                   </item>
+                   <item row="5" column="0" colspan="2">
+                    <widget class="QPushButton" name="ProfilChangeNameButton_40">
+                     <property name="styleSheet">
+                      <string notr="true">QPushButton
+{
+	background-color:rgb(50, 53, 57);
+	border-style:solid;
+	border-radius:7px;
+	border-width:1px;
+border-color: rgb(50, 53, 57);
+	color:#ffffff;
+	font-size:16px;
+font-family:Calibri;
+}
+
+QPushButton:hover
+{
+	background-color: #00000000;
+	border-color:red;
+	/*color:rgb(30, 227, 0);*/
+}
+
+QPushButton:focus
+{
+	background-color:  red;
+	border-color: red;
+	color:rgb(255, 255, 255);
+}
+</string>
+                     </property>
+                     <property name="text">
+                      <string>Delete</string>
+                     </property>
+                    </widget>
+                   </item>
+                  </layout>
+                 </item>
+                </layout>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+       </widget>
+      </widget>
       <widget class="QWidget" name="products"/>
       <widget class="QWidget" name="movies"/>
       <widget class="QWidget" name="theatres"/>
