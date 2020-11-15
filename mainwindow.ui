@@ -805,7 +805,7 @@ QPushButton:focus
 </string>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>5</number>
       </property>
       <widget class="QWidget" name="profil">
        <widget class="QLabel" name="ProfilPhoto">
@@ -9240,7 +9240,7 @@ QTabBar::tab:selected
          <enum>QTabWidget::Rounded</enum>
         </property>
         <property name="currentIndex">
-         <number>1</number>
+         <number>0</number>
         </property>
         <property name="elideMode">
          <enum>Qt::ElideRight</enum>
@@ -9621,7 +9621,7 @@ background-color: rgba(255, 255, 255, 0);</string>
              <property name="geometry">
               <rect>
                <x>0</x>
-               <y>-66</y>
+               <y>0</y>
                <width>946</width>
                <height>638</height>
               </rect>
@@ -18342,7 +18342,7 @@ QTabBar::tab:selected
 </string>
         </property>
         <property name="currentIndex">
-         <number>1</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="AddBillTab_2">
          <property name="styleSheet">
@@ -25011,7 +25011,2982 @@ QPushButton:focus
         </widget>
        </widget>
       </widget>
-      <widget class="QWidget" name="movies"/>
+      <widget class="QWidget" name="movies">
+       <widget class="QTabWidget" name="tabWidget_5">
+        <property name="geometry">
+         <rect>
+          <x>0</x>
+          <y>0</y>
+          <width>965</width>
+          <height>630</height>
+         </rect>
+        </property>
+        <property name="minimumSize">
+         <size>
+          <width>965</width>
+          <height>630</height>
+         </size>
+        </property>
+        <property name="maximumSize">
+         <size>
+          <width>965</width>
+          <height>630</height>
+         </size>
+        </property>
+        <property name="styleSheet">
+         <string notr="true">QTabWidget::pane {
+    background: transparent;
+    border:0;
+}
+
+QTabBar::tab
+{
+	background-color: rgba(42, 46, 50,0);
+	color:#ffffff;
+	width:100px;
+	font-size:16px;
+	font-family:Calibri;
+
+}
+
+QTabBar::tab:hover
+{
+	background-color:rgb(50, 53, 57);
+		color:rgb(249, 167, 43);
+}
+
+QTabBar::tab:focus
+{
+	background-color: rgb(59, 62, 66);
+	border-style:solid;
+	border-left-width:1px;
+	border-bottom-width:1px;
+	border-color: rgb(249, 167, 43);
+	color:rgb(249, 167, 43);
+}
+QTabBar::tab:selected
+{
+	background-color: rgb(59, 62, 66);
+	border-style:solid;
+	border-left-width:1px;
+	border-bottom-width:1px;
+	border-color:   rgb(249, 167, 43);
+	color:  rgb(249, 167, 43);
+}
+</string>
+        </property>
+        <property name="currentIndex">
+         <number>1</number>
+        </property>
+        <widget class="QWidget" name="movies_2">
+         <attribute name="title">
+          <string>Movies</string>
+         </attribute>
+         <layout class="QHBoxLayout" name="horizontalLayout_3">
+          <property name="leftMargin">
+           <number>0</number>
+          </property>
+          <property name="topMargin">
+           <number>0</number>
+          </property>
+          <property name="rightMargin">
+           <number>0</number>
+          </property>
+          <property name="bottomMargin">
+           <number>0</number>
+          </property>
+          <item>
+           <widget class="QGroupBox" name="groupBox_5">
+            <property name="minimumSize">
+             <size>
+              <width>200</width>
+              <height>0</height>
+             </size>
+            </property>
+            <property name="maximumSize">
+             <size>
+              <width>200</width>
+              <height>16777215</height>
+             </size>
+            </property>
+            <property name="title">
+             <string>GroupBox</string>
+            </property>
+            <widget class="QLabel" name="FilmIdTitle_5">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>70</y>
+               <width>26</width>
+               <height>37</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Yu Gothic UI Semilight</family>
+               <pointsize>20</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;</string>
+             </property>
+             <property name="text">
+              <string>ID</string>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="FilmIdEdit_5">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>110</y>
+               <width>140</width>
+               <height>21</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Arial Black</family>
+               <pointsize>9</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border: 0px solid rgb(249, 167, 43);
+border-bottom-width: 2px;
+border-radius: px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+             </property>
+             <property name="text">
+              <string>14D7</string>
+             </property>
+             <property name="placeholderText">
+              <string/>
+             </property>
+            </widget>
+            <widget class="QLabel" name="FilmNameTitle_5">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>140</y>
+               <width>38</width>
+               <height>17</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Arial Black</family>
+               <pointsize>9</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;</string>
+             </property>
+             <property name="text">
+              <string>Name</string>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="FilmNameEdit_5">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>160</y>
+               <width>140</width>
+               <height>21</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Arial Black</family>
+               <pointsize>9</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border: 0px solid rgb(249, 167, 43);
+border-bottom-width: 2px;
+border-radius: px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+             </property>
+             <property name="text">
+              <string>MOTHER!</string>
+             </property>
+             <property name="placeholderText">
+              <string/>
+             </property>
+            </widget>
+            <widget class="QLabel" name="FilmTypeTitle_5">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>190</y>
+               <width>32</width>
+               <height>17</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Arial Black</family>
+               <pointsize>9</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;</string>
+             </property>
+             <property name="text">
+              <string>Type</string>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="FilmTypeEdit_5">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>210</y>
+               <width>140</width>
+               <height>21</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Arial Black</family>
+               <pointsize>9</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border: 0px solid rgb(249, 167, 43);
+border-bottom-width: 2px;
+border-radius: px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+             </property>
+             <property name="text">
+              <string>Horror</string>
+             </property>
+             <property name="placeholderText">
+              <string/>
+             </property>
+            </widget>
+            <widget class="QLabel" name="FilmPriceTitle_5">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>240</y>
+               <width>34</width>
+               <height>17</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Arial Black</family>
+               <pointsize>9</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;</string>
+             </property>
+             <property name="text">
+              <string>Price</string>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="FilmPriceEdit_5">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>260</y>
+               <width>140</width>
+               <height>21</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Arial Black</family>
+               <pointsize>9</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border: 0px solid rgb(249, 167, 43);
+border-bottom-width: 2px;
+border-radius: px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+             </property>
+             <property name="text">
+              <string>25</string>
+             </property>
+             <property name="placeholderText">
+              <string/>
+             </property>
+            </widget>
+            <widget class="QLabel" name="FilmSubtitle_5">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>290</y>
+               <width>115</width>
+               <height>17</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Arial Black</family>
+               <pointsize>9</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;</string>
+             </property>
+             <property name="text">
+              <string>Available Subtitle</string>
+             </property>
+            </widget>
+            <widget class="QCheckBox" name="FilmEnCheck_5">
+             <property name="geometry">
+              <rect>
+               <x>110</x>
+               <y>310</y>
+               <width>32</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QCheckBox
+{
+color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;
+}
+QCheckBox::indicator:unchecked {
+    border: 1px solid #ffffff;
+	border-radius: 5px;
+	
+	border-color: rgb(249, 167, 43);
+    background: none;
+}
+QCheckBox::indicator:checked {
+    border: 0px solid #5A5A5A;
+	border-radius: 5px;
+
+    background: qradialgradient(spread:pad, cx:0.494, cy:0.528182, radius:2, fx:0.494, fy:0.528, stop:0.153409 rgba(255, 171, 44, 255), stop:0.3125 rgba(252, 128, 128, 0));
+}
+</string>
+             </property>
+             <property name="text">
+              <string>EN</string>
+             </property>
+            </widget>
+            <widget class="QCheckBox" name="FilmArCheck_5">
+             <property name="geometry">
+              <rect>
+               <x>61</x>
+               <y>310</y>
+               <width>33</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QCheckBox
+{
+color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;
+}
+QCheckBox::indicator:unchecked {
+    border: 1px solid #ffffff;
+	border-radius: 5px;
+	border-color: rgb(249, 167, 43);
+    background: none;
+}
+QCheckBox::indicator:checked {
+    border: 0px solid #5A5A5A;
+	border-radius: 5px;
+
+    background: qradialgradient(spread:pad, cx:0.494, cy:0.528182, radius:2, fx:0.494, fy:0.528, stop:0.153409 rgba(255, 171, 44, 255), stop:0.3125 rgba(252, 128, 128, 0));
+}
+</string>
+             </property>
+             <property name="text">
+              <string>AR</string>
+             </property>
+            </widget>
+            <widget class="QCheckBox" name="FilmFrCheck_5">
+             <property name="geometry">
+              <rect>
+               <x>13</x>
+               <y>310</y>
+               <width>32</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QCheckBox
+{
+color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;
+}
+QCheckBox::indicator:unchecked {
+    border: 1px solid #ffffff;
+	border-radius: 5px;
+	border-color: rgb(249, 167, 43);
+    background: none;
+}
+QCheckBox::indicator:checked {
+    border: 0px solid #5A5A5A;
+	border-radius: 5px;
+
+    background: qradialgradient(spread:pad, cx:0.494, cy:0.528182, radius:2, fx:0.494, fy:0.528, stop:0.153409 rgba(255, 171, 44, 255), stop:0.3125 rgba(252, 128, 128, 0));
+}
+</string>
+             </property>
+             <property name="text">
+              <string>FR</string>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="FilmUpdateButton_5">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>340</y>
+               <width>181</width>
+               <height>21</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton
+{
+	background-color:rgb(50, 53, 57);
+	border-style:solid;
+	border-radius:7px;
+	border-width:1px;
+border-color: rgb(50, 53, 57);
+	color:#ffffff;
+	font-size:16px;
+font-family:Calibri;
+}
+
+QPushButton:hover
+{
+	background-color: #00000000;
+	border-color: rgb(30, 227, 0);
+	/*color:rgb(30, 227, 0);*/
+}
+
+QPushButton:focus
+{
+	background-color:  rgb(30, 227, 0);
+	border-color: rgba(30, 227, 0,0);
+	color:rgb(255, 255, 255);
+}
+</string>
+             </property>
+             <property name="text">
+              <string>Search</string>
+             </property>
+            </widget>
+           </widget>
+          </item>
+          <item>
+           <widget class="QScrollArea" name="scrollArea_3">
+            <property name="styleSheet">
+             <string notr="true">border: 0px;</string>
+            </property>
+            <property name="widgetResizable">
+             <bool>true</bool>
+            </property>
+            <widget class="QWidget" name="scrollAreaWidgetContents_3">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>1163</width>
+               <height>592</height>
+              </rect>
+             </property>
+             <layout class="QHBoxLayout" name="horizontalLayout_4">
+              <property name="spacing">
+               <number>10</number>
+              </property>
+              <property name="leftMargin">
+               <number>0</number>
+              </property>
+              <property name="topMargin">
+               <number>0</number>
+              </property>
+              <property name="rightMargin">
+               <number>0</number>
+              </property>
+              <property name="bottomMargin">
+               <number>0</number>
+              </property>
+              <item>
+               <widget class="QGroupBox" name="FilmBox">
+                <property name="minimumSize">
+                 <size>
+                  <width>381</width>
+                  <height>531</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>381</width>
+                  <height>531</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">/*background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0.386364 rgb(255, 139, 44), stop:0.397727 rgba(255, 255, 255, 0));*/
+border: 0px solid rgb(126, 70, 221);</string>
+                </property>
+                <property name="title">
+                 <string/>
+                </property>
+                <widget class="QPushButton" name="FilmImageButton">
+                 <property name="geometry">
+                  <rect>
+                   <x>5</x>
+                   <y>0</y>
+                   <width>371</width>
+                   <height>241</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset>
+                   <normaloff>../mother-poster-crop.jpg</normaloff>../mother-poster-crop.jpg</iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>400</width>
+                   <height>400</height>
+                  </size>
+                 </property>
+                 <property name="shortcut">
+                  <string/>
+                 </property>
+                </widget>
+                <widget class="QGroupBox" name="FilmBottomBox">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>197</y>
+                   <width>381</width>
+                   <height>331</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QGroupBox
+{
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(59, 62, 66, 255), stop:1 rgba(255, 255, 255, 92));
+border: 0px solid rgb(255, 255, 255);
+border-bottom-width: 1px;
+border-radius: 10px;
+}</string>
+                 </property>
+                 <property name="title">
+                  <string/>
+                 </property>
+                 <widget class="QGroupBox" name="FilmDetailsBox">
+                  <property name="enabled">
+                   <bool>true</bool>
+                  </property>
+                  <property name="geometry">
+                   <rect>
+                    <x>0</x>
+                    <y>40</y>
+                    <width>381</width>
+                    <height>291</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgba(255, 255, 255, 0);
+border: 0px;</string>
+                  </property>
+                  <property name="title">
+                   <string/>
+                  </property>
+                  <widget class="QLineEdit" name="FilmPriceEdit">
+                   <property name="geometry">
+                    <rect>
+                     <x>122</x>
+                     <y>98</y>
+                     <width>140</width>
+                     <height>21</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Arial Black</family>
+                     <pointsize>9</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">border: 0px solid rgb(249, 167, 43);
+border-bottom-width: 2px;
+border-radius: px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+                   </property>
+                   <property name="text">
+                    <string>25</string>
+                   </property>
+                   <property name="placeholderText">
+                    <string/>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="FilmDescriptionTitle">
+                   <property name="geometry">
+                    <rect>
+                     <x>1</x>
+                     <y>148</y>
+                     <width>74</width>
+                     <height>17</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Arial Black</family>
+                     <pointsize>9</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;</string>
+                   </property>
+                   <property name="text">
+                    <string>Description</string>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="FilmNameTitle">
+                   <property name="geometry">
+                    <rect>
+                     <x>1</x>
+                     <y>44</y>
+                     <width>38</width>
+                     <height>17</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Arial Black</family>
+                     <pointsize>9</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;</string>
+                   </property>
+                   <property name="text">
+                    <string>Name</string>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="FilmPriceTitle">
+                   <property name="geometry">
+                    <rect>
+                     <x>1</x>
+                     <y>98</y>
+                     <width>34</width>
+                     <height>17</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Arial Black</family>
+                     <pointsize>9</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;</string>
+                   </property>
+                   <property name="text">
+                    <string>Price</string>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="FilmDT">
+                   <property name="geometry">
+                    <rect>
+                     <x>240</x>
+                     <y>98</y>
+                     <width>18</width>
+                     <height>17</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Arial Black</family>
+                     <pointsize>9</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;</string>
+                   </property>
+                   <property name="text">
+                    <string>DT</string>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="FilmIdTitle">
+                   <property name="geometry">
+                    <rect>
+                     <x>1</x>
+                     <y>1</y>
+                     <width>26</width>
+                     <height>37</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Yu Gothic UI Semilight</family>
+                     <pointsize>20</pointsize>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;</string>
+                   </property>
+                   <property name="text">
+                    <string>ID</string>
+                   </property>
+                  </widget>
+                  <widget class="QLineEdit" name="FilmIdEdit">
+                   <property name="geometry">
+                    <rect>
+                     <x>122</x>
+                     <y>9</y>
+                     <width>140</width>
+                     <height>21</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Arial Black</family>
+                     <pointsize>9</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">border: 0px solid rgb(249, 167, 43);
+border-bottom-width: 2px;
+border-radius: px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+                   </property>
+                   <property name="text">
+                    <string>14D7</string>
+                   </property>
+                   <property name="placeholderText">
+                    <string/>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="FilmSubtitle">
+                   <property name="geometry">
+                    <rect>
+                     <x>1</x>
+                     <y>125</y>
+                     <width>115</width>
+                     <height>17</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Arial Black</family>
+                     <pointsize>9</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;</string>
+                   </property>
+                   <property name="text">
+                    <string>Available Subtitle</string>
+                   </property>
+                  </widget>
+                  <widget class="QLineEdit" name="FilmTypeEdit">
+                   <property name="geometry">
+                    <rect>
+                     <x>122</x>
+                     <y>71</y>
+                     <width>140</width>
+                     <height>21</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Arial Black</family>
+                     <pointsize>9</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">border: 0px solid rgb(249, 167, 43);
+border-bottom-width: 2px;
+border-radius: px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+                   </property>
+                   <property name="text">
+                    <string>Horror</string>
+                   </property>
+                   <property name="placeholderText">
+                    <string/>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="FilmTypeTitle">
+                   <property name="geometry">
+                    <rect>
+                     <x>1</x>
+                     <y>71</y>
+                     <width>32</width>
+                     <height>17</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Arial Black</family>
+                     <pointsize>9</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;</string>
+                   </property>
+                   <property name="text">
+                    <string>Type</string>
+                   </property>
+                  </widget>
+                  <widget class="QLineEdit" name="FilmNameEdit">
+                   <property name="geometry">
+                    <rect>
+                     <x>122</x>
+                     <y>44</y>
+                     <width>140</width>
+                     <height>21</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Arial Black</family>
+                     <pointsize>9</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">border: 0px solid rgb(249, 167, 43);
+border-bottom-width: 2px;
+border-radius: px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+                   </property>
+                   <property name="text">
+                    <string>MOTHER!</string>
+                   </property>
+                   <property name="placeholderText">
+                    <string/>
+                   </property>
+                  </widget>
+                  <widget class="QPushButton" name="FilmUpdateButton">
+                   <property name="geometry">
+                    <rect>
+                     <x>11</x>
+                     <y>260</y>
+                     <width>171</width>
+                     <height>21</height>
+                    </rect>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton
+{
+	background-color:rgb(50, 53, 57);
+	border-style:solid;
+	border-radius:7px;
+	border-width:1px;
+border-color: rgb(50, 53, 57);
+	color:#ffffff;
+	font-size:16px;
+font-family:Calibri;
+}
+
+QPushButton:hover
+{
+	background-color: #00000000;
+	border-color: rgb(30, 227, 0);
+	/*color:rgb(30, 227, 0);*/
+}
+
+QPushButton:focus
+{
+	background-color:  rgb(30, 227, 0);
+	border-color: rgba(30, 227, 0,0);
+	color:rgb(255, 255, 255);
+}
+</string>
+                   </property>
+                   <property name="text">
+                    <string>Update</string>
+                   </property>
+                  </widget>
+                  <widget class="QPlainTextEdit" name="FilmDescriptionEdit">
+                   <property name="geometry">
+                    <rect>
+                     <x>122</x>
+                     <y>148</y>
+                     <width>234</width>
+                     <height>115</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Segoe UI Semilight</family>
+                     <pointsize>11</pointsize>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">border: 0px solid rgb(249, 167, 43);
+
+background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+                   </property>
+                   <property name="plainText">
+                    <string>The private life of a poet and his wife ruptures at the seams when uninvited strangers begin to visit their tranquil, isolated home.</string>
+                   </property>
+                  </widget>
+                  <widget class="QCheckBox" name="FilmFrCheck">
+                   <property name="geometry">
+                    <rect>
+                     <x>123</x>
+                     <y>126</y>
+                     <width>32</width>
+                     <height>16</height>
+                    </rect>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QCheckBox
+{
+color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;
+}
+QCheckBox::indicator:unchecked {
+    border: 1px solid #ffffff;
+	border-radius: 5px;
+	border-color: rgb(249, 167, 43);
+    background: none;
+}
+QCheckBox::indicator:checked {
+    border: 0px solid #5A5A5A;
+	border-radius: 5px;
+
+    background: qradialgradient(spread:pad, cx:0.494, cy:0.528182, radius:2, fx:0.494, fy:0.528, stop:0.153409 rgba(255, 171, 44, 255), stop:0.3125 rgba(252, 128, 128, 0));
+}
+</string>
+                   </property>
+                   <property name="text">
+                    <string>FR</string>
+                   </property>
+                  </widget>
+                  <widget class="QCheckBox" name="FilmArCheck">
+                   <property name="geometry">
+                    <rect>
+                     <x>171</x>
+                     <y>126</y>
+                     <width>33</width>
+                     <height>16</height>
+                    </rect>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QCheckBox
+{
+color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;
+}
+QCheckBox::indicator:unchecked {
+    border: 1px solid #ffffff;
+	border-radius: 5px;
+	border-color: rgb(249, 167, 43);
+    background: none;
+}
+QCheckBox::indicator:checked {
+    border: 0px solid #5A5A5A;
+	border-radius: 5px;
+
+    background: qradialgradient(spread:pad, cx:0.494, cy:0.528182, radius:2, fx:0.494, fy:0.528, stop:0.153409 rgba(255, 171, 44, 255), stop:0.3125 rgba(252, 128, 128, 0));
+}
+</string>
+                   </property>
+                   <property name="text">
+                    <string>AR</string>
+                   </property>
+                  </widget>
+                  <widget class="QCheckBox" name="FilmEnCheck">
+                   <property name="geometry">
+                    <rect>
+                     <x>220</x>
+                     <y>126</y>
+                     <width>32</width>
+                     <height>16</height>
+                    </rect>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QCheckBox
+{
+color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;
+}
+QCheckBox::indicator:unchecked {
+    border: 1px solid #ffffff;
+	border-radius: 5px;
+	
+	border-color: rgb(249, 167, 43);
+    background: none;
+}
+QCheckBox::indicator:checked {
+    border: 0px solid #5A5A5A;
+	border-radius: 5px;
+
+    background: qradialgradient(spread:pad, cx:0.494, cy:0.528182, radius:2, fx:0.494, fy:0.528, stop:0.153409 rgba(255, 171, 44, 255), stop:0.3125 rgba(252, 128, 128, 0));
+}
+</string>
+                   </property>
+                   <property name="text">
+                    <string>EN</string>
+                   </property>
+                  </widget>
+                  <widget class="QPushButton" name="ProfilChangeNameButton_39">
+                   <property name="geometry">
+                    <rect>
+                     <x>200</x>
+                     <y>260</y>
+                     <width>171</width>
+                     <height>21</height>
+                    </rect>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton
+{
+	background-color:rgb(50, 53, 57);
+	border-style:solid;
+	border-radius:7px;
+	border-width:1px;
+border-color: rgb(50, 53, 57);
+	color:#ffffff;
+	font-size:16px;
+font-family:Calibri;
+}
+
+QPushButton:hover
+{
+	background-color: #00000000;
+	border-color:red;
+	/*color:rgb(30, 227, 0);*/
+}
+
+QPushButton:focus
+{
+	background-color:  red;
+	border-color: red;
+	color:rgb(255, 255, 255);
+}
+</string>
+                   </property>
+                   <property name="text">
+                    <string>Delete</string>
+                   </property>
+                  </widget>
+                 </widget>
+                </widget>
+                <widget class="QPushButton" name="FilmSwipeButton">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>170</y>
+                   <width>381</width>
+                   <height>71</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Candara Light</family>
+                   <pointsize>16</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton
+{
+	background-color:#00000000;
+	border-width:0px;
+	color:#ffffff;
+}
+
+QPushButton:hover
+{
+
+	color:rgb(30, 227, 0);
+}
+
+QPushButton:focus
+{
+
+	color:rgb(30, 227, 0);
+}
+</string>
+                 </property>
+                 <property name="text">
+                  <string>MOTHER!</string>
+                 </property>
+                </widget>
+               </widget>
+              </item>
+              <item>
+               <widget class="QGroupBox" name="FilmBox_3">
+                <property name="minimumSize">
+                 <size>
+                  <width>381</width>
+                  <height>531</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>381</width>
+                  <height>531</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">/*background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0.386364 rgb(255, 139, 44), stop:0.397727 rgba(255, 255, 255, 0));*/
+border: 0px solid rgb(126, 70, 221);</string>
+                </property>
+                <property name="title">
+                 <string/>
+                </property>
+                <widget class="QPushButton" name="FilmImageButton_3">
+                 <property name="geometry">
+                  <rect>
+                   <x>5</x>
+                   <y>0</y>
+                   <width>371</width>
+                   <height>241</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset>
+                   <normaloff>../mother-poster-crop.jpg</normaloff>../mother-poster-crop.jpg</iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>400</width>
+                   <height>400</height>
+                  </size>
+                 </property>
+                 <property name="shortcut">
+                  <string/>
+                 </property>
+                </widget>
+                <widget class="QGroupBox" name="FilmBottomBox_3">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>197</y>
+                   <width>381</width>
+                   <height>331</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QGroupBox
+{
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(59, 62, 66, 255), stop:1 rgba(255, 255, 255, 92));
+border: 0px solid rgb(255, 255, 255);
+border-bottom-width: 1px;
+border-radius: 10px;
+}</string>
+                 </property>
+                 <property name="title">
+                  <string/>
+                 </property>
+                 <widget class="QGroupBox" name="FilmDetailsBox_3">
+                  <property name="enabled">
+                   <bool>true</bool>
+                  </property>
+                  <property name="geometry">
+                   <rect>
+                    <x>0</x>
+                    <y>40</y>
+                    <width>381</width>
+                    <height>291</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgba(255, 255, 255, 0);
+border: 0px;</string>
+                  </property>
+                  <property name="title">
+                   <string/>
+                  </property>
+                  <widget class="QLineEdit" name="FilmPriceEdit_3">
+                   <property name="geometry">
+                    <rect>
+                     <x>122</x>
+                     <y>98</y>
+                     <width>140</width>
+                     <height>21</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Arial Black</family>
+                     <pointsize>9</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">border: 0px solid rgb(249, 167, 43);
+border-bottom-width: 2px;
+border-radius: px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+                   </property>
+                   <property name="text">
+                    <string>25</string>
+                   </property>
+                   <property name="placeholderText">
+                    <string/>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="FilmDescriptionTitle_3">
+                   <property name="geometry">
+                    <rect>
+                     <x>1</x>
+                     <y>148</y>
+                     <width>74</width>
+                     <height>17</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Arial Black</family>
+                     <pointsize>9</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;</string>
+                   </property>
+                   <property name="text">
+                    <string>Description</string>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="FilmNameTitle_3">
+                   <property name="geometry">
+                    <rect>
+                     <x>1</x>
+                     <y>44</y>
+                     <width>38</width>
+                     <height>17</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Arial Black</family>
+                     <pointsize>9</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;</string>
+                   </property>
+                   <property name="text">
+                    <string>Name</string>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="FilmPriceTitle_3">
+                   <property name="geometry">
+                    <rect>
+                     <x>1</x>
+                     <y>98</y>
+                     <width>34</width>
+                     <height>17</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Arial Black</family>
+                     <pointsize>9</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;</string>
+                   </property>
+                   <property name="text">
+                    <string>Price</string>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="FilmDT_3">
+                   <property name="geometry">
+                    <rect>
+                     <x>240</x>
+                     <y>98</y>
+                     <width>18</width>
+                     <height>17</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Arial Black</family>
+                     <pointsize>9</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;</string>
+                   </property>
+                   <property name="text">
+                    <string>DT</string>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="FilmIdTitle_3">
+                   <property name="geometry">
+                    <rect>
+                     <x>1</x>
+                     <y>1</y>
+                     <width>26</width>
+                     <height>37</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Yu Gothic UI Semilight</family>
+                     <pointsize>20</pointsize>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;</string>
+                   </property>
+                   <property name="text">
+                    <string>ID</string>
+                   </property>
+                  </widget>
+                  <widget class="QLineEdit" name="FilmIdEdit_3">
+                   <property name="geometry">
+                    <rect>
+                     <x>122</x>
+                     <y>9</y>
+                     <width>140</width>
+                     <height>21</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Arial Black</family>
+                     <pointsize>9</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">border: 0px solid rgb(249, 167, 43);
+border-bottom-width: 2px;
+border-radius: px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+                   </property>
+                   <property name="text">
+                    <string>14D7</string>
+                   </property>
+                   <property name="placeholderText">
+                    <string/>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="FilmSubtitle_3">
+                   <property name="geometry">
+                    <rect>
+                     <x>1</x>
+                     <y>125</y>
+                     <width>115</width>
+                     <height>17</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Arial Black</family>
+                     <pointsize>9</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;</string>
+                   </property>
+                   <property name="text">
+                    <string>Available Subtitle</string>
+                   </property>
+                  </widget>
+                  <widget class="QLineEdit" name="FilmTypeEdit_3">
+                   <property name="geometry">
+                    <rect>
+                     <x>122</x>
+                     <y>71</y>
+                     <width>140</width>
+                     <height>21</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Arial Black</family>
+                     <pointsize>9</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">border: 0px solid rgb(249, 167, 43);
+border-bottom-width: 2px;
+border-radius: px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+                   </property>
+                   <property name="text">
+                    <string>Horror</string>
+                   </property>
+                   <property name="placeholderText">
+                    <string/>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="FilmTypeTitle_3">
+                   <property name="geometry">
+                    <rect>
+                     <x>1</x>
+                     <y>71</y>
+                     <width>32</width>
+                     <height>17</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Arial Black</family>
+                     <pointsize>9</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;</string>
+                   </property>
+                   <property name="text">
+                    <string>Type</string>
+                   </property>
+                  </widget>
+                  <widget class="QLineEdit" name="FilmNameEdit_3">
+                   <property name="geometry">
+                    <rect>
+                     <x>122</x>
+                     <y>44</y>
+                     <width>140</width>
+                     <height>21</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Arial Black</family>
+                     <pointsize>9</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">border: 0px solid rgb(249, 167, 43);
+border-bottom-width: 2px;
+border-radius: px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+                   </property>
+                   <property name="text">
+                    <string>MOTHER!</string>
+                   </property>
+                   <property name="placeholderText">
+                    <string/>
+                   </property>
+                  </widget>
+                  <widget class="QPushButton" name="FilmUpdateButton_3">
+                   <property name="geometry">
+                    <rect>
+                     <x>11</x>
+                     <y>260</y>
+                     <width>171</width>
+                     <height>21</height>
+                    </rect>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton
+{
+	background-color:rgb(50, 53, 57);
+	border-style:solid;
+	border-radius:7px;
+	border-width:1px;
+border-color: rgb(50, 53, 57);
+	color:#ffffff;
+	font-size:16px;
+font-family:Calibri;
+}
+
+QPushButton:hover
+{
+	background-color: #00000000;
+	border-color: rgb(30, 227, 0);
+	/*color:rgb(30, 227, 0);*/
+}
+
+QPushButton:focus
+{
+	background-color:  rgb(30, 227, 0);
+	border-color: rgba(30, 227, 0,0);
+	color:rgb(255, 255, 255);
+}
+</string>
+                   </property>
+                   <property name="text">
+                    <string>Update</string>
+                   </property>
+                  </widget>
+                  <widget class="QPlainTextEdit" name="FilmDescriptionEdit_3">
+                   <property name="geometry">
+                    <rect>
+                     <x>122</x>
+                     <y>148</y>
+                     <width>234</width>
+                     <height>115</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Segoe UI Semilight</family>
+                     <pointsize>11</pointsize>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">border: 0px solid rgb(249, 167, 43);
+
+background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+                   </property>
+                   <property name="plainText">
+                    <string>The private life of a poet and his wife ruptures at the seams when uninvited strangers begin to visit their tranquil, isolated home.</string>
+                   </property>
+                  </widget>
+                  <widget class="QCheckBox" name="FilmFrCheck_3">
+                   <property name="geometry">
+                    <rect>
+                     <x>123</x>
+                     <y>126</y>
+                     <width>32</width>
+                     <height>16</height>
+                    </rect>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QCheckBox
+{
+color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;
+}
+QCheckBox::indicator:unchecked {
+    border: 1px solid #ffffff;
+	border-radius: 5px;
+	border-color: rgb(249, 167, 43);
+    background: none;
+}
+QCheckBox::indicator:checked {
+    border: 0px solid #5A5A5A;
+	border-radius: 5px;
+
+    background: qradialgradient(spread:pad, cx:0.494, cy:0.528182, radius:2, fx:0.494, fy:0.528, stop:0.153409 rgba(255, 171, 44, 255), stop:0.3125 rgba(252, 128, 128, 0));
+}
+</string>
+                   </property>
+                   <property name="text">
+                    <string>FR</string>
+                   </property>
+                  </widget>
+                  <widget class="QCheckBox" name="FilmArCheck_3">
+                   <property name="geometry">
+                    <rect>
+                     <x>171</x>
+                     <y>126</y>
+                     <width>33</width>
+                     <height>16</height>
+                    </rect>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QCheckBox
+{
+color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;
+}
+QCheckBox::indicator:unchecked {
+    border: 1px solid #ffffff;
+	border-radius: 5px;
+	border-color: rgb(249, 167, 43);
+    background: none;
+}
+QCheckBox::indicator:checked {
+    border: 0px solid #5A5A5A;
+	border-radius: 5px;
+
+    background: qradialgradient(spread:pad, cx:0.494, cy:0.528182, radius:2, fx:0.494, fy:0.528, stop:0.153409 rgba(255, 171, 44, 255), stop:0.3125 rgba(252, 128, 128, 0));
+}
+</string>
+                   </property>
+                   <property name="text">
+                    <string>AR</string>
+                   </property>
+                  </widget>
+                  <widget class="QCheckBox" name="FilmEnCheck_3">
+                   <property name="geometry">
+                    <rect>
+                     <x>220</x>
+                     <y>126</y>
+                     <width>32</width>
+                     <height>16</height>
+                    </rect>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QCheckBox
+{
+color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;
+}
+QCheckBox::indicator:unchecked {
+    border: 1px solid #ffffff;
+	border-radius: 5px;
+	
+	border-color: rgb(249, 167, 43);
+    background: none;
+}
+QCheckBox::indicator:checked {
+    border: 0px solid #5A5A5A;
+	border-radius: 5px;
+
+    background: qradialgradient(spread:pad, cx:0.494, cy:0.528182, radius:2, fx:0.494, fy:0.528, stop:0.153409 rgba(255, 171, 44, 255), stop:0.3125 rgba(252, 128, 128, 0));
+}
+</string>
+                   </property>
+                   <property name="text">
+                    <string>EN</string>
+                   </property>
+                  </widget>
+                  <widget class="QPushButton" name="ProfilChangeNameButton_43">
+                   <property name="geometry">
+                    <rect>
+                     <x>200</x>
+                     <y>260</y>
+                     <width>171</width>
+                     <height>21</height>
+                    </rect>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton
+{
+	background-color:rgb(50, 53, 57);
+	border-style:solid;
+	border-radius:7px;
+	border-width:1px;
+border-color: rgb(50, 53, 57);
+	color:#ffffff;
+	font-size:16px;
+font-family:Calibri;
+}
+
+QPushButton:hover
+{
+	background-color: #00000000;
+	border-color:red;
+	/*color:rgb(30, 227, 0);*/
+}
+
+QPushButton:focus
+{
+	background-color:  red;
+	border-color: red;
+	color:rgb(255, 255, 255);
+}
+</string>
+                   </property>
+                   <property name="text">
+                    <string>Delete</string>
+                   </property>
+                  </widget>
+                 </widget>
+                </widget>
+                <widget class="QPushButton" name="FilmSwipeButton_3">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>170</y>
+                   <width>381</width>
+                   <height>71</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Candara Light</family>
+                   <pointsize>16</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton
+{
+	background-color:#00000000;
+	border-width:0px;
+	color:#ffffff;
+}
+
+QPushButton:hover
+{
+
+	color:rgb(30, 227, 0);
+}
+
+QPushButton:focus
+{
+
+	color:rgb(30, 227, 0);
+}
+</string>
+                 </property>
+                 <property name="text">
+                  <string>MOTHER!</string>
+                 </property>
+                </widget>
+               </widget>
+              </item>
+              <item>
+               <widget class="QGroupBox" name="FilmBox_2">
+                <property name="minimumSize">
+                 <size>
+                  <width>381</width>
+                  <height>531</height>
+                 </size>
+                </property>
+                <property name="maximumSize">
+                 <size>
+                  <width>381</width>
+                  <height>531</height>
+                 </size>
+                </property>
+                <property name="styleSheet">
+                 <string notr="true">/*background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0.386364 rgb(255, 139, 44), stop:0.397727 rgba(255, 255, 255, 0));*/
+border: 0px solid rgb(126, 70, 221);</string>
+                </property>
+                <property name="title">
+                 <string/>
+                </property>
+                <widget class="QPushButton" name="FilmImageButton_2">
+                 <property name="geometry">
+                  <rect>
+                   <x>5</x>
+                   <y>0</y>
+                   <width>371</width>
+                   <height>241</height>
+                  </rect>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="icon">
+                  <iconset>
+                   <normaloff>../mother-poster-crop.jpg</normaloff>../mother-poster-crop.jpg</iconset>
+                 </property>
+                 <property name="iconSize">
+                  <size>
+                   <width>400</width>
+                   <height>400</height>
+                  </size>
+                 </property>
+                 <property name="shortcut">
+                  <string/>
+                 </property>
+                </widget>
+                <widget class="QGroupBox" name="FilmBottomBox_2">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>197</y>
+                   <width>381</width>
+                   <height>331</height>
+                  </rect>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QGroupBox
+{
+background-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(59, 62, 66, 255), stop:1 rgba(255, 255, 255, 92));
+border: 0px solid rgb(255, 255, 255);
+border-bottom-width: 1px;
+border-radius: 10px;
+}</string>
+                 </property>
+                 <property name="title">
+                  <string/>
+                 </property>
+                 <widget class="QGroupBox" name="FilmDetailsBox_2">
+                  <property name="enabled">
+                   <bool>true</bool>
+                  </property>
+                  <property name="geometry">
+                   <rect>
+                    <x>0</x>
+                    <y>40</y>
+                    <width>381</width>
+                    <height>291</height>
+                   </rect>
+                  </property>
+                  <property name="styleSheet">
+                   <string notr="true">background-color: rgba(255, 255, 255, 0);
+border: 0px;</string>
+                  </property>
+                  <property name="title">
+                   <string/>
+                  </property>
+                  <widget class="QLineEdit" name="FilmPriceEdit_2">
+                   <property name="geometry">
+                    <rect>
+                     <x>122</x>
+                     <y>98</y>
+                     <width>140</width>
+                     <height>21</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Arial Black</family>
+                     <pointsize>9</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">border: 0px solid rgb(249, 167, 43);
+border-bottom-width: 2px;
+border-radius: px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+                   </property>
+                   <property name="text">
+                    <string>25</string>
+                   </property>
+                   <property name="placeholderText">
+                    <string/>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="FilmDescriptionTitle_2">
+                   <property name="geometry">
+                    <rect>
+                     <x>1</x>
+                     <y>148</y>
+                     <width>74</width>
+                     <height>17</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Arial Black</family>
+                     <pointsize>9</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;</string>
+                   </property>
+                   <property name="text">
+                    <string>Description</string>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="FilmNameTitle_2">
+                   <property name="geometry">
+                    <rect>
+                     <x>1</x>
+                     <y>44</y>
+                     <width>38</width>
+                     <height>17</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Arial Black</family>
+                     <pointsize>9</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;</string>
+                   </property>
+                   <property name="text">
+                    <string>Name</string>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="FilmPriceTitle_2">
+                   <property name="geometry">
+                    <rect>
+                     <x>1</x>
+                     <y>98</y>
+                     <width>34</width>
+                     <height>17</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Arial Black</family>
+                     <pointsize>9</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;</string>
+                   </property>
+                   <property name="text">
+                    <string>Price</string>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="FilmDT_2">
+                   <property name="geometry">
+                    <rect>
+                     <x>240</x>
+                     <y>98</y>
+                     <width>18</width>
+                     <height>17</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Arial Black</family>
+                     <pointsize>9</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;</string>
+                   </property>
+                   <property name="text">
+                    <string>DT</string>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="FilmIdTitle_2">
+                   <property name="geometry">
+                    <rect>
+                     <x>1</x>
+                     <y>1</y>
+                     <width>26</width>
+                     <height>37</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Yu Gothic UI Semilight</family>
+                     <pointsize>20</pointsize>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;</string>
+                   </property>
+                   <property name="text">
+                    <string>ID</string>
+                   </property>
+                  </widget>
+                  <widget class="QLineEdit" name="FilmIdEdit_2">
+                   <property name="geometry">
+                    <rect>
+                     <x>122</x>
+                     <y>9</y>
+                     <width>140</width>
+                     <height>21</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Arial Black</family>
+                     <pointsize>9</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">border: 0px solid rgb(249, 167, 43);
+border-bottom-width: 2px;
+border-radius: px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+                   </property>
+                   <property name="text">
+                    <string>14D7</string>
+                   </property>
+                   <property name="placeholderText">
+                    <string/>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="FilmSubtitle_2">
+                   <property name="geometry">
+                    <rect>
+                     <x>1</x>
+                     <y>125</y>
+                     <width>115</width>
+                     <height>17</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Arial Black</family>
+                     <pointsize>9</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;</string>
+                   </property>
+                   <property name="text">
+                    <string>Available Subtitle</string>
+                   </property>
+                  </widget>
+                  <widget class="QLineEdit" name="FilmTypeEdit_2">
+                   <property name="geometry">
+                    <rect>
+                     <x>122</x>
+                     <y>71</y>
+                     <width>140</width>
+                     <height>21</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Arial Black</family>
+                     <pointsize>9</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">border: 0px solid rgb(249, 167, 43);
+border-bottom-width: 2px;
+border-radius: px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+                   </property>
+                   <property name="text">
+                    <string>Horror</string>
+                   </property>
+                   <property name="placeholderText">
+                    <string/>
+                   </property>
+                  </widget>
+                  <widget class="QLabel" name="FilmTypeTitle_2">
+                   <property name="geometry">
+                    <rect>
+                     <x>1</x>
+                     <y>71</y>
+                     <width>32</width>
+                     <height>17</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Arial Black</family>
+                     <pointsize>9</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;</string>
+                   </property>
+                   <property name="text">
+                    <string>Type</string>
+                   </property>
+                  </widget>
+                  <widget class="QLineEdit" name="FilmNameEdit_2">
+                   <property name="geometry">
+                    <rect>
+                     <x>122</x>
+                     <y>44</y>
+                     <width>140</width>
+                     <height>21</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Arial Black</family>
+                     <pointsize>9</pointsize>
+                     <weight>75</weight>
+                     <bold>true</bold>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">border: 0px solid rgb(249, 167, 43);
+border-bottom-width: 2px;
+border-radius: px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+                   </property>
+                   <property name="text">
+                    <string>MOTHER!</string>
+                   </property>
+                   <property name="placeholderText">
+                    <string/>
+                   </property>
+                  </widget>
+                  <widget class="QPushButton" name="FilmUpdateButton_2">
+                   <property name="geometry">
+                    <rect>
+                     <x>11</x>
+                     <y>260</y>
+                     <width>171</width>
+                     <height>21</height>
+                    </rect>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton
+{
+	background-color:rgb(50, 53, 57);
+	border-style:solid;
+	border-radius:7px;
+	border-width:1px;
+border-color: rgb(50, 53, 57);
+	color:#ffffff;
+	font-size:16px;
+font-family:Calibri;
+}
+
+QPushButton:hover
+{
+	background-color: #00000000;
+	border-color: rgb(30, 227, 0);
+	/*color:rgb(30, 227, 0);*/
+}
+
+QPushButton:focus
+{
+	background-color:  rgb(30, 227, 0);
+	border-color: rgba(30, 227, 0,0);
+	color:rgb(255, 255, 255);
+}
+</string>
+                   </property>
+                   <property name="text">
+                    <string>Update</string>
+                   </property>
+                  </widget>
+                  <widget class="QPlainTextEdit" name="FilmDescriptionEdit_2">
+                   <property name="geometry">
+                    <rect>
+                     <x>122</x>
+                     <y>148</y>
+                     <width>234</width>
+                     <height>115</height>
+                    </rect>
+                   </property>
+                   <property name="font">
+                    <font>
+                     <family>Segoe UI Semilight</family>
+                     <pointsize>11</pointsize>
+                    </font>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">border: 0px solid rgb(249, 167, 43);
+
+background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+                   </property>
+                   <property name="plainText">
+                    <string>The private life of a poet and his wife ruptures at the seams when uninvited strangers begin to visit their tranquil, isolated home.</string>
+                   </property>
+                  </widget>
+                  <widget class="QCheckBox" name="FilmFrCheck_2">
+                   <property name="geometry">
+                    <rect>
+                     <x>123</x>
+                     <y>126</y>
+                     <width>32</width>
+                     <height>16</height>
+                    </rect>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QCheckBox
+{
+color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;
+}
+QCheckBox::indicator:unchecked {
+    border: 1px solid #ffffff;
+	border-radius: 5px;
+	border-color: rgb(249, 167, 43);
+    background: none;
+}
+QCheckBox::indicator:checked {
+    border: 0px solid #5A5A5A;
+	border-radius: 5px;
+
+    background: qradialgradient(spread:pad, cx:0.494, cy:0.528182, radius:2, fx:0.494, fy:0.528, stop:0.153409 rgba(255, 171, 44, 255), stop:0.3125 rgba(252, 128, 128, 0));
+}
+</string>
+                   </property>
+                   <property name="text">
+                    <string>FR</string>
+                   </property>
+                  </widget>
+                  <widget class="QCheckBox" name="FilmArCheck_2">
+                   <property name="geometry">
+                    <rect>
+                     <x>171</x>
+                     <y>126</y>
+                     <width>33</width>
+                     <height>16</height>
+                    </rect>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QCheckBox
+{
+color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;
+}
+QCheckBox::indicator:unchecked {
+    border: 1px solid #ffffff;
+	border-radius: 5px;
+	border-color: rgb(249, 167, 43);
+    background: none;
+}
+QCheckBox::indicator:checked {
+    border: 0px solid #5A5A5A;
+	border-radius: 5px;
+
+    background: qradialgradient(spread:pad, cx:0.494, cy:0.528182, radius:2, fx:0.494, fy:0.528, stop:0.153409 rgba(255, 171, 44, 255), stop:0.3125 rgba(252, 128, 128, 0));
+}
+</string>
+                   </property>
+                   <property name="text">
+                    <string>AR</string>
+                   </property>
+                  </widget>
+                  <widget class="QCheckBox" name="FilmEnCheck_2">
+                   <property name="geometry">
+                    <rect>
+                     <x>220</x>
+                     <y>126</y>
+                     <width>32</width>
+                     <height>16</height>
+                    </rect>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QCheckBox
+{
+color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;
+}
+QCheckBox::indicator:unchecked {
+    border: 1px solid #ffffff;
+	border-radius: 5px;
+	
+	border-color: rgb(249, 167, 43);
+    background: none;
+}
+QCheckBox::indicator:checked {
+    border: 0px solid #5A5A5A;
+	border-radius: 5px;
+
+    background: qradialgradient(spread:pad, cx:0.494, cy:0.528182, radius:2, fx:0.494, fy:0.528, stop:0.153409 rgba(255, 171, 44, 255), stop:0.3125 rgba(252, 128, 128, 0));
+}
+</string>
+                   </property>
+                   <property name="text">
+                    <string>EN</string>
+                   </property>
+                  </widget>
+                  <widget class="QPushButton" name="ProfilChangeNameButton_42">
+                   <property name="geometry">
+                    <rect>
+                     <x>200</x>
+                     <y>260</y>
+                     <width>171</width>
+                     <height>21</height>
+                    </rect>
+                   </property>
+                   <property name="styleSheet">
+                    <string notr="true">QPushButton
+{
+	background-color:rgb(50, 53, 57);
+	border-style:solid;
+	border-radius:7px;
+	border-width:1px;
+border-color: rgb(50, 53, 57);
+	color:#ffffff;
+	font-size:16px;
+font-family:Calibri;
+}
+
+QPushButton:hover
+{
+	background-color: #00000000;
+	border-color:red;
+	/*color:rgb(30, 227, 0);*/
+}
+
+QPushButton:focus
+{
+	background-color:  red;
+	border-color: red;
+	color:rgb(255, 255, 255);
+}
+</string>
+                   </property>
+                   <property name="text">
+                    <string>Delete</string>
+                   </property>
+                  </widget>
+                 </widget>
+                </widget>
+                <widget class="QPushButton" name="FilmSwipeButton_2">
+                 <property name="geometry">
+                  <rect>
+                   <x>0</x>
+                   <y>170</y>
+                   <width>381</width>
+                   <height>71</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Candara Light</family>
+                   <pointsize>16</pointsize>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">QPushButton
+{
+	background-color:#00000000;
+	border-width:0px;
+	color:#ffffff;
+}
+
+QPushButton:hover
+{
+
+	color:rgb(30, 227, 0);
+}
+
+QPushButton:focus
+{
+
+	color:rgb(30, 227, 0);
+}
+</string>
+                 </property>
+                 <property name="text">
+                  <string>MOTHER!</string>
+                 </property>
+                </widget>
+               </widget>
+              </item>
+             </layout>
+            </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="AddMovieTab">
+         <property name="styleSheet">
+          <string notr="true">background-color: rgba(255, 255, 255, 0);</string>
+         </property>
+         <attribute name="title">
+          <string>Add</string>
+         </attribute>
+         <widget class="QGroupBox" name="FilmDetailsBox_5">
+          <property name="enabled">
+           <bool>true</bool>
+          </property>
+          <property name="geometry">
+           <rect>
+            <x>260</x>
+            <y>150</y>
+            <width>381</width>
+            <height>291</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgba(255, 255, 255, 0);
+border: 0px;</string>
+          </property>
+          <property name="title">
+           <string/>
+          </property>
+          <widget class="QLineEdit" name="FilmPriceEdit_6">
+           <property name="geometry">
+            <rect>
+             <x>122</x>
+             <y>98</y>
+             <width>140</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Arial Black</family>
+             <pointsize>9</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border: 0px solid rgb(249, 167, 43);
+border-bottom-width: 2px;
+border-radius: px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>25</string>
+           </property>
+           <property name="placeholderText">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="FilmDescriptionTitle_5">
+           <property name="geometry">
+            <rect>
+             <x>1</x>
+             <y>148</y>
+             <width>74</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Arial Black</family>
+             <pointsize>9</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;</string>
+           </property>
+           <property name="text">
+            <string>Description</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="FilmNameTitle_6">
+           <property name="geometry">
+            <rect>
+             <x>1</x>
+             <y>44</y>
+             <width>38</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Arial Black</family>
+             <pointsize>9</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;</string>
+           </property>
+           <property name="text">
+            <string>Name</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="FilmPriceTitle_6">
+           <property name="geometry">
+            <rect>
+             <x>1</x>
+             <y>98</y>
+             <width>34</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Arial Black</family>
+             <pointsize>9</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;</string>
+           </property>
+           <property name="text">
+            <string>Price</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="FilmDT_5">
+           <property name="geometry">
+            <rect>
+             <x>240</x>
+             <y>98</y>
+             <width>18</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Arial Black</family>
+             <pointsize>9</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;</string>
+           </property>
+           <property name="text">
+            <string>DT</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="FilmIdTitle_6">
+           <property name="geometry">
+            <rect>
+             <x>1</x>
+             <y>1</y>
+             <width>26</width>
+             <height>37</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Yu Gothic UI Semilight</family>
+             <pointsize>20</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;</string>
+           </property>
+           <property name="text">
+            <string>ID</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="FilmIdEdit_6">
+           <property name="geometry">
+            <rect>
+             <x>122</x>
+             <y>9</y>
+             <width>140</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Arial Black</family>
+             <pointsize>9</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border: 0px solid rgb(249, 167, 43);
+border-bottom-width: 2px;
+border-radius: px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>14D7</string>
+           </property>
+           <property name="placeholderText">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="FilmSubtitle_6">
+           <property name="geometry">
+            <rect>
+             <x>1</x>
+             <y>125</y>
+             <width>115</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Arial Black</family>
+             <pointsize>9</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;</string>
+           </property>
+           <property name="text">
+            <string>Available Subtitle</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="FilmTypeEdit_6">
+           <property name="geometry">
+            <rect>
+             <x>122</x>
+             <y>71</y>
+             <width>140</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Arial Black</family>
+             <pointsize>9</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border: 0px solid rgb(249, 167, 43);
+border-bottom-width: 2px;
+border-radius: px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>Horror</string>
+           </property>
+           <property name="placeholderText">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QLabel" name="FilmTypeTitle_6">
+           <property name="geometry">
+            <rect>
+             <x>1</x>
+             <y>71</y>
+             <width>32</width>
+             <height>17</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Arial Black</family>
+             <pointsize>9</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;</string>
+           </property>
+           <property name="text">
+            <string>Type</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="FilmNameEdit_6">
+           <property name="geometry">
+            <rect>
+             <x>122</x>
+             <y>44</y>
+             <width>140</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Arial Black</family>
+             <pointsize>9</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border: 0px solid rgb(249, 167, 43);
+border-bottom-width: 2px;
+border-radius: px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>MOTHER!</string>
+           </property>
+           <property name="placeholderText">
+            <string/>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="FilmUpdateButton_6">
+           <property name="geometry">
+            <rect>
+             <x>11</x>
+             <y>260</y>
+             <width>351</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton
+{
+	background-color:rgb(50, 53, 57);
+	border-style:solid;
+	border-radius:7px;
+	border-width:1px;
+border-color: rgb(50, 53, 57);
+	color:#ffffff;
+	font-size:16px;
+font-family:Calibri;
+}
+
+QPushButton:hover
+{
+	background-color: #00000000;
+	border-color: rgb(30, 227, 0);
+	/*color:rgb(30, 227, 0);*/
+}
+
+QPushButton:focus
+{
+	background-color:  rgb(30, 227, 0);
+	border-color: rgba(30, 227, 0,0);
+	color:rgb(255, 255, 255);
+}
+</string>
+           </property>
+           <property name="text">
+            <string>Add Film</string>
+           </property>
+          </widget>
+          <widget class="QPlainTextEdit" name="FilmDescriptionEdit_5">
+           <property name="geometry">
+            <rect>
+             <x>122</x>
+             <y>148</y>
+             <width>234</width>
+             <height>115</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Segoe UI Semilight</family>
+             <pointsize>11</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border: 0px solid rgb(249, 167, 43);
+
+background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="plainText">
+            <string>The private life of a poet and his wife ruptures at the seams when uninvited strangers begin to visit their tranquil, isolated home.</string>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="FilmFrCheck_6">
+           <property name="geometry">
+            <rect>
+             <x>123</x>
+             <y>126</y>
+             <width>32</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QCheckBox
+{
+color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;
+}
+QCheckBox::indicator:unchecked {
+    border: 1px solid #ffffff;
+	border-radius: 5px;
+	border-color: rgb(249, 167, 43);
+    background: none;
+}
+QCheckBox::indicator:checked {
+    border: 0px solid #5A5A5A;
+	border-radius: 5px;
+
+    background: qradialgradient(spread:pad, cx:0.494, cy:0.528182, radius:2, fx:0.494, fy:0.528, stop:0.153409 rgba(255, 171, 44, 255), stop:0.3125 rgba(252, 128, 128, 0));
+}
+</string>
+           </property>
+           <property name="text">
+            <string>FR</string>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="FilmArCheck_6">
+           <property name="geometry">
+            <rect>
+             <x>171</x>
+             <y>126</y>
+             <width>33</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QCheckBox
+{
+color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;
+}
+QCheckBox::indicator:unchecked {
+    border: 1px solid #ffffff;
+	border-radius: 5px;
+	border-color: rgb(249, 167, 43);
+    background: none;
+}
+QCheckBox::indicator:checked {
+    border: 0px solid #5A5A5A;
+	border-radius: 5px;
+
+    background: qradialgradient(spread:pad, cx:0.494, cy:0.528182, radius:2, fx:0.494, fy:0.528, stop:0.153409 rgba(255, 171, 44, 255), stop:0.3125 rgba(252, 128, 128, 0));
+}
+</string>
+           </property>
+           <property name="text">
+            <string>AR</string>
+           </property>
+          </widget>
+          <widget class="QCheckBox" name="FilmEnCheck_6">
+           <property name="geometry">
+            <rect>
+             <x>220</x>
+             <y>126</y>
+             <width>32</width>
+             <height>16</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QCheckBox
+{
+color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;
+}
+QCheckBox::indicator:unchecked {
+    border: 1px solid #ffffff;
+	border-radius: 5px;
+	
+	border-color: rgb(249, 167, 43);
+    background: none;
+}
+QCheckBox::indicator:checked {
+    border: 0px solid #5A5A5A;
+	border-radius: 5px;
+
+    background: qradialgradient(spread:pad, cx:0.494, cy:0.528182, radius:2, fx:0.494, fy:0.528, stop:0.153409 rgba(255, 171, 44, 255), stop:0.3125 rgba(252, 128, 128, 0));
+}
+</string>
+           </property>
+           <property name="text">
+            <string>EN</string>
+           </property>
+          </widget>
+         </widget>
+        </widget>
+       </widget>
+      </widget>
       <widget class="QWidget" name="theatres"/>
       <widget class="QWidget" name="clients"/>
       <widget class="QWidget" name="subscriptions"/>
