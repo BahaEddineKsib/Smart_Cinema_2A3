@@ -252,7 +252,7 @@ background-color: rgba(255, 255, 255, 0);</string>
 background-color: rgba(255, 255, 255, 0);</string>
        </property>
        <property name="text">
-        <string>Profil</string>
+        <string>Profile</string>
        </property>
       </widget>
      </widget>
@@ -307,7 +307,6 @@ background-color: rgba(255, 255, 255, 0);</string>
 	color:#ffffff;
 	font-size:16px;
 font-family:Calibri;
-qproperty-icon: url(:/new/prefix1/imgs/curtains-small.png);
 qproperty-iconSize:35px;
 
 }
@@ -387,7 +386,7 @@ QPushButton:focus
 	color:#ffffff;
 	font-size:16px;
 font-family:Calibri;
-qproperty-icon: url(:/new/prefix1/imgs/popcorn-small.png);
+/*qproperty-icon: url(:/new/prefix1/imgs/popcorn-small.png);*/
 qproperty-iconSize:35px;
 
 }
@@ -746,7 +745,7 @@ QPushButton:focus
 	color:#ffffff;
 	font-size:16px;
 font-family:Calibri;
-qproperty-icon: url(:/new/prefix1/imgs/curtains-small.png);
+/*qproperty-icon: url(:/new/prefix1/imgs/curtains-small.png);*/
 qproperty-iconSize:35px;
 
 }
@@ -9621,7 +9620,7 @@ background-color: rgba(255, 255, 255, 0);</string>
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>100</width>
+               <width>949</width>
                <height>638</height>
               </rect>
              </property>
@@ -16095,8 +16094,8 @@ QTabBar::tab:selected
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>751</width>
-               <height>612</height>
+               <width>963</width>
+               <height>615</height>
               </rect>
              </property>
              <property name="styleSheet">
@@ -16493,7 +16492,7 @@ QPushButton:focus
                <x>0</x>
                <y>0</y>
                <width>1492</width>
-               <height>501</height>
+               <height>601</height>
               </rect>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_23">
@@ -18681,7 +18680,7 @@ QComboBox QAbstractItemView{
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>118</width>
+               <width>949</width>
                <height>668</height>
               </rect>
              </property>
