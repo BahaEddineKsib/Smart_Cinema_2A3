@@ -11,8 +11,8 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
-    ui->BigStack->setCurrentIndex(1);
-    ui->DashboardPages->setCurrentIndex(0);
+    ui->BigStack->setCurrentIndex(0);
+   // ui->DashboardPages->setCurrentIndex(0);
     timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(TimeOfWork()));
     timer->start(1000);

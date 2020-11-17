@@ -71,7 +71,7 @@ border-radius: 10px;
       <property name="midLineWidth">
        <number>0</number>
       </property>
-      <widget class="QPushButton" name="pushButton_2">
+      <widget class="QPushButton" name="LoginButton">
        <property name="geometry">
         <rect>
          <x>10</x>
@@ -311,7 +311,7 @@ background-color: rgb(6, 150, 110);
         <string>Login</string>
        </property>
       </widget>
-      <widget class="QLineEdit" name="ProfilContactEdit_39">
+      <widget class="QLineEdit" name="LoginUsernameInput">
        <property name="geometry">
         <rect>
          <x>140</x>
@@ -357,7 +357,7 @@ color: rgb(255, 255, 255);</string>
         <string>Username</string>
        </property>
       </widget>
-      <widget class="QLineEdit" name="ProfilContactEdit_40">
+      <widget class="QLineEdit" name="LoginPasswordInput">
        <property name="geometry">
         <rect>
          <x>140</x>
@@ -403,7 +403,7 @@ color: rgb(255, 255, 255);</string>
         <string>Password</string>
        </property>
       </widget>
-      <widget class="QRadioButton" name="radioButton_3">
+      <widget class="QRadioButton" name="LoginManagerRadioButton">
        <property name="geometry">
         <rect>
          <x>160</x>
@@ -426,7 +426,7 @@ background-color: rgba(255, 255, 255, 0);</string>
         <string>MANAGER</string>
        </property>
       </widget>
-      <widget class="QRadioButton" name="radioButton_4">
+      <widget class="QRadioButton" name="LoginEmployerRadioButton">
        <property name="geometry">
         <rect>
          <x>160</x>
@@ -449,7 +449,7 @@ background-color: rgba(255, 255, 255, 0);</string>
         <string>EMPLOYER</string>
        </property>
       </widget>
-      <widget class="QLabel" name="label_29">
+      <widget class="QLabel" name="LoginTitle">
        <property name="geometry">
         <rect>
          <x>0</x>

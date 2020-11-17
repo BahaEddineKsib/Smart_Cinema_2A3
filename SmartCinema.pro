@@ -27,5 +27,6 @@ else: unix:!android: target.path = /opt/$${TARGET}/bin
 
 RESOURCES += \
     imgs.qrc \
+    login_icon.qrc \
     logo.qrc \
     profil_icon.qrc

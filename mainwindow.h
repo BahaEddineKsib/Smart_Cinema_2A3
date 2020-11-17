@@ -50,5 +50,6 @@ private:
     Ui::MainWindow *ui;
     QTimer *timer;
     int seconds,minuts,hours;
+
 };
 #endif // MAINWINDOW_H
