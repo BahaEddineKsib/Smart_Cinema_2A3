@@ -11,8 +11,8 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
-    ui->BigStack->setCurrentIndex(0);
-   // ui->DashboardPages->setCurrentIndex(0);
+    ui->BigStack->setCurrentIndex(1);
+    //ui->DashboardPages->setCurrentIndex(0);
     timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(TimeOfWork()));
     timer->start(1000);
@@ -27,7 +27,6 @@ MainWindow::MainWindow(QWidget *parent)
     ui->ProfilPhoto->setPixmap(ProfilIcon.scaled(100,100,Qt::KeepAspectRatio));
     //ui->label_41->setPixmap(ProfilIcon.scaled(100,100,Qt::KeepAspectRatio));
     ui->label->setPixmap(ProfilIcon.scaled(100,100,Qt::KeepAspectRatio));
-    //GIT TEST
 }
 
 MainWindow::~MainWindow()
