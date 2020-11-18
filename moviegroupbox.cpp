@@ -17,8 +17,6 @@ MovieGroupBox::MovieGroupBox(QWidget *parent) : QWidget(parent)
     MovieBox = new QGroupBox(this);
     MovieBox->setMinimumSize(QSize(381, 531));
     MovieBox->setMaximumSize(QSize(381, 531));
-   // MovieBox->setStyleSheet(QLatin1String("border: 2px solid rgb(255, 255, 255);\n"
-   //                                   "background-color:red;"));
     MovieImageButton = new QPushButton(MovieBox);
     MovieImageButton->setObjectName(QStringLiteral("MovieImageButton"));
     MovieImageButton->setGeometry(QRect(5, 0, 371, 241));
@@ -27,7 +25,7 @@ MovieGroupBox::MovieGroupBox(QWidget *parent) : QWidget(parent)
     MovieImageButton->setIcon(icon1);
     MovieImageButton->setIconSize(QSize(400, 400));
     MovieImageButton->setStyleSheet(QLatin1String("border: 2px solid rgb(255, 255, 255);\n"
-                                      "background-color:red;"));
+                                                  "background-color:red;"));
     MovieBottomBox = new QGroupBox(MovieBox);
     MovieBottomBox->setObjectName(QStringLiteral("MovieBottomBox"));
     MovieBottomBox->setGeometry(QRect(0, 197, 381, 331));
