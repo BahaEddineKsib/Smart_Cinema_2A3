@@ -1321,7 +1321,7 @@ QPushButton:focus
 </string>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>6</number>
       </property>
       <widget class="QWidget" name="profil">
        <widget class="QLabel" name="ProfilPhoto">
@@ -1397,7 +1397,7 @@ QToolBox::tab:selected
 </string>
         </property>
         <property name="currentIndex">
-         <number>5</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="ProfilName">
          <property name="geometry">
@@ -14431,13 +14431,13 @@ QPushButton:focus
           <x>0</x>
           <y>0</y>
           <width>965</width>
-          <height>642</height>
+          <height>631</height>
          </rect>
         </property>
         <property name="minimumSize">
          <size>
-          <width>965</width>
-          <height>642</height>
+          <width>0</width>
+          <height>0</height>
          </size>
         </property>
         <property name="maximumSize">
@@ -14489,7 +14489,7 @@ QTabBar::tab:selected
 </string>
         </property>
         <property name="currentIndex">
-         <number>1</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="AddBillTab">
          <property name="styleSheet">
@@ -14529,7 +14529,7 @@ QTabBar::tab:selected
                <x>0</x>
                <y>0</y>
                <width>963</width>
-               <height>619</height>
+               <height>608</height>
               </rect>
              </property>
              <property name="styleSheet">
@@ -14926,7 +14926,7 @@ QPushButton:focus
                <x>0</x>
                <y>0</y>
                <width>1492</width>
-               <height>602</height>
+               <height>591</height>
               </rect>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_23">
@@ -16716,13 +16716,13 @@ QPushButton:focus
           <x>0</x>
           <y>0</y>
           <width>965</width>
-          <height>642</height>
+          <height>561</height>
          </rect>
         </property>
         <property name="minimumSize">
          <size>
-          <width>965</width>
-          <height>642</height>
+          <width>900</width>
+          <height>500</height>
          </size>
         </property>
         <property name="maximumSize">
@@ -17082,6 +17082,9 @@ QComboBox QAbstractItemView{
          </layout>
         </widget>
         <widget class="QWidget" name="ProductsTab">
+         <property name="styleSheet">
+          <string notr="true">border: 0px;</string>
+         </property>
          <attribute name="title">
           <string>Products</string>
          </attribute>
@@ -17114,9 +17117,12 @@ QComboBox QAbstractItemView{
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>946</width>
+               <width>948</width>
                <height>668</height>
               </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border: 0px;</string>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_5">
               <item>
@@ -23444,7 +23450,7 @@ QPushButton:focus
        </widget>
       </widget>
       <widget class="QWidget" name="movies">
-       <widget class="QTabWidget" name="tabWidget_5">
+       <widget class="QTabWidget" name="MoviesTabWidget">
         <property name="geometry">
          <rect>
           <x>0</x>
@@ -23510,7 +23516,7 @@ QTabBar::tab:selected
         <property name="currentIndex">
          <number>0</number>
         </property>
-        <widget class="QWidget" name="movies_2">
+        <widget class="QWidget" name="MoviesWidget">
          <attribute name="title">
           <string>Movies</string>
          </attribute>
@@ -23943,14 +23949,14 @@ QPushButton:focus
            </widget>
           </item>
           <item>
-           <widget class="QScrollArea" name="scrollArea_3">
+           <widget class="QScrollArea" name="MoviesScrollArea">
             <property name="styleSheet">
              <string notr="true">border: 0px;</string>
             </property>
             <property name="widgetResizable">
              <bool>true</bool>
             </property>
-            <widget class="QWidget" name="scrollAreaWidgetContents_3">
+            <widget class="QWidget" name="MoviesArea">
              <property name="geometry">
               <rect>
                <x>0</x>
@@ -23976,7 +23982,10 @@ QPushButton:focus
                <number>0</number>
               </property>
               <item>
-               <widget class="QGroupBox" name="FilmBox">
+               <widget class="MovieGroupBox" name="widget_3" native="true"/>
+              </item>
+              <item>
+               <widget class="QGroupBox" name="MovieBox">
                 <property name="minimumSize">
                  <size>
                   <width>381</width>
@@ -23996,7 +24005,7 @@ border: 0px solid rgb(126, 70, 221);</string>
                 <property name="title">
                  <string/>
                 </property>
-                <widget class="QPushButton" name="FilmImageButton">
+                <widget class="QPushButton" name="MovieImageButton">
                  <property name="geometry">
                   <rect>
                    <x>5</x>
@@ -24009,8 +24018,8 @@ border: 0px solid rgb(126, 70, 221);</string>
                   <string/>
                  </property>
                  <property name="icon">
-                  <iconset>
-                   <normaloff>../mother-poster-crop.jpg</normaloff>../mother-poster-crop.jpg</iconset>
+                  <iconset resource="imgs.qrc">
+                   <normaloff>:/new/prefix1/imgs/deadpool.png</normaloff>:/new/prefix1/imgs/deadpool.png</iconset>
                  </property>
                  <property name="iconSize">
                   <size>
@@ -24022,7 +24031,7 @@ border: 0px solid rgb(126, 70, 221);</string>
                   <string/>
                  </property>
                 </widget>
-                <widget class="QGroupBox" name="FilmBottomBox">
+                <widget class="QGroupBox" name="MovieBottomBox">
                  <property name="geometry">
                   <rect>
                    <x>0</x>
@@ -24043,7 +24052,7 @@ border-radius: 10px;
                  <property name="title">
                   <string/>
                  </property>
-                 <widget class="QGroupBox" name="FilmDetailsBox">
+                 <widget class="QGroupBox" name="MovieDetailsBox">
                   <property name="enabled">
                    <bool>true</bool>
                   </property>
@@ -24062,7 +24071,7 @@ border: 0px;</string>
                   <property name="title">
                    <string/>
                   </property>
-                  <widget class="QLineEdit" name="FilmPriceEdit">
+                  <widget class="QLineEdit" name="MoviePriceEdit">
                    <property name="geometry">
                     <rect>
                      <x>122</x>
@@ -24093,7 +24102,7 @@ color: rgb(255, 255, 255);</string>
                     <string/>
                    </property>
                   </widget>
-                  <widget class="QLabel" name="FilmDescriptionTitle">
+                  <widget class="QLabel" name="MovieDescriptionTitle">
                    <property name="geometry">
                     <rect>
                      <x>1</x>
@@ -24119,7 +24128,7 @@ border: 0px;</string>
                     <string>Description</string>
                    </property>
                   </widget>
-                  <widget class="QLabel" name="FilmNameTitle">
+                  <widget class="QLabel" name="MovieNameTitle">
                    <property name="geometry">
                     <rect>
                      <x>1</x>
@@ -24145,7 +24154,7 @@ border: 0px;</string>
                     <string>Name</string>
                    </property>
                   </widget>
-                  <widget class="QLabel" name="FilmPriceTitle">
+                  <widget class="QLabel" name="MoviePriceTitle">
                    <property name="geometry">
                     <rect>
                      <x>1</x>
@@ -24171,7 +24180,7 @@ border: 0px;</string>
                     <string>Price</string>
                    </property>
                   </widget>
-                  <widget class="QLabel" name="FilmDT">
+                  <widget class="QLabel" name="MovieDT">
                    <property name="geometry">
                     <rect>
                      <x>240</x>
@@ -24197,7 +24206,7 @@ border: 0px;</string>
                     <string>DT</string>
                    </property>
                   </widget>
-                  <widget class="QLabel" name="FilmIdTitle">
+                  <widget class="QLabel" name="MovieIdTitle">
                    <property name="geometry">
                     <rect>
                      <x>1</x>
@@ -24221,7 +24230,7 @@ border: 0px;</string>
                     <string>ID</string>
                    </property>
                   </widget>
-                  <widget class="QLineEdit" name="FilmIdEdit">
+                  <widget class="QLineEdit" name="MovieIdEdit">
                    <property name="geometry">
                     <rect>
                      <x>122</x>
@@ -24252,7 +24261,7 @@ color: rgb(255, 255, 255);</string>
                     <string/>
                    </property>
                   </widget>
-                  <widget class="QLabel" name="FilmSubtitle">
+                  <widget class="QLabel" name="MovieSubtitle">
                    <property name="geometry">
                     <rect>
                      <x>1</x>
@@ -24278,7 +24287,7 @@ border: 0px;</string>
                     <string>Available Subtitle</string>
                    </property>
                   </widget>
-                  <widget class="QLineEdit" name="FilmTypeEdit">
+                  <widget class="QLineEdit" name="MovieTypeEdit">
                    <property name="geometry">
                     <rect>
                      <x>122</x>
@@ -24309,7 +24318,7 @@ color: rgb(255, 255, 255);</string>
                     <string/>
                    </property>
                   </widget>
-                  <widget class="QLabel" name="FilmTypeTitle">
+                  <widget class="QLabel" name="MovieTypeTitle">
                    <property name="geometry">
                     <rect>
                      <x>1</x>
@@ -24335,7 +24344,7 @@ border: 0px;</string>
                     <string>Type</string>
                    </property>
                   </widget>
-                  <widget class="QLineEdit" name="FilmNameEdit">
+                  <widget class="QLineEdit" name="MovieNameEdit">
                    <property name="geometry">
                     <rect>
                      <x>122</x>
@@ -24366,7 +24375,7 @@ color: rgb(255, 255, 255);</string>
                     <string/>
                    </property>
                   </widget>
-                  <widget class="QPushButton" name="FilmUpdateButton">
+                  <widget class="QPushButton" name="MovieUpdateButton">
                    <property name="geometry">
                     <rect>
                      <x>11</x>
@@ -24407,7 +24416,7 @@ QPushButton:focus
                     <string>Update</string>
                    </property>
                   </widget>
-                  <widget class="QPlainTextEdit" name="FilmDescriptionEdit">
+                  <widget class="QPlainTextEdit" name="MovieDescriptionEdit">
                    <property name="geometry">
                     <rect>
                      <x>122</x>
@@ -24432,7 +24441,7 @@ color: rgb(255, 255, 255);</string>
                     <string>The private life of a poet and his wife ruptures at the seams when uninvited strangers begin to visit their tranquil, isolated home.</string>
                    </property>
                   </widget>
-                  <widget class="QCheckBox" name="FilmFrCheck">
+                  <widget class="QCheckBox" name="MovieFrCheck">
                    <property name="geometry">
                     <rect>
                      <x>123</x>
@@ -24466,7 +24475,7 @@ QCheckBox::indicator:checked {
                     <string>FR</string>
                    </property>
                   </widget>
-                  <widget class="QCheckBox" name="FilmArCheck">
+                  <widget class="QCheckBox" name="MovieArCheck">
                    <property name="geometry">
                     <rect>
                      <x>171</x>
@@ -24500,7 +24509,7 @@ QCheckBox::indicator:checked {
                     <string>AR</string>
                    </property>
                   </widget>
-                  <widget class="QCheckBox" name="FilmEnCheck">
+                  <widget class="QCheckBox" name="MovieEnCheck">
                    <property name="geometry">
                     <rect>
                      <x>220</x>
@@ -24535,7 +24544,7 @@ QCheckBox::indicator:checked {
                     <string>EN</string>
                    </property>
                   </widget>
-                  <widget class="QPushButton" name="ProfilChangeNameButton_39">
+                  <widget class="QPushButton" name="MovieDeleteButton">
                    <property name="geometry">
                     <rect>
                      <x>200</x>
@@ -24578,7 +24587,7 @@ QPushButton:focus
                   </widget>
                  </widget>
                 </widget>
-                <widget class="QPushButton" name="FilmSwipeButton">
+                <widget class="QPushButton" name="MovieSwipeButton">
                  <property name="geometry">
                   <rect>
                    <x>0</x>
@@ -34492,9 +34501,16 @@ border-radius:5px;</string>
    <header>poll_chart.h</header>
    <container>1</container>
   </customwidget>
+  <customwidget>
+   <class>MovieGroupBox</class>
+   <extends>QWidget</extends>
+   <header>moviegroupbox.h</header>
+   <container>1</container>
+  </customwidget>
  </customwidgets>
  <resources>
   <include location="logo.qrc"/>
+  <include location="imgs.qrc"/>
  </resources>
  <connections/>
 </ui>

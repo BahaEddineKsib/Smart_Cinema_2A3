@@ -11,10 +11,12 @@ CONFIG += c++11
 SOURCES += \
     main.cpp \
     mainwindow.cpp \
+    moviegroupbox.cpp \
     poll_chart.cpp
 
 HEADERS += \
     mainwindow.h \
+    moviegroupbox.h \
     poll_chart.h
 
 FORMS += \
@@ -30,3 +32,6 @@ RESOURCES += \
     login_icon.qrc \
     logo.qrc \
     profil_icon.qrc
+
+DISTFILES += \
+    imgs/mother-poster-crop.jpg
