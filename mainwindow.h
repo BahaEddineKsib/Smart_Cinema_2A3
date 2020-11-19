@@ -46,6 +46,8 @@ private slots:
 
     void on_PollsButton_clicked();
 
+    void on_LoginButton_clicked();
+
 private:
     Ui::MainWindow *ui;
     QTimer *timer;

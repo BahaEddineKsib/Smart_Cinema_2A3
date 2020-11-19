@@ -27,7 +27,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>1</number>
+     <number>0</number>
     </property>
     <widget class="QWidget" name="LoginPage">
      <widget class="QFrame" name="Loginframe">
@@ -495,6 +495,9 @@ background-color: rgba(255, 255, 255, 0);</string>
         <width>641</width>
         <height>401</height>
        </rect>
+      </property>
+      <property name="styleSheet">
+       <string notr="true"/>
       </property>
       <property name="text">
        <string/>
@@ -1494,8 +1497,8 @@ QPushButton:focus
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>281</width>
-           <height>38</height>
+           <width>100</width>
+           <height>30</height>
           </rect>
          </property>
          <attribute name="label">
@@ -1578,8 +1581,8 @@ QPushButton:focus
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>281</width>
-           <height>38</height>
+           <width>100</width>
+           <height>30</height>
           </rect>
          </property>
          <attribute name="label">
@@ -1662,8 +1665,8 @@ color: rgb(255, 255, 255);</string>
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>281</width>
-           <height>38</height>
+           <width>100</width>
+           <height>30</height>
           </rect>
          </property>
          <attribute name="label">
@@ -1783,8 +1786,8 @@ color: rgb(255, 255, 255);</string>
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>281</width>
-           <height>38</height>
+           <width>100</width>
+           <height>30</height>
           </rect>
          </property>
          <attribute name="label">
@@ -1818,8 +1821,8 @@ color: rgb(255, 255, 255);</string>
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>281</width>
-           <height>38</height>
+           <width>100</width>
+           <height>30</height>
           </rect>
          </property>
          <attribute name="label">
@@ -1954,7 +1957,7 @@ QTabBar::tab:selected
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>946</width>
+               <width>118</width>
                <height>817</height>
               </rect>
              </property>
@@ -5308,7 +5311,7 @@ QPushButton:focus
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>946</width>
+               <width>100</width>
                <height>660</height>
               </rect>
              </property>
@@ -9779,7 +9782,7 @@ QTabBar::tab:selected
             <x>290</x>
             <y>130</y>
             <width>321</width>
-            <height>321</height>
+            <height>363</height>
            </rect>
           </property>
           <layout class="QFormLayout" name="formLayout">
@@ -10393,8 +10396,8 @@ color: rgb(255, 255, 255);
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>965</width>
-               <height>509</height>
+               <width>100</width>
+               <height>381</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_8">
@@ -14528,8 +14531,8 @@ QTabBar::tab:selected
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>963</width>
-               <height>608</height>
+               <width>751</width>
+               <height>612</height>
               </rect>
              </property>
              <property name="styleSheet">
@@ -14926,7 +14929,7 @@ QPushButton:focus
                <x>0</x>
                <y>0</y>
                <width>1492</width>
-               <height>591</height>
+               <height>501</height>
               </rect>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_23">
@@ -17117,7 +17120,7 @@ QComboBox QAbstractItemView{
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>948</width>
+               <width>118</width>
                <height>668</height>
               </rect>
              </property>
@@ -23961,8 +23964,8 @@ QPushButton:focus
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>759</width>
-               <height>609</height>
+               <width>401</width>
+               <height>531</height>
               </rect>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_4">
@@ -27802,8 +27805,8 @@ border-radius:5px;
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>963</width>
-               <height>553</height>
+               <width>100</width>
+               <height>316</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_14">
@@ -34509,8 +34512,8 @@ border-radius:5px;</string>
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="logo.qrc"/>
   <include location="imgs.qrc"/>
+  <include location="logo.qrc"/>
  </resources>
  <connections/>
 </ui>

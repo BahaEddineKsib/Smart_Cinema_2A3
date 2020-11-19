@@ -5,6 +5,11 @@
 #include <QHBoxLayout>
 #include <QWidget>
 #include <QScrollArea>
+#include <QMessageBox>
+#include "database.h"
+
+
+
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -27,6 +32,11 @@ MainWindow::MainWindow(QWidget *parent)
     ui->ProfilPhoto->setPixmap(ProfilIcon.scaled(100,100,Qt::KeepAspectRatio));
     //ui->label_41->setPixmap(ProfilIcon.scaled(100,100,Qt::KeepAspectRatio));
     ui->label->setPixmap(ProfilIcon.scaled(100,100,Qt::KeepAspectRatio));
+
+    ui->BigStack->setCurrentIndex(0); //default page set to loginpage
+
+
+
 }
 
 MainWindow::~MainWindow()
@@ -147,4 +157,12 @@ void MainWindow::on_PollsButton_clicked()
 {
     ui->DashboardPages->setCurrentIndex(10);
     ui->CurrentPageTitle->setText("Polls Management");
+}
+
+void MainWindow::on_LoginButton_clicked()
+{
+    if(database::get()->db.open()) // check if connected to db
+        QMessageBox::information(this,"Success","Connected to database.");
+    else
+        QMessageBox::information(this,"Error","Failed to connect to database.");
 }
