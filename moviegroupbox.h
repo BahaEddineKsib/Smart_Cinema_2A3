@@ -36,6 +36,8 @@ public:
     QCheckBox      *MovieEnCheck;
     QPushButton    *MovieDeleteButton;
     QPushButton    *MovieSwipeButton;
+public slots:
+    void slutytest();
 
 signals:
 

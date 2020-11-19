@@ -301,4 +301,10 @@ MovieGroupBox::MovieGroupBox(QWidget *parent) : QWidget(parent)
 "	color:rgb(30, 227, 0);\n"
 "}\n"
 ""));
+    connect(MovieSwipeButton,SIGNAL(clicked()),this,SLOT(slutytest()));
+}
+
+void MovieGroupBox::slutytest()
+{
+        qDebug() << "IT WORKS !!!";
 }
