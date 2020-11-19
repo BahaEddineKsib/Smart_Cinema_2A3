@@ -27,7 +27,7 @@
      </rect>
     </property>
     <property name="currentIndex">
-     <number>0</number>
+     <number>1</number>
     </property>
     <widget class="QWidget" name="LoginPage">
      <widget class="QFrame" name="Loginframe">
@@ -314,8 +314,8 @@ background-color: rgb(6, 150, 110);
       <widget class="QLineEdit" name="LoginUsernameInput">
        <property name="geometry">
         <rect>
-         <x>140</x>
-         <y>130</y>
+         <x>130</x>
+         <y>154</y>
          <width>151</width>
          <height>20</height>
         </rect>
@@ -360,8 +360,8 @@ color: rgb(255, 255, 255);</string>
       <widget class="QLineEdit" name="LoginPasswordInput">
        <property name="geometry">
         <rect>
-         <x>140</x>
-         <y>180</y>
+         <x>130</x>
+         <y>208</y>
          <width>151</width>
          <height>20</height>
         </rect>
@@ -403,57 +403,11 @@ color: rgb(255, 255, 255);</string>
         <string>Password</string>
        </property>
       </widget>
-      <widget class="QRadioButton" name="LoginManagerRadioButton">
-       <property name="geometry">
-        <rect>
-         <x>160</x>
-         <y>230</y>
-         <width>151</width>
-         <height>29</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Yu Gothic UI Semilight</family>
-         <pointsize>14</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);
-background-color: rgba(255, 255, 255, 0);</string>
-       </property>
-       <property name="text">
-        <string>MANAGER</string>
-       </property>
-      </widget>
-      <widget class="QRadioButton" name="LoginEmployerRadioButton">
-       <property name="geometry">
-        <rect>
-         <x>160</x>
-         <y>270</y>
-         <width>151</width>
-         <height>29</height>
-        </rect>
-       </property>
-       <property name="font">
-        <font>
-         <family>Yu Gothic UI Semilight</family>
-         <pointsize>14</pointsize>
-        </font>
-       </property>
-       <property name="styleSheet">
-        <string notr="true">color: rgb(255, 255, 255);
-background-color: rgba(255, 255, 255, 0);</string>
-       </property>
-       <property name="text">
-        <string>EMPLOYER</string>
-       </property>
-      </widget>
       <widget class="QLabel" name="LoginTitle">
        <property name="geometry">
         <rect>
          <x>0</x>
-         <y>0</y>
+         <y>32</y>
          <width>411</width>
          <height>40</height>
         </rect>
@@ -484,6 +438,24 @@ background-color: rgba(255, 255, 255, 0);</string>
        </property>
        <property name="alignment">
         <set>Qt::AlignCenter</set>
+       </property>
+      </widget>
+      <widget class="QCheckBox" name="checkBox">
+       <property name="geometry">
+        <rect>
+         <x>152</x>
+         <y>278</y>
+         <width>91</width>
+         <height>20</height>
+        </rect>
+       </property>
+       <property name="styleSheet">
+        <string notr="true">background-color:transparent;
+color:#fff
+</string>
+       </property>
+       <property name="text">
+        <string>Remember Me</string>
        </property>
       </widget>
      </widget>
@@ -1324,7 +1296,7 @@ QPushButton:focus
 </string>
       </property>
       <property name="currentIndex">
-       <number>6</number>
+       <number>1</number>
       </property>
       <widget class="QWidget" name="profil">
        <widget class="QLabel" name="ProfilPhoto">
@@ -1497,8 +1469,8 @@ QPushButton:focus
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>100</width>
-           <height>30</height>
+           <width>281</width>
+           <height>38</height>
           </rect>
          </property>
          <attribute name="label">
@@ -1581,8 +1553,8 @@ QPushButton:focus
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>100</width>
-           <height>30</height>
+           <width>281</width>
+           <height>38</height>
           </rect>
          </property>
          <attribute name="label">
@@ -1665,8 +1637,8 @@ color: rgb(255, 255, 255);</string>
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>100</width>
-           <height>30</height>
+           <width>281</width>
+           <height>38</height>
           </rect>
          </property>
          <attribute name="label">
@@ -1786,8 +1758,8 @@ color: rgb(255, 255, 255);</string>
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>100</width>
-           <height>30</height>
+           <width>281</width>
+           <height>38</height>
           </rect>
          </property>
          <attribute name="label">
@@ -1821,8 +1793,8 @@ color: rgb(255, 255, 255);</string>
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>100</width>
-           <height>30</height>
+           <width>281</width>
+           <height>38</height>
           </rect>
          </property>
          <attribute name="label">
@@ -1957,7 +1929,7 @@ QTabBar::tab:selected
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>118</width>
+               <width>949</width>
                <height>817</height>
               </rect>
              </property>
@@ -5311,7 +5283,7 @@ QPushButton:focus
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>100</width>
+               <width>949</width>
                <height>660</height>
               </rect>
              </property>
@@ -9134,8 +9106,58 @@ QPushButton:focus
            </rect>
           </property>
           <layout class="QGridLayout" name="gridLayout_22">
+           <item row="3" column="1">
+            <widget class="QLineEdit" name="Employee_new_password">
+             <property name="font">
+              <font>
+               <family>Arial Black</family>
+               <pointsize>9</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border: 0px solid rgb(249, 167, 43);
+border-bottom-width: 2px;
+border-radius: px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="placeholderText">
+              <string>Enter password</string>
+             </property>
+            </widget>
+           </item>
+           <item row="0" column="1">
+            <widget class="QLineEdit" name="Employee_new_name">
+             <property name="font">
+              <font>
+               <family>Arial Black</family>
+               <pointsize>9</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border: 0px solid rgb(249, 167, 43);
+border-bottom-width: 2px;
+border-radius: px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="placeholderText">
+              <string>Example : John Smith</string>
+             </property>
+            </widget>
+           </item>
            <item row="2" column="0">
-            <widget class="QLabel" name="label_296">
+            <widget class="QLabel" name="label_298">
              <property name="font">
               <font>
                <family>Arial Black</family>
@@ -9153,22 +9175,6 @@ QPushButton:focus
             </widget>
            </item>
            <item row="0" column="0">
-            <widget class="QLabel" name="ProfilPersonelAccessEdit_45">
-             <property name="font">
-              <font>
-               <family>Yu Gothic UI Semilight</family>
-               <pointsize>20</pointsize>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">color: rgb(255, 255, 255);</string>
-             </property>
-             <property name="text">
-              <string>ID</string>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="0">
             <widget class="QLabel" name="label_297">
              <property name="font">
               <font>
@@ -9182,104 +9188,11 @@ QPushButton:focus
               <string notr="true">color: rgb(255, 255, 255);</string>
              </property>
              <property name="text">
-              <string>Name</string>
+              <string>Full Name</string>
              </property>
             </widget>
            </item>
-           <item row="3" column="1">
-            <widget class="QLineEdit" name="ProfilContactEdit_87">
-             <property name="font">
-              <font>
-               <family>Arial Black</family>
-               <pointsize>9</pointsize>
-               <weight>75</weight>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border: 0px solid rgb(249, 167, 43);
-border-bottom-width: 2px;
-border-radius: px;
-background-color: rgba(255, 255, 255, 0);
-color: rgb(255, 255, 255);</string>
-             </property>
-             <property name="text">
-              <string/>
-             </property>
-             <property name="placeholderText">
-              <string/>
-             </property>
-            </widget>
-           </item>
-           <item row="3" column="0">
-            <widget class="QLabel" name="label_298">
-             <property name="font">
-              <font>
-               <family>Arial Black</family>
-               <pointsize>9</pointsize>
-               <weight>75</weight>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">color: rgb(255, 255, 255);</string>
-             </property>
-             <property name="text">
-              <string>Contact</string>
-             </property>
-            </widget>
-           </item>
-           <item row="4" column="1">
-            <widget class="QLineEdit" name="ProfilContactEdit_88">
-             <property name="font">
-              <font>
-               <family>Arial Black</family>
-               <pointsize>9</pointsize>
-               <weight>75</weight>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border: 0px solid rgb(249, 167, 43);
-border-bottom-width: 2px;
-border-radius: px;
-background-color: rgba(255, 255, 255, 0);
-color: rgb(255, 255, 255);</string>
-             </property>
-             <property name="text">
-              <string/>
-             </property>
-             <property name="placeholderText">
-              <string/>
-             </property>
-            </widget>
-           </item>
-           <item row="1" column="1">
-            <widget class="QLineEdit" name="ProfilContactEdit_89">
-             <property name="font">
-              <font>
-               <family>Arial Black</family>
-               <pointsize>9</pointsize>
-               <weight>75</weight>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border: 0px solid rgb(249, 167, 43);
-border-bottom-width: 2px;
-border-radius: px;
-background-color: rgba(255, 255, 255, 0);
-color: rgb(255, 255, 255);</string>
-             </property>
-             <property name="text">
-              <string/>
-             </property>
-             <property name="placeholderText">
-              <string/>
-             </property>
-            </widget>
-           </item>
-           <item row="6" column="1">
+           <item row="5" column="1">
             <layout class="QFormLayout" name="formLayout_22">
              <property name="horizontalSpacing">
               <number>45</number>
@@ -9550,7 +9463,75 @@ QCheckBox::indicator:checked {
              </item>
             </layout>
            </item>
-           <item row="4" column="0">
+           <item row="1" column="0">
+            <widget class="QLabel" name="label_296">
+             <property name="font">
+              <font>
+               <family>Arial Black</family>
+               <pointsize>9</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(255, 255, 255);</string>
+             </property>
+             <property name="text">
+              <string>Email</string>
+             </property>
+            </widget>
+           </item>
+           <item row="2" column="1">
+            <widget class="QLineEdit" name="Employee_new_username">
+             <property name="font">
+              <font>
+               <family>Arial Black</family>
+               <pointsize>9</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border: 0px solid rgb(249, 167, 43);
+border-bottom-width: 2px;
+border-radius: px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="placeholderText">
+              <string>Enter username</string>
+             </property>
+            </widget>
+           </item>
+           <item row="1" column="1">
+            <widget class="QLineEdit" name="Employee_new_email">
+             <property name="font">
+              <font>
+               <family>Arial Black</family>
+               <pointsize>9</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border: 0px solid rgb(249, 167, 43);
+border-bottom-width: 2px;
+border-radius: px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="placeholderText">
+              <string>Example@gmail.com</string>
+             </property>
+            </widget>
+           </item>
+           <item row="3" column="0">
             <widget class="QLabel" name="label_299">
              <property name="font">
               <font>
@@ -9568,57 +9549,7 @@ QCheckBox::indicator:checked {
              </property>
             </widget>
            </item>
-           <item row="2" column="1">
-            <widget class="QLineEdit" name="ProfilContactEdit_90">
-             <property name="font">
-              <font>
-               <family>Arial Black</family>
-               <pointsize>9</pointsize>
-               <weight>75</weight>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border: 0px solid rgb(249, 167, 43);
-border-bottom-width: 2px;
-border-radius: px;
-background-color: rgba(255, 255, 255, 0);
-color: rgb(255, 255, 255);</string>
-             </property>
-             <property name="text">
-              <string/>
-             </property>
-             <property name="placeholderText">
-              <string/>
-             </property>
-            </widget>
-           </item>
-           <item row="0" column="1">
-            <widget class="QLineEdit" name="ProfilContactEdit_91">
-             <property name="font">
-              <font>
-               <family>Arial Black</family>
-               <pointsize>9</pointsize>
-               <weight>75</weight>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">border: 0px solid rgb(249, 167, 43);
-border-bottom-width: 2px;
-border-radius: px;
-background-color: rgba(255, 255, 255, 0);
-color: rgb(255, 255, 255);</string>
-             </property>
-             <property name="text">
-              <string/>
-             </property>
-             <property name="placeholderText">
-              <string/>
-             </property>
-            </widget>
-           </item>
-           <item row="5" column="0">
+           <item row="4" column="0">
             <widget class="QLabel" name="ProfilPersonelAccessEdit_46">
              <property name="font">
               <font>
@@ -9630,13 +9561,13 @@ color: rgb(255, 255, 255);</string>
               <string notr="true">color: rgb(255, 255, 255);</string>
              </property>
              <property name="text">
-              <string>ACCESSES</string>
+              <string>ACCESS</string>
              </property>
             </widget>
            </item>
           </layout>
          </widget>
-         <widget class="QPushButton" name="ProfilChangeNameButton_34">
+         <widget class="QPushButton" name="add_employee_btn">
           <property name="geometry">
            <rect>
             <x>330</x>
@@ -10396,8 +10327,8 @@ color: rgb(255, 255, 255);
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>100</width>
-               <height>381</height>
+               <width>965</width>
+               <height>505</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_8">
@@ -14531,7 +14462,7 @@ QTabBar::tab:selected
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>751</width>
+               <width>949</width>
                <height>612</height>
               </rect>
              </property>
@@ -14929,7 +14860,7 @@ QPushButton:focus
                <x>0</x>
                <y>0</y>
                <width>1492</width>
-               <height>501</height>
+               <height>590</height>
               </rect>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_23">
@@ -16777,7 +16708,7 @@ QTabBar::tab:selected
 </string>
         </property>
         <property name="currentIndex">
-         <number>1</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="AddBillTab_2">
          <property name="styleSheet">
@@ -17120,7 +17051,7 @@ QComboBox QAbstractItemView{
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>118</width>
+               <width>951</width>
                <height>668</height>
               </rect>
              </property>
@@ -23964,8 +23895,8 @@ QPushButton:focus
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>401</width>
-               <height>531</height>
+               <width>759</width>
+               <height>605</height>
               </rect>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_4">
@@ -27805,8 +27736,8 @@ border-radius:5px;
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>100</width>
-               <height>316</height>
+               <width>963</width>
+               <height>549</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_14">
@@ -34512,8 +34443,8 @@ border-radius:5px;</string>
   </customwidget>
  </customwidgets>
  <resources>
-  <include location="imgs.qrc"/>
   <include location="logo.qrc"/>
+  <include location="imgs.qrc"/>
  </resources>
  <connections/>
 </ui>

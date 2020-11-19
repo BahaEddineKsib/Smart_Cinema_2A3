@@ -5,6 +5,10 @@
 #include <QTimer>
 #include <QWidget>
 #include <QScrollArea>
+
+#include "loginpage.h"
+#include "tab_employees.h"
+
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -16,6 +20,12 @@ class MainWindow : public QMainWindow
 public:
     MainWindow(QWidget *parent = nullptr);
     ~MainWindow();
+    Ui::MainWindow *ui;
+
+    loginpage *login_page;
+    tab_employees *employees;
+
+
 public slots:
     void TimeOfWork();
 
@@ -46,12 +56,15 @@ private slots:
 
     void on_PollsButton_clicked();
 
-    void on_LoginButton_clicked();
+    void loginpage_login();
+
+    void tab_employees_add_employee();
 
 private:
-    Ui::MainWindow *ui;
+
     QTimer *timer;
     int seconds,minuts,hours;
+
 
 };
 #endif // MAINWINDOW_H

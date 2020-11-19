@@ -6,7 +6,9 @@
 #include <QWidget>
 #include <QScrollArea>
 #include <QMessageBox>
+
 #include "database.h"
+
 
 
 
@@ -35,6 +37,10 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->BigStack->setCurrentIndex(0); //default page set to loginpage
 
+    login_page = new loginpage(ui);
+    connect(ui->LoginButton, SIGNAL (clicked()),this, SLOT (loginpage_login()));
+    employees = new tab_employees(ui);
+    connect(ui->add_employee_btn, SIGNAL (clicked()),this, SLOT (tab_employees_add_employee()));
 
 
 }
@@ -159,10 +165,13 @@ void MainWindow::on_PollsButton_clicked()
     ui->CurrentPageTitle->setText("Polls Management");
 }
 
-void MainWindow::on_LoginButton_clicked()
+void MainWindow::loginpage_login()
 {
-    if(database::get()->db.open()) // check if connected to db
-        QMessageBox::information(this,"Success","Connected to database.");
-    else
-        QMessageBox::information(this,"Error","Failed to connect to database.");
+    login_page->login();
 }
+
+void MainWindow::tab_employees_add_employee()
+{
+    employees->add_employee();
+}
+

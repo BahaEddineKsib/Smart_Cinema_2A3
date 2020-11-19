@@ -9,17 +9,23 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    current_user.cpp \
     database.cpp \
+    loginpage.cpp \
     main.cpp \
     mainwindow.cpp \
     moviegroupbox.cpp \
-    poll_chart.cpp
+    poll_chart.cpp \
+    tab_employees.cpp
 
 HEADERS += \
+    current_user.h \
     database.h \
+    loginpage.h \
     mainwindow.h \
     moviegroupbox.h \
-    poll_chart.h
+    poll_chart.h \
+    tab_employees.h
 
 FORMS += \
     mainwindow.ui
