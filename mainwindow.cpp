@@ -37,18 +37,33 @@ MainWindow::MainWindow(QWidget *parent)
 
     ui->BigStack->setCurrentIndex(0); //default page set to loginpage
 
-    login_page = new loginpage(ui);
-    connect(ui->LoginButton, SIGNAL (clicked()),this, SLOT (loginpage_login()));
-    employees = new tab_employees(ui);
-    connect(ui->add_employee_btn, SIGNAL (clicked()),this, SLOT (tab_employees_add_employee()));
-
+    setup_tabs();
 
 }
+
 
 MainWindow::~MainWindow()
 {
     delete ui;
 }
+
+
+void MainWindow::setup_tabs()
+{
+    login_page = new loginpage(ui);
+    connect(ui->LoginButton, SIGNAL (clicked()),this, SLOT (loginpage_login()));
+
+    //tabs
+    employees = new tab_employees(ui);
+    connect(ui->add_employee_btn, SIGNAL (clicked()),this, SLOT (tab_employees_add_employee()));
+
+    theatres = new tab_theatres(ui);
+    connect(ui->btn_show_add_theatre, SIGNAL (clicked()),this, SLOT (tab_theatres_show_add()));
+    connect(ui->btn_add_theatre, SIGNAL (clicked()),this, SLOT (tab_theatres_add_theatre()));
+
+
+}
+
 
 void MainWindow::TimeOfWork()
 {
@@ -96,6 +111,8 @@ void MainWindow::on_DashboardButton_clicked()
 
 
 }
+
+
 
 void MainWindow::on_ProfilButton_clicked()
 {
@@ -174,4 +191,18 @@ void MainWindow::tab_employees_add_employee()
 {
     employees->add_employee();
 }
+
+void MainWindow::tab_theatres_show_add()
+{
+    theatres->show_add_theatre();
+}
+
+void MainWindow::tab_theatres_add_theatre()
+{
+    theatres->add_theatre();
+}
+
+
+
+
 

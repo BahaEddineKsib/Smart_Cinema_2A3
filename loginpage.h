@@ -3,8 +3,6 @@
 
 #include <QSqlDatabase>
 #include <QtSql>
-#include <QObject>
-
 
 #include "ui_mainwindow.h"
 

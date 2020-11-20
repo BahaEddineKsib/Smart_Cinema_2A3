@@ -8,6 +8,7 @@
 
 #include "loginpage.h"
 #include "tab_employees.h"
+#include "tab_theatres.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -23,7 +24,10 @@ public:
     Ui::MainWindow *ui;
 
     loginpage *login_page;
+
+    //dashboard tabs
     tab_employees *employees;
+    tab_theatres *theatres;
 
 
 public slots:
@@ -60,10 +64,15 @@ private slots:
 
     void tab_employees_add_employee();
 
+    void tab_theatres_show_add();
+    void tab_theatres_add_theatre();
+
 private:
 
     QTimer *timer;
     int seconds,minuts,hours;
+
+    void setup_tabs();
 
 
 };

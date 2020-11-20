@@ -16,7 +16,8 @@ SOURCES += \
     mainwindow.cpp \
     moviegroupbox.cpp \
     poll_chart.cpp \
-    tab_employees.cpp
+    tab_employees.cpp \
+    tab_theatres.cpp
 
 HEADERS += \
     current_user.h \
@@ -25,7 +26,8 @@ HEADERS += \
     mainwindow.h \
     moviegroupbox.h \
     poll_chart.h \
-    tab_employees.h
+    tab_employees.h \
+    tab_theatres.h
 
 FORMS += \
     mainwindow.ui
