@@ -1,6 +1,8 @@
 #include "tab_theatres.h"
 #include "database.h"
 
+#include <QMessageBox>
+
 tab_theatres::tab_theatres(Ui::MainWindow *ui)
 {
     this->ui=ui;
@@ -20,7 +22,7 @@ void tab_theatres::add_theatre()
 
     if(name=="" || max_seats=="")
     {
-        qDebug("Please fill out all forms.");
+        QMessageBox::information(nullptr,"Notice","Please fill out all forms.");
     }
 
     else if(database::get()->db.open())
@@ -35,13 +37,20 @@ void tab_theatres::add_theatre()
         ui->add_theatre_name->setText("");
         ui->add_theatre_seats->setText("");
 
-        qry.exec();
-        //qDebug() << qry.lastError().text();
-        qDebug("Theatre added.");
+        if(qry.exec())
+        {
+            QMessageBox::information(nullptr,"Success","Theatre added.");
+        }
+        else
+        {
+            QMessageBox::information(nullptr,"Error",qry.lastError().text());
+        }
+
+
     }
     else
     {
-        qDebug("Failed to connect to DB");
+        QMessageBox::information(nullptr,"Error","Failed to connect to DB");
     }
 
     ui->add_theatre_widget->hide();
@@ -50,4 +59,9 @@ void tab_theatres::add_theatre()
 void tab_theatres::show_add_theatre()
 {
     ui->add_theatre_widget->show();
+}
+
+void tab_theatres::hide_add_theatre()
+{
+    ui->add_theatre_widget->hide();
 }

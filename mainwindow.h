@@ -66,6 +66,7 @@ private slots:
 
     void tab_theatres_show_add();
     void tab_theatres_add_theatre();
+    void tab_theatres_cancel_add();
 
 private:
 

@@ -60,6 +60,7 @@ void MainWindow::setup_tabs()
     theatres = new tab_theatres(ui);
     connect(ui->btn_show_add_theatre, SIGNAL (clicked()),this, SLOT (tab_theatres_show_add()));
     connect(ui->btn_add_theatre, SIGNAL (clicked()),this, SLOT (tab_theatres_add_theatre()));
+    connect(ui->btn_cancel_theatre, SIGNAL (clicked()),this, SLOT (tab_theatres_cancel_add()));
 
 
 }
@@ -200,6 +201,11 @@ void MainWindow::tab_theatres_show_add()
 void MainWindow::tab_theatres_add_theatre()
 {
     theatres->add_theatre();
+}
+
+void MainWindow::tab_theatres_cancel_add()
+{
+    theatres->hide_add_theatre();
 }
 
 

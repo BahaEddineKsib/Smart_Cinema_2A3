@@ -2,6 +2,8 @@
 #include "database.h"
 #include "current_user.h"
 
+#include <QMessageBox>
+
 
 loginpage::loginpage(Ui::MainWindow *ui)
 {
@@ -18,7 +20,7 @@ void loginpage::login()
 
         if(username=="" || password=="")
         {
-            qDebug("Please fill out both forms.");
+            QMessageBox::information(nullptr,"Notice","Please fill out both forms.");
         }
         else if(database::get()->db.open())
         {
@@ -32,7 +34,7 @@ void loginpage::login()
             qry.bindValue(":password",password);
             if(!qry.exec())
             {
-                qDebug("Failed to exec query");
+                QMessageBox::information(nullptr,"Error","Failed to exec query");
             }
             else
             {
@@ -59,14 +61,14 @@ void loginpage::login()
                 }
                 if(succ==false)
                 {
-                    qDebug("Couldnt Log In.");
+                    QMessageBox::information(nullptr,"Error","Couldnt Log In.");
                 }
             }
 
         }
         else
         {
-            qDebug("Failed to connect to DB");
+            QMessageBox::information(nullptr,"Error","Failed to connect to DB");
         }
 }
 

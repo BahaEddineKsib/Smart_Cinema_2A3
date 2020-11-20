@@ -3,6 +3,7 @@
 
 #include <QSqlDatabase>
 #include <QtSql>
+#include <QMessageBox>
 
 tab_employees::tab_employees(Ui::MainWindow *ui)
 {
@@ -19,7 +20,7 @@ void tab_employees::add_employee()
 
         if(name=="" || email=="" || username=="" || password=="")
         {
-            qDebug("Please fill out all forms.");
+            QMessageBox::information(nullptr,"Notice","Please fill out all forms.");
         }
 
         else if(database::get()->db.open())
@@ -41,9 +42,16 @@ void tab_employees::add_employee()
             ui->Employee_new_password->setText("");
             ui->Employee_new_name->setText("");
 
-            qry.exec();
-            //qDebug() << qry.lastError().text();
-            qDebug("Registered");
+            if(qry.exec())
+            {
+                QMessageBox::information(nullptr,"Success","Employee registered successfully.");
+            }
+            else
+            {
+                QMessageBox::information(nullptr,"Error",qry.lastError().text());
+            }
+
+
         }
         else
         {
