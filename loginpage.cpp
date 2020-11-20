@@ -54,9 +54,11 @@ void loginpage::login()
                         ui->BigStack->setCurrentIndex(1);
                         ui->LoginUsernameInput->setText("");
                         ui->LoginPasswordInput->setText("");
-                        qDebug("Logged In.");
+
                         succ=true;
                     }
+                    qDebug("Logged In.");
+                    ui->DashboardPages->setCurrentIndex(0); //default page set to profile
 
                 }
                 if(succ==false)

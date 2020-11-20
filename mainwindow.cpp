@@ -156,6 +156,7 @@ void MainWindow::on_TheatresButton_clicked()
 {
     ui->DashboardPages->setCurrentIndex(6);
     ui->CurrentPageTitle->setText("Theatres Management");
+    theatres->show_theatres();
 }
 
 void MainWindow::on_ClientsButton_clicked()

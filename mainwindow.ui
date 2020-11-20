@@ -1379,8 +1379,8 @@ QToolBox::tab:selected
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>281</width>
-           <height>38</height>
+           <width>100</width>
+           <height>30</height>
           </rect>
          </property>
          <property name="layoutDirection">
@@ -14462,7 +14462,7 @@ QTabBar::tab:selected
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>949</width>
+               <width>751</width>
                <height>612</height>
               </rect>
              </property>
@@ -17051,7 +17051,7 @@ QComboBox QAbstractItemView{
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>951</width>
+               <width>118</width>
                <height>668</height>
               </rect>
              </property>
@@ -23895,8 +23895,8 @@ QPushButton:focus
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>759</width>
-               <height>605</height>
+               <width>401</width>
+               <height>531</height>
               </rect>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_4">
@@ -27217,8 +27217,8 @@ image: url(:/new/prefix1/imgs/theatre.jpg);
           </property>
           <property name="geometry">
            <rect>
-            <x>211</x>
-            <y>149</y>
+            <x>2000</x>
+            <y>2000</y>
             <width>479</width>
             <height>355</height>
            </rect>
@@ -27226,7 +27226,8 @@ image: url(:/new/prefix1/imgs/theatre.jpg);
           <property name="styleSheet">
            <string notr="true">
 background-color: rgb(51, 56, 61);
-border-radius: 20px;</string>
+border-radius: 20px;
+</string>
           </property>
           <widget class="QLabel" name="label_74">
            <property name="geometry">
@@ -28349,8 +28350,8 @@ border-radius:5px;
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>963</width>
-               <height>549</height>
+               <width>100</width>
+               <height>316</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_14">

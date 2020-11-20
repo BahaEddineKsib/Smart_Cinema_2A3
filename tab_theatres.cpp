@@ -7,11 +7,31 @@ tab_theatres::tab_theatres(Ui::MainWindow *ui)
 {
     this->ui=ui;
     ui->add_theatre_widget->hide(); //default : hidden
+    ui->add_theatre_widget->setGeometry(211,149,449,355);
 }
 
 void tab_theatres::show_theatres()
 {
-
+    if(database::get()->db.open())
+            {
+                QSqlQuery qry;
+                qry.prepare("SELECT * FROM  tab_theatres");
+                if(!qry.exec())
+                {
+                    QMessageBox::information(nullptr,"Error","Failed to exec query");
+                }
+                else
+                {
+                    while(qry.next())
+                    {
+                        qDebug() << qry.value(0).toString() << " " << qry.value(1).toInt() << " " << qry.value(2).toInt() << " " << qry.value(3).toInt() << endl;
+                    }
+                }
+    }
+    else
+    {
+        QMessageBox::information(nullptr,"Error","Failed to connect to DB");
+    }
 }
 
 void tab_theatres::add_theatre()
