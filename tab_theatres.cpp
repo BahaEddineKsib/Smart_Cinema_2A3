@@ -12,6 +12,8 @@ tab_theatres::tab_theatres(Ui::MainWindow *ui)
 
 void tab_theatres::show_theatres()
 {
+    int x= 84;
+    int i=0;
     if(database::get()->db.open())
             {
                 QSqlQuery qry;
@@ -25,6 +27,22 @@ void tab_theatres::show_theatres()
                     while(qry.next())
                     {
                         qDebug() << qry.value(0).toString() << " " << qry.value(1).toInt() << " " << qry.value(2).toInt() << " " << qry.value(3).toInt() << endl;
+
+                        /*QFrame *th_frame = new QFrame();
+                        th_frame->setParent(ui->theatresScrollArea);
+                        th_frame->setStyleSheet("background-color: rgb(51, 56, 100);border-radius: 10px;");
+                        th_frame->setGeometry(x,62,200,222);
+
+                        QLabel *th_label = new QLabel();
+                        th_label->setParent(th_frame);
+                        th_label->setText(qry.value(0).toString());
+                        th_label->setStyleSheet("color:#fff");
+                        th_label->move(x+100,62);
+
+                        x+=304;*/
+
+                        i++;
+
                     }
                 }
     }
