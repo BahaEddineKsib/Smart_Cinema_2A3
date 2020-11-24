@@ -303,7 +303,10 @@ MovieGroupBox::MovieGroupBox(QWidget *parent) : QWidget(parent)
 ""));
     connect(MovieSwipeButton,SIGNAL(clicked()),this,SLOT(slutytest()));
 }
-
+MovieGroupBox::~MovieGroupBox()
+{
+    qDebug() << "mchat";
+}
 void MovieGroupBox::slutytest()
 {
         qDebug() << "IT WORKS !!!";

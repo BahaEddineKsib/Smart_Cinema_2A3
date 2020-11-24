@@ -13,6 +13,7 @@ class MovieGroupBox : public QWidget
     Q_OBJECT
 public:
     explicit MovieGroupBox(QWidget *parent = nullptr);
+    ~MovieGroupBox();
 
     QGroupBox      *MovieBox;
     QPushButton    *MovieImageButton;

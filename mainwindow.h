@@ -68,6 +68,8 @@ private slots:
     void tab_theatres_add_theatre();
     void tab_theatres_cancel_add();
 
+    void on_FilmAddButton_clicked();
+
 private:
 
     QTimer *timer;

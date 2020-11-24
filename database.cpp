@@ -3,11 +3,11 @@
 database::database()
 {
 
-    db = QSqlDatabase::addDatabase("QMYSQL");
-    db.setHostName("sql7.freesqldatabase.com");
-    db.setUserName("sql7377608");
-    db.setPassword("SeJMMSScDF");
-    db.setDatabaseName("sql7377608");
+    db = QSqlDatabase::addDatabase("QODBC");
+    //db.setHostName("sql7.freesqldatabase.com");
+    db.setUserName("system");
+    db.setPassword("0000");
+    db.setDatabaseName("SC_DATA");
 
 
     if(db.open()){qDebug()<<"Database opened!";}

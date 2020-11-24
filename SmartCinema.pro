@@ -14,6 +14,7 @@ SOURCES += \
     loginpage.cpp \
     main.cpp \
     mainwindow.cpp \
+    movie.cpp \
     moviegroupbox.cpp \
     poll_chart.cpp \
     tab_employees.cpp \
@@ -24,6 +25,7 @@ HEADERS += \
     database.h \
     loginpage.h \
     mainwindow.h \
+    movie.h \
     moviegroupbox.h \
     poll_chart.h \
     tab_employees.h \
