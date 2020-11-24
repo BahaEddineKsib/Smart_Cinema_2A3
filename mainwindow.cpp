@@ -150,9 +150,10 @@ void MainWindow::on_MoviesButton_clicked()
 {
     ui->DashboardPages->setCurrentIndex(5);
     ui->CurrentPageTitle->setText("Movies Management");
-    MovieGroupBox* m;
-    m = new MovieGroupBox(ui->MoviesArea);
-    ui->horizontalLayout_4->addWidget(m);
+    //MovieGroupBox* m;
+    //m = new MovieGroupBox(ui->MoviesArea);
+    //ui->horizontalLayout_4->addWidget(m);
+   // ui->horizontalLayout_4->removeWidget();
 }
 
 void MainWindow::on_TheatresButton_clicked()
