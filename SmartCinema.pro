@@ -18,6 +18,7 @@ SOURCES += \
     moviegroupbox.cpp \
     poll_chart.cpp \
     tab_employees.cpp \
+    tab_movies.cpp \
     tab_theatres.cpp
 
 HEADERS += \
@@ -29,6 +30,7 @@ HEADERS += \
     moviegroupbox.h \
     poll_chart.h \
     tab_employees.h \
+    tab_movies.h \
     tab_theatres.h
 
 FORMS += \

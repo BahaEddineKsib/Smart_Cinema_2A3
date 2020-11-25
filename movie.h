@@ -22,5 +22,4 @@ public:
     bool en;
     MovieGroupBox* DisplayBox;
 };
-QVector<movie> AllMovies;
 #endif // MOVIE_H

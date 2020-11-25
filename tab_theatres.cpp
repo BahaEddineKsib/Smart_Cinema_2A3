@@ -12,7 +12,7 @@ tab_theatres::tab_theatres(Ui::MainWindow *ui)
 
 void tab_theatres::show_theatres()
 {
-    int x= 84;
+    //int x= 84;
     int i=0;
     if(database::get()->db.open())
             {

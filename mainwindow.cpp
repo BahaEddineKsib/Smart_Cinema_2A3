@@ -18,8 +18,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     //this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
-    ui->BigStack->setCurrentIndex(1);
-    //ui->DashboardPages->setCurrentIndex(0);
+
     timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(TimeOfWork()));
     timer->start(1000);
@@ -30,13 +29,14 @@ MainWindow::MainWindow(QWidget *parent)
     QPixmap logo(":/logo/logo.png");
     ui->logo->setPixmap(logo.scaled(200,200,Qt::KeepAspectRatio));
 
-    QPixmap ProfilIcon(":/profil_icon/profile_icon.png");
-    ui->ProfilPhoto->setPixmap(ProfilIcon.scaled(100,100,Qt::KeepAspectRatio));
-    //ui->label_41->setPixmap(ProfilIcon.scaled(100,100,Qt::KeepAspectRatio));
-    ui->label->setPixmap(ProfilIcon.scaled(100,100,Qt::KeepAspectRatio));
+    /***********************TEMPORARY CODE*********************************/
+    /**/QPixmap ProfilIcon(":/profil_icon/profile_icon.png");
+    /**/ui->ProfilPhoto->setPixmap(ProfilIcon.scaled(100,100,Qt::KeepAspectRatio));
+    /**/ui->label->setPixmap(ProfilIcon.scaled(100,100,Qt::KeepAspectRatio));
+    /**********************************************************************/
 
-    ui->BigStack->setCurrentIndex(0); //default page set to loginpage
-
+    ui->BigStack->setCurrentIndex(0);       //default page set to loginpage
+    ui->DashboardPages->setCurrentIndex(0); //default Dashboard page set to profil
     setup_tabs();
 
 }
@@ -62,6 +62,8 @@ void MainWindow::setup_tabs()
     connect(ui->btn_add_theatre, SIGNAL (clicked()),this, SLOT (tab_theatres_add_theatre()));
     connect(ui->btn_cancel_theatre, SIGNAL (clicked()),this, SLOT (tab_theatres_cancel_add()));
 
+    movies = new tab_movies(ui);
+    movies->DisplayAllMovies();
 
 }
 

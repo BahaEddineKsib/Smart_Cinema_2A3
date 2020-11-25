@@ -64,21 +64,7 @@ void movie::StoreInDatabase()
     }
 
 }
-void MainWindow::on_FilmAddButton_clicked()
-{
-    movie* Movie = new movie(ui->FilmIdAdd          ->text(),
-                             ui->FilmNameAdd        ->text(),
-                             ui->FilmTypeAdd        ->text(),
-                             ui->FilmPriceAdd       ->text(),
-                             ui->FilmDescriptionAdd ->text(),
-                             ui->FilmArCheckAdd->isChecked(),
-                             ui->FilmFrCheckAdd->isChecked(),
-                             ui->FilmEnCheckAdd->isChecked(),
-                             ui);
 
-    Movie->StoreInDatabase();
-    Movie->Display();
-}
 void movie::Display()
 {
     DisplayBox = new MovieGroupBox(ui->MoviesArea);

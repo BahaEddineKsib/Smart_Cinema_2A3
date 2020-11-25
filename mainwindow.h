@@ -9,6 +9,7 @@
 #include "loginpage.h"
 #include "tab_employees.h"
 #include "tab_theatres.h"
+#include "tab_movies.h"
 
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -27,8 +28,8 @@ public:
 
     //dashboard tabs
     tab_employees *employees;
-    tab_theatres *theatres;
-
+    tab_theatres  *theatres;
+    tab_movies    *movies;
 
 public slots:
     void TimeOfWork();
