@@ -1,11 +1,14 @@
 #include "moviegroupbox.h"
+#include "database.h"
+#include "tab_movies.h"
+#include <QMessageBox>
 #include <QDebug>
 #include <QLatin1String>
 MovieGroupBox::MovieGroupBox(QWidget *parent) : QWidget(parent)
 {
     this->setMinimumSize(QSize(381, 531));
     this->setMaximumSize(QSize(381, 531));
-    qDebug() << "SO WHAT THEN ?";
+    qDebug() << "CREATE MovieGroupBox";
     QFont font1;
     font1.setFamily(QStringLiteral("Arial Black"));
     font1.setPointSize(9);
@@ -139,31 +142,7 @@ MovieGroupBox::MovieGroupBox(QWidget *parent) : QWidget(parent)
     MovieUpdateButton->setObjectName(QStringLiteral("MovieUpdateButton"));
     MovieUpdateButton->setGeometry(QRect(11, 260, 171, 21));
     MovieUpdateButton->setText("Update");
-    MovieUpdateButton->setStyleSheet(QLatin1String("QPushButton\n"
-"{\n"
-"	background-color:rgb(50, 53, 57);\n"
-"	border-style:solid;\n"
-"	border-radius:7px;\n"
-"	border-width:1px;\n"
-"border-color: rgb(50, 53, 57);\n"
-"	color:#ffffff;\n"
-"	font-size:16px;\n"
-"font-family:Calibri;\n"
-"}\n"
-"\n"
-"QPushButton:hover\n"
-"{\n"
-"	background-color: #00000000;\n"
-"	border-color: rgb(30, 227, 0);\n"
-"}\n"
-"\n"
-"QPushButton:focus\n"
-"{\n"
-"	background-color:  rgb(30, 227, 0);\n"
-"	border-color: rgba(30, 227, 0,0);\n"
-"	color:rgb(255, 255, 255);\n"
-"}\n"
-""));
+    MovieUpdateButton->setStyleSheet(QLatin1String("QPushButton\n{\n	background-color:rgb(50, 53, 57);\n	border-style:solid;\n	border-radius:7px;\n	border-width:1px;\nborder-color: rgb(50, 53, 57);\n	color:#ffffff;\n	font-size:16px;\nfont-family:Calibri;\n}\n\nQPushButton:hover\n{\n	background-color: #00000000;\n	border-color: rgb(30, 227, 0);\n}\n\nQPushButton:focus\n{\n	background-color:  rgb(30, 227, 0);\n	border-color: rgba(30, 227, 0,0);\n	color:rgb(255, 255, 255);\n}\n"));
     MovieDescriptionEdit = new QPlainTextEdit(MovieDetailsBox);
     MovieDescriptionEdit->setObjectName(QStringLiteral("MovieDescriptionEdit"));
     MovieDescriptionEdit->setGeometry(QRect(122, 148, 234, 115));
@@ -301,13 +280,59 @@ MovieGroupBox::MovieGroupBox(QWidget *parent) : QWidget(parent)
 "	color:rgb(30, 227, 0);\n"
 "}\n"
 ""));
-    connect(MovieSwipeButton,SIGNAL(clicked()),this,SLOT(slutytest()));
+    connect(MovieUpdateButton,SIGNAL(clicked()),this,SLOT(UpdateMovieSlot()));
+    //connect(MovieDeleteButton,SIGNAL(clicked()),this,SLOT(DeleteMovieSlot()));
 }
 MovieGroupBox::~MovieGroupBox()
 {
-    qDebug() << "mchat";
+    qDebug() << "DELETE MovieGroupBox";
 }
-void MovieGroupBox::slutytest()
+void MovieGroupBox::UpdateMovieSlot()
 {
-        qDebug() << "IT WORKS !!!";
+    qDebug() << "UPDATE MOVIE";
+    if(database::get()->db.open())
+    {
+        QSqlQuery qry;
+        qry.prepare("UPDATE movies SET name=:name, type=:type, price=:price, description=:description, fr=:fr, ar=:ar, en=:en WHERE id=:id ");
+        qry.bindValue(":name",MovieNameEdit->text());
+        qry.bindValue(":type",MovieTypeEdit->text());
+        qry.bindValue(":price",MoviePriceEdit->text());
+        QString desc =MovieDescriptionEdit->toPlainText();
+        qry.bindValue(":description",desc);
+        if(MovieFrCheck->isChecked())
+        {
+            qry.bindValue(":fr","1");
+        }
+        else
+        {
+            qry.bindValue(":fr","0");
+        }
+        if(MovieArCheck->isChecked())
+        {
+            qry.bindValue(":ar","1");
+        }
+        else
+        {
+            qry.bindValue(":ar","0");
+        }
+        if(MovieEnCheck->isChecked())
+        {
+            qry.bindValue(":en","1");
+        }
+        else
+        {
+            qry.bindValue(":en","0");
+        }
+        qry.bindValue(":id",MovieIdEdit->text());
+        if(!qry.exec())
+        {
+            QMessageBox::information(nullptr,"Error","Failed to exec query");
+        }
+        else
+        {
+            QMessageBox::information(nullptr,"UPDATE MOVIE","DONE!");
+        }
+    }
+
 }
+

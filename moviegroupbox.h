@@ -38,7 +38,8 @@ public:
     QPushButton    *MovieDeleteButton;
     QPushButton    *MovieSwipeButton;
 public slots:
-    void slutytest();
+    void UpdateMovieSlot();
+    //void DeleteMovieSlot();
 
 signals:
 
