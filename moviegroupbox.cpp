@@ -281,7 +281,7 @@ MovieGroupBox::MovieGroupBox(QWidget *parent) : QWidget(parent)
 "}\n"
 ""));
     connect(MovieUpdateButton,SIGNAL(clicked()),this,SLOT(UpdateMovieSlot()));
-    //connect(MovieDeleteButton,SIGNAL(clicked()),this,SLOT(DeleteMovieSlot()));
+    connect(MovieDeleteButton,SIGNAL(clicked()),this,SLOT(DeleteMovieSlot()));
 }
 MovieGroupBox::~MovieGroupBox()
 {
@@ -333,6 +333,28 @@ void MovieGroupBox::UpdateMovieSlot()
             QMessageBox::information(nullptr,"UPDATE MOVIE","DONE!");
         }
     }
+
+}
+
+void MovieGroupBox::DeleteMovieSlot()
+{
+    qDebug() << "DELETE MOVIE FROM DATA BASE";
+    if(database::get()->db.open())
+    {
+        QSqlQuery qry;
+        qry.prepare("DELETE FROM movies WHERE id=:id ");
+        qry.bindValue(":id",MovieIdEdit->text());
+        if(!qry.exec())
+        {
+            QMessageBox::information(nullptr,"Error","Failed to exec query");
+        }
+        else
+        {
+            QMessageBox::information(nullptr,"DELETE MOVIE","DONE!");
+        }
+        delete this;
+    }
+
 
 }
 
