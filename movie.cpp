@@ -2,9 +2,11 @@
 #include "movie.h"
 #include "database.h"
 #include <QMessageBox>
+#include <QHBoxLayout>
 movie::movie(){}
-movie::movie(QString ID, QString NAME, QString TYPE, QString PRICE, QString DESCRIPTION, bool AR, bool FR, bool EN)
+movie::movie(QString ID, QString NAME, QString TYPE, QString PRICE, QString DESCRIPTION, bool AR, bool FR, bool EN,Ui::MainWindow *ui)
 {
+    this->ui=ui;
     id =          ID;
     name =        NAME;
     type =        TYPE;
@@ -64,14 +66,34 @@ void movie::StoreInDatabase()
 }
 void MainWindow::on_FilmAddButton_clicked()
 {
-    movie Movie(ui->FilmIdAdd->   text(),
-                ui->FilmNameAdd-> text(),
-                ui->FilmTypeAdd-> text(),
-                ui->FilmPriceAdd->text(),
-                ui->FilmDescriptionAdd->text(),
-                ui->FilmArCheckAdd->isChecked(),
-                ui->FilmFrCheckAdd->isChecked(),
-                ui->FilmEnCheckAdd->isChecked());
+    movie* Movie = new movie(ui->FilmIdAdd          ->text(),
+                             ui->FilmNameAdd        ->text(),
+                             ui->FilmTypeAdd        ->text(),
+                             ui->FilmPriceAdd       ->text(),
+                             ui->FilmDescriptionAdd ->text(),
+                             ui->FilmArCheckAdd->isChecked(),
+                             ui->FilmFrCheckAdd->isChecked(),
+                             ui->FilmEnCheckAdd->isChecked(),
+                             ui);
 
-    Movie.StoreInDatabase();
+    Movie->StoreInDatabase();
+    Movie->Display();
 }
+void movie::Display()
+{
+    DisplayBox = new MovieGroupBox(ui->MoviesArea);
+    DisplayBox->MovieIdEdit->setText(id);
+    DisplayBox->MovieNameEdit->setText(name);
+    DisplayBox->MovieTypeEdit->setText(type);
+    DisplayBox->MoviePriceEdit->setText(price);
+    DisplayBox->MovieDescriptionEdit->setPlainText(description);
+    DisplayBox->MovieArCheck->setChecked(ar);
+    DisplayBox->MovieFrCheck->setChecked(fr);
+    DisplayBox->MovieEnCheck->setChecked(en);
+    ui->horizontalLayout_4->addWidget(DisplayBox);
+}
+
+
+
+
+

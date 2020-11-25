@@ -17,7 +17,7 @@ MainWindow::MainWindow(QWidget *parent)
     , ui(new Ui::MainWindow)
 {
     ui->setupUi(this);
-    this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
+    //this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
     ui->BigStack->setCurrentIndex(1);
     //ui->DashboardPages->setCurrentIndex(0);
     timer = new QTimer(this);
@@ -152,7 +152,7 @@ void MainWindow::on_MoviesButton_clicked()
     ui->CurrentPageTitle->setText("Movies Management");
     //MovieGroupBox* m;
     //m = new MovieGroupBox(ui->MoviesArea);
-    //ui->horizontalLayout_4->addWidget(m);
+    //ui->horizontalLayout_4->add
    // ui->horizontalLayout_4->removeWidget();
 }
 

@@ -1469,8 +1469,8 @@ QPushButton:focus
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>281</width>
-           <height>37</height>
+           <width>100</width>
+           <height>30</height>
           </rect>
          </property>
          <attribute name="label">
@@ -1553,8 +1553,8 @@ QPushButton:focus
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>281</width>
-           <height>37</height>
+           <width>100</width>
+           <height>30</height>
           </rect>
          </property>
          <attribute name="label">
@@ -1637,8 +1637,8 @@ color: rgb(255, 255, 255);</string>
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>281</width>
-           <height>37</height>
+           <width>100</width>
+           <height>30</height>
           </rect>
          </property>
          <attribute name="label">
@@ -1758,8 +1758,8 @@ color: rgb(255, 255, 255);</string>
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>281</width>
-           <height>37</height>
+           <width>100</width>
+           <height>30</height>
           </rect>
          </property>
          <attribute name="label">
@@ -1793,8 +1793,8 @@ color: rgb(255, 255, 255);</string>
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>281</width>
-           <height>37</height>
+           <width>100</width>
+           <height>30</height>
           </rect>
          </property>
          <attribute name="label">
@@ -1929,7 +1929,7 @@ QTabBar::tab:selected
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>942</width>
+               <width>122</width>
                <height>825</height>
               </rect>
              </property>
@@ -5283,7 +5283,7 @@ QPushButton:focus
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>942</width>
+               <width>100</width>
                <height>660</height>
               </rect>
              </property>
@@ -10327,8 +10327,8 @@ color: rgb(255, 255, 255);
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>965</width>
-               <height>504</height>
+               <width>100</width>
+               <height>392</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_8">
@@ -14462,7 +14462,7 @@ QTabBar::tab:selected
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>942</width>
+               <width>778</width>
                <height>631</height>
               </rect>
              </property>
@@ -14860,7 +14860,7 @@ QPushButton:focus
                <x>0</x>
                <y>0</y>
                <width>1494</width>
-               <height>584</height>
+               <height>501</height>
               </rect>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_23">
@@ -17051,7 +17051,7 @@ QComboBox QAbstractItemView{
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>944</width>
+               <width>122</width>
                <height>687</height>
               </rect>
              </property>
@@ -23884,6 +23884,9 @@ QPushButton:focus
           </item>
           <item>
            <widget class="QScrollArea" name="MoviesScrollArea">
+            <property name="layoutDirection">
+             <enum>Qt::RightToLeft</enum>
+            </property>
             <property name="styleSheet">
              <string notr="true">border: 0px;</string>
             </property>
@@ -28353,8 +28356,8 @@ border-radius:5px;
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>963</width>
-               <height>549</height>
+               <width>100</width>
+               <height>322</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_14">

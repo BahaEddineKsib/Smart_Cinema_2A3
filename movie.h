@@ -2,13 +2,16 @@
 #define MOVIE_H
 #include <QString>
 #include <QVector>
+#include "mainwindow.h"
 #include "moviegroupbox.h"
 class movie
 {
 public:
     movie();
-    movie(QString, QString, QString, QString, QString, bool, bool, bool);
+    movie(QString, QString, QString, QString, QString, bool, bool, bool,Ui::MainWindow *ui);
+    Ui::MainWindow *ui;
     void StoreInDatabase();
+    void Display();
     QString id;
     QString name;
     QString type;
@@ -17,7 +20,7 @@ public:
     bool ar;
     bool fr;
     bool en;
-    MovieGroupBox DisplayBox;
+    MovieGroupBox* DisplayBox;
 };
 QVector<movie> AllMovies;
 #endif // MOVIE_H
