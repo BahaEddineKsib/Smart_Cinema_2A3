@@ -8,8 +8,10 @@ public:
     tab_movies(Ui::MainWindow *ui);
     Ui::MainWindow *ui;
     void DisplayAllMovies();
-    void SearchMovies();
+    void UndisplayAllMovies();
     void AddMovie();
+    void SearchMovies();
+
 };
 
 #endif // TAB_MOVIES_H

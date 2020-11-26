@@ -62,7 +62,7 @@ void MainWindow::setup_tabs()
     connect(ui->btn_add_theatre, SIGNAL (clicked()),this, SLOT (tab_theatres_add_theatre()));
     connect(ui->btn_cancel_theatre, SIGNAL (clicked()),this, SLOT (tab_theatres_cancel_add()));
 
-    movies = new tab_movies(ui);
+    movies = new  tab_movies(ui);
     movies->DisplayAllMovies();
 
 }
@@ -214,8 +214,14 @@ void MainWindow::tab_theatres_cancel_add()
 {
     theatres->hide_add_theatre();
 }
-
-
+void MainWindow::on_FilmAddButton_clicked()
+{
+    movies->AddMovie();
+}
+void MainWindow::on_SearchFilmButton_clicked()
+{
+    movies->SearchMovies();
+}
 
 
 

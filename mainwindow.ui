@@ -17051,7 +17051,7 @@ QComboBox QAbstractItemView{
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>122</width>
+               <width>944</width>
                <height>687</height>
               </rect>
              </property>
@@ -23481,15 +23481,19 @@ QTabBar::tab:selected
               <height>16777215</height>
              </size>
             </property>
+            <property name="styleSheet">
+             <string notr="true">border: 0px;
+background-color: qlineargradient(spread:pad, x1:1, y1:0, x2:0, y2:0, stop:0.109453 rgba(42, 46, 50, 255), stop:1 rgba(255, 255, 255, 0))</string>
+            </property>
             <property name="title">
-             <string>GroupBox</string>
+             <string/>
             </property>
             <widget class="QLabel" name="FilmIdTitle_5">
              <property name="geometry">
               <rect>
                <x>10</x>
                <y>70</y>
-               <width>26</width>
+               <width>41</width>
                <height>37</height>
               </rect>
              </property>
@@ -23508,7 +23512,7 @@ border: 0px;</string>
               <string>ID</string>
              </property>
             </widget>
-            <widget class="QLineEdit" name="FilmIdEdit_5">
+            <widget class="QLineEdit" name="SearchFilmById">
              <property name="geometry">
               <rect>
                <x>10</x>
@@ -23533,7 +23537,7 @@ background-color: rgba(255, 255, 255, 0);
 color: rgb(255, 255, 255);</string>
              </property>
              <property name="text">
-              <string>14D7</string>
+              <string/>
              </property>
              <property name="placeholderText">
               <string/>
@@ -23544,7 +23548,7 @@ color: rgb(255, 255, 255);</string>
               <rect>
                <x>10</x>
                <y>140</y>
-               <width>38</width>
+               <width>61</width>
                <height>17</height>
               </rect>
              </property>
@@ -23565,7 +23569,7 @@ border: 0px;</string>
               <string>Name</string>
              </property>
             </widget>
-            <widget class="QLineEdit" name="FilmNameEdit_5">
+            <widget class="QLineEdit" name="SearchFilmByName">
              <property name="geometry">
               <rect>
                <x>10</x>
@@ -23590,7 +23594,7 @@ background-color: rgba(255, 255, 255, 0);
 color: rgb(255, 255, 255);</string>
              </property>
              <property name="text">
-              <string>MOTHER!</string>
+              <string/>
              </property>
              <property name="placeholderText">
               <string/>
@@ -23601,8 +23605,8 @@ color: rgb(255, 255, 255);</string>
               <rect>
                <x>10</x>
                <y>190</y>
-               <width>32</width>
-               <height>17</height>
+               <width>71</width>
+               <height>21</height>
               </rect>
              </property>
              <property name="font">
@@ -23622,7 +23626,7 @@ border: 0px;</string>
               <string>Type</string>
              </property>
             </widget>
-            <widget class="QLineEdit" name="FilmTypeEdit_5">
+            <widget class="QLineEdit" name="SearchFilmByType">
              <property name="geometry">
               <rect>
                <x>10</x>
@@ -23647,7 +23651,7 @@ background-color: rgba(255, 255, 255, 0);
 color: rgb(255, 255, 255);</string>
              </property>
              <property name="text">
-              <string>Horror</string>
+              <string/>
              </property>
              <property name="placeholderText">
               <string/>
@@ -23658,7 +23662,7 @@ color: rgb(255, 255, 255);</string>
               <rect>
                <x>10</x>
                <y>240</y>
-               <width>34</width>
+               <width>51</width>
                <height>17</height>
               </rect>
              </property>
@@ -23679,7 +23683,7 @@ border: 0px;</string>
               <string>Price</string>
              </property>
             </widget>
-            <widget class="QLineEdit" name="FilmPriceEdit_5">
+            <widget class="QLineEdit" name="SearchFilmByPrice">
              <property name="geometry">
               <rect>
                <x>10</x>
@@ -23704,142 +23708,13 @@ background-color: rgba(255, 255, 255, 0);
 color: rgb(255, 255, 255);</string>
              </property>
              <property name="text">
-              <string>25</string>
+              <string/>
              </property>
              <property name="placeholderText">
               <string/>
              </property>
             </widget>
-            <widget class="QLabel" name="FilmSubtitle_5">
-             <property name="geometry">
-              <rect>
-               <x>10</x>
-               <y>290</y>
-               <width>115</width>
-               <height>17</height>
-              </rect>
-             </property>
-             <property name="font">
-              <font>
-               <family>Arial Black</family>
-               <pointsize>9</pointsize>
-               <weight>75</weight>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">color: rgb(255, 255, 255);
-background-color: rgba(255, 255, 255, 0);
-border: 0px;</string>
-             </property>
-             <property name="text">
-              <string>Available Subtitle</string>
-             </property>
-            </widget>
-            <widget class="QCheckBox" name="FilmEnCheck_5">
-             <property name="geometry">
-              <rect>
-               <x>110</x>
-               <y>310</y>
-               <width>32</width>
-               <height>16</height>
-              </rect>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">QCheckBox
-{
-color: rgb(255, 255, 255);
-background-color: rgba(255, 255, 255, 0);
-border: 0px;
-}
-QCheckBox::indicator:unchecked {
-    border: 1px solid #ffffff;
-	border-radius: 5px;
-	
-	border-color: rgb(249, 167, 43);
-    background: none;
-}
-QCheckBox::indicator:checked {
-    border: 0px solid #5A5A5A;
-	border-radius: 5px;
-
-    background: qradialgradient(spread:pad, cx:0.494, cy:0.528182, radius:2, fx:0.494, fy:0.528, stop:0.153409 rgba(255, 171, 44, 255), stop:0.3125 rgba(252, 128, 128, 0));
-}
-</string>
-             </property>
-             <property name="text">
-              <string>EN</string>
-             </property>
-            </widget>
-            <widget class="QCheckBox" name="FilmArCheck_5">
-             <property name="geometry">
-              <rect>
-               <x>61</x>
-               <y>310</y>
-               <width>33</width>
-               <height>16</height>
-              </rect>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">QCheckBox
-{
-color: rgb(255, 255, 255);
-background-color: rgba(255, 255, 255, 0);
-border: 0px;
-}
-QCheckBox::indicator:unchecked {
-    border: 1px solid #ffffff;
-	border-radius: 5px;
-	border-color: rgb(249, 167, 43);
-    background: none;
-}
-QCheckBox::indicator:checked {
-    border: 0px solid #5A5A5A;
-	border-radius: 5px;
-
-    background: qradialgradient(spread:pad, cx:0.494, cy:0.528182, radius:2, fx:0.494, fy:0.528, stop:0.153409 rgba(255, 171, 44, 255), stop:0.3125 rgba(252, 128, 128, 0));
-}
-</string>
-             </property>
-             <property name="text">
-              <string>AR</string>
-             </property>
-            </widget>
-            <widget class="QCheckBox" name="FilmFrCheck_5">
-             <property name="geometry">
-              <rect>
-               <x>13</x>
-               <y>310</y>
-               <width>32</width>
-               <height>16</height>
-              </rect>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">QCheckBox
-{
-color: rgb(255, 255, 255);
-background-color: rgba(255, 255, 255, 0);
-border: 0px;
-}
-QCheckBox::indicator:unchecked {
-    border: 1px solid #ffffff;
-	border-radius: 5px;
-	border-color: rgb(249, 167, 43);
-    background: none;
-}
-QCheckBox::indicator:checked {
-    border: 0px solid #5A5A5A;
-	border-radius: 5px;
-
-    background: qradialgradient(spread:pad, cx:0.494, cy:0.528182, radius:2, fx:0.494, fy:0.528, stop:0.153409 rgba(255, 171, 44, 255), stop:0.3125 rgba(252, 128, 128, 0));
-}
-</string>
-             </property>
-             <property name="text">
-              <string>FR</string>
-             </property>
-            </widget>
-            <widget class="QPushButton" name="FilmUpdateButton_5">
+            <widget class="QPushButton" name="SearchFilmButton">
              <property name="geometry">
               <rect>
                <x>10</x>
@@ -23878,6 +23753,142 @@ QPushButton:focus
              </property>
              <property name="text">
               <string>Search</string>
+             </property>
+            </widget>
+            <widget class="QRadioButton" name="SearchFilmByPriceCheck">
+             <property name="geometry">
+              <rect>
+               <x>130</x>
+               <y>260</y>
+               <width>21</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QCheckBox
+{
+color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;
+}
+QCheckBox::indicator:unchecked {
+    border: 1px solid #ffffff;
+	border-radius: 5px;
+	border-color: rgb(249, 167, 43);
+    background: none;
+}
+QCheckBox::indicator:checked {
+    border: 0px solid #5A5A5A;
+	border-radius: 5px;
+
+    background: qradialgradient(spread:pad, cx:0.494, cy:0.528182, radius:2, fx:0.494, fy:0.528, stop:0.153409 rgba(255, 171, 44, 255), stop:0.3125 rgba(252, 128, 128, 0));
+}
+</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+            <widget class="QRadioButton" name="SearchFilmByTypeCheck">
+             <property name="geometry">
+              <rect>
+               <x>130</x>
+               <y>210</y>
+               <width>21</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QCheckBox
+{
+color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;
+}
+QCheckBox::indicator:unchecked {
+    border: 1px solid #ffffff;
+	border-radius: 5px;
+	border-color: rgb(249, 167, 43);
+    background: none;
+}
+QCheckBox::indicator:checked {
+    border: 0px solid #5A5A5A;
+	border-radius: 5px;
+
+    background: qradialgradient(spread:pad, cx:0.494, cy:0.528182, radius:2, fx:0.494, fy:0.528, stop:0.153409 rgba(255, 171, 44, 255), stop:0.3125 rgba(252, 128, 128, 0));
+}
+</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+            <widget class="QRadioButton" name="SearchFilmByNameCheck">
+             <property name="geometry">
+              <rect>
+               <x>130</x>
+               <y>160</y>
+               <width>21</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QCheckBox
+{
+color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;
+}
+QCheckBox::indicator:unchecked {
+    border: 1px solid #ffffff;
+	border-radius: 5px;
+	border-color: rgb(249, 167, 43);
+    background: none;
+}
+QCheckBox::indicator:checked {
+    border: 0px solid #5A5A5A;
+	border-radius: 5px;
+
+    background: qradialgradient(spread:pad, cx:0.494, cy:0.528182, radius:2, fx:0.494, fy:0.528, stop:0.153409 rgba(255, 171, 44, 255), stop:0.3125 rgba(252, 128, 128, 0));
+}
+</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
+            <widget class="QRadioButton" name="SearchFilmByIdCheck">
+             <property name="geometry">
+              <rect>
+               <x>130</x>
+               <y>110</y>
+               <width>21</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QCheckBox
+{
+color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;
+}
+QCheckBox::indicator:unchecked {
+    border: 1px solid #ffffff;
+	border-radius: 5px;
+	border-color: rgb(249, 167, 43);
+    background: none;
+}
+QCheckBox::indicator:checked {
+    border: 0px solid #5A5A5A;
+	border-radius: 5px;
+
+    background: qradialgradient(spread:pad, cx:0.494, cy:0.528182, radius:2, fx:0.494, fy:0.528, stop:0.153409 rgba(255, 171, 44, 255), stop:0.3125 rgba(252, 128, 128, 0));
+}
+</string>
+             </property>
+             <property name="text">
+              <string/>
              </property>
             </widget>
            </widget>
@@ -24067,7 +24078,7 @@ border: 0px;</string>
                     <rect>
                      <x>1</x>
                      <y>44</y>
-                     <width>38</width>
+                     <width>51</width>
                      <height>17</height>
                     </rect>
                    </property>
@@ -24093,7 +24104,7 @@ border: 0px;</string>
                     <rect>
                      <x>1</x>
                      <y>98</y>
-                     <width>34</width>
+                     <width>41</width>
                      <height>17</height>
                     </rect>
                    </property>
@@ -24145,7 +24156,7 @@ border: 0px;</string>
                     <rect>
                      <x>1</x>
                      <y>1</y>
-                     <width>26</width>
+                     <width>31</width>
                      <height>37</height>
                     </rect>
                    </property>
@@ -24257,7 +24268,7 @@ color: rgb(255, 255, 255);</string>
                     <rect>
                      <x>1</x>
                      <y>71</y>
-                     <width>32</width>
+                     <width>41</width>
                      <height>17</height>
                     </rect>
                    </property>

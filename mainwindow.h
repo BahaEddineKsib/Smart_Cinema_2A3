@@ -33,6 +33,15 @@ public:
 
 public slots:
     void TimeOfWork();
+    void tab_theatres_show_add();
+    void tab_theatres_add_theatre();
+    void tab_theatres_cancel_add();
+private:
+
+    QTimer *timer;
+    int seconds,minuts,hours;
+
+    void setup_tabs();
 
 private slots:
     void on_ExitButton_clicked();
@@ -65,18 +74,9 @@ private slots:
 
     void tab_employees_add_employee();
 
-    void tab_theatres_show_add();
-    void tab_theatres_add_theatre();
-    void tab_theatres_cancel_add();
-
     void on_FilmAddButton_clicked();
 
-private:
-
-    QTimer *timer;
-    int seconds,minuts,hours;
-
-    void setup_tabs();
+    void on_SearchFilmButton_clicked();
 
 
 };
