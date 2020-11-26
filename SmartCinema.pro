@@ -19,7 +19,8 @@ SOURCES += \
     poll_chart.cpp \
     tab_employees.cpp \
     tab_movies.cpp \
-    tab_theatres.cpp
+    tab_theatres.cpp \
+    ticketgroupbox.cpp
 
 HEADERS += \
     current_user.h \
@@ -31,7 +32,8 @@ HEADERS += \
     poll_chart.h \
     tab_employees.h \
     tab_movies.h \
-    tab_theatres.h
+    tab_theatres.h \
+    ticketgroupbox.h
 
 FORMS += \
     mainwindow.ui
