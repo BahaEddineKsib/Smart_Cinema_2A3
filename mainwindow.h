@@ -78,6 +78,8 @@ private slots:
 
     void on_SearchFilmButton_clicked();
 
+    void on_FilmAddImageButton_clicked();
+
 
 };
 #endif // MAINWINDOW_H

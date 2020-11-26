@@ -8,7 +8,8 @@
 #include <QMessageBox>
 #include <moviegroupbox.h>
 #include "database.h"
-
+#include <QFileDialog>
+#include <QFile>
 
 
 
@@ -213,6 +214,14 @@ void MainWindow::tab_theatres_add_theatre()
 void MainWindow::tab_theatres_cancel_add()
 {
     theatres->hide_add_theatre();
+}
+void MainWindow::on_FilmAddImageButton_clicked()
+{
+    qDebug() << "FilmAddImageButton_clicked" << endl;
+    QString ImagePath = QFileDialog::getOpenFileName(this,"choose image");
+    qDebug() << ImagePath << endl;
+    ui->FilmAddImageButton->setText(ImagePath);
+    qDebug() << ui->FilmAddImageButton->text() << endl;
 }
 void MainWindow::on_FilmAddButton_clicked()
 {

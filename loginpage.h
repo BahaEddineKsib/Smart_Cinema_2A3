@@ -13,8 +13,6 @@ public:
     Ui::MainWindow *ui;
 
     void login();
-
-
 };
 
 #endif // LOGINPAGE_H

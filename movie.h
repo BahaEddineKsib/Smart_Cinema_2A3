@@ -8,7 +8,7 @@ class movie
 {
 public:
     movie();
-    movie(QString, QString, QString, QString, QString, bool, bool, bool,Ui::MainWindow *ui);
+    movie(QString, QString, QString, QString, QString, QString, bool, bool, bool,Ui::MainWindow *ui);
     Ui::MainWindow *ui;
     void StoreInDatabase();
     void Display();
@@ -17,6 +17,7 @@ public:
     QString type;
     QString price;
     QString description;
+    QString ImageLink;
     bool ar;
     bool fr;
     bool en;

@@ -4,7 +4,7 @@
 #include <QMessageBox>
 #include <QHBoxLayout>
 movie::movie(){}
-movie::movie(QString ID, QString NAME, QString TYPE, QString PRICE, QString DESCRIPTION, bool AR, bool FR, bool EN,Ui::MainWindow *ui)
+movie::movie(QString ID, QString NAME, QString TYPE, QString PRICE, QString DESCRIPTION, QString IMAGELINK, bool AR, bool FR, bool EN,Ui::MainWindow *ui)
 {
     this->ui=ui;
     id =          ID;
@@ -15,19 +15,21 @@ movie::movie(QString ID, QString NAME, QString TYPE, QString PRICE, QString DESC
     ar =          AR;
     fr =          FR;
     en =          EN;
+    ImageLink=    IMAGELINK;
 }
 void movie::StoreInDatabase()
 {
     if(database::get()->db.open())
     {
         QSqlQuery qry;
-        qry.prepare("INSERT INTO movies (id,name,type,price,fr,ar,en,description) VALUES (:id,:name,:type,:price,:fr,:ar,:en,:description)");
+        qry.prepare("INSERT INTO movies (id,name,type,price,fr,ar,en,description,imagelink) VALUES (:id,:name,:type,:price,:fr,:ar,:en,:description,:imagelink)");
 
         qry.bindValue(":id",         id);
         qry.bindValue(":name",       name);
         qry.bindValue(":type",       type);
         qry.bindValue(":price",      price);
         qry.bindValue(":description",description);
+        qry.bindValue(":imagelink",ImageLink);
         if(fr)
         {
             qry.bindValue(":fr","1");
@@ -76,6 +78,10 @@ void movie::Display()
     DisplayBox->MovieArCheck->setChecked(ar);
     DisplayBox->MovieFrCheck->setChecked(fr);
     DisplayBox->MovieEnCheck->setChecked(en);
+    QIcon icon1;
+    icon1.addFile(ImageLink, QSize(), QIcon::Normal, QIcon::Off);
+    DisplayBox->MovieImageButton->setIcon(icon1);
+
     ui->horizontalLayout_4->addWidget(DisplayBox);
 }
 

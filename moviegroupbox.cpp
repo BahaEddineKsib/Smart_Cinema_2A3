@@ -354,7 +354,5 @@ void MovieGroupBox::DeleteMovieSlot()
         }
         delete this;
     }
-
-
 }
 
