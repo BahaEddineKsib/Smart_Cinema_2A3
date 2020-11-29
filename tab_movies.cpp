@@ -26,16 +26,15 @@ void tab_movies::DisplayAllMovies()
             while(qry.next())
             {
 
-                qDebug() << qry.value(qry.record().indexOf("id")).toString() << " " << qry.value(qry.record().indexOf("name")).toInt() << " " << qry.value(qry.record().indexOf("type")).toInt() << " " << qry.value(qry.record().indexOf("price")).toInt() << qry.value(qry.record().indexOf("description")).toInt() << qry.value(qry.record().indexOf("imagelink")).toInt() << qry.value(qry.record().indexOf("ar")).toInt() << qry.value(qry.record().indexOf("fr")).toInt() << qry.value(qry.record().indexOf("en")).toInt() << endl;
-                MOVIE = new movie(qry.value(qry.record().indexOf         ("id")).toString(),
-                                  qry.value(qry.record().indexOf       ("name")).toString(),
-                                  qry.value(qry.record().indexOf       ("type")).toString(),
-                                  qry.value(qry.record().indexOf      ("price")).toString(),
-                                  qry.value(qry.record().indexOf("description")).toString(),
-                                  qry.value(qry.record().indexOf  ("imagelink")).toString(),
-                                  qry.value(qry.record().indexOf         ("ar")).toInt()==1,
-                                  qry.value(qry.record().indexOf         ("fr")).toInt()==1,
-                                  qry.value(qry.record().indexOf         ("en")).toInt()==1,
+                qDebug() << qry.value(qry.record().indexOf("id")).toString() << " " << qry.value(qry.record().indexOf("name")).toInt() << " " << qry.value(qry.record().indexOf("type")).toInt() << " " << qry.value(qry.record().indexOf("price")).toInt() << qry.value(qry.record().indexOf("description")).toInt() << qry.value(qry.record().indexOf("imagelink")).toInt() << qry.value(qry.record().indexOf("sub_language")).toString() << qry.value(qry.record().indexOf("sub_language")).toString() << endl;
+                MOVIE = new movie(qry.value(qry.record().indexOf          ("id")).toString(),
+                                  qry.value(qry.record().indexOf        ("name")).toString(),
+                                  qry.value(qry.record().indexOf        ("type")).toString(),
+                                  qry.value(qry.record().indexOf       ("price")).toString(),
+                                  qry.value(qry.record().indexOf ("description")).toString(),
+                                  qry.value(qry.record().indexOf   ("imagelink")).toString(),
+                                  qry.value(qry.record().indexOf("sub_language")).toString(),
+                                  qry.value(qry.record().indexOf("dub_language")).toString(),
                                   ui);
                 MOVIE->Display();
             }
@@ -95,16 +94,15 @@ void tab_movies::SearchMovies()
             while(qry.next())
             {
 
-                qDebug() << qry.value(qry.record().indexOf("id")).toString() << " " << qry.value(qry.record().indexOf("name")).toInt() << " " << qry.value(qry.record().indexOf("type")).toInt() << " " << qry.value(qry.record().indexOf("price")).toInt() << qry.value(qry.record().indexOf("description")).toInt() << qry.value(qry.record().indexOf("imagelink")).toInt() << qry.value(qry.record().indexOf("ar")).toInt() << qry.value(qry.record().indexOf("fr")).toInt() << qry.value(qry.record().indexOf("en")).toInt() << endl;
-                MOVIE = new movie(qry.value(qry.record().indexOf         ("id")).toString(),
-                                  qry.value(qry.record().indexOf       ("name")).toString(),
-                                  qry.value(qry.record().indexOf       ("type")).toString(),
-                                  qry.value(qry.record().indexOf      ("price")).toString(),
-                                  qry.value(qry.record().indexOf("description")).toString(),
-                                  qry.value(qry.record().indexOf  ("imagelink")).toString(),
-                                  qry.value(qry.record().indexOf         ("ar")).toInt()==1,
-                                  qry.value(qry.record().indexOf         ("fr")).toInt()==1,
-                                  qry.value(qry.record().indexOf         ("en")).toInt()==1,
+                qDebug() << qry.value(qry.record().indexOf("id")).toString() << " " << qry.value(qry.record().indexOf("name")).toInt() << " " << qry.value(qry.record().indexOf("type")).toInt() << " " << qry.value(qry.record().indexOf("price")).toInt() << qry.value(qry.record().indexOf("description")).toInt() << qry.value(qry.record().indexOf("imagelink")).toInt() << qry.value(qry.record().indexOf("sub_language")).toString() << qry.value(qry.record().indexOf("sub_language")).toString() << endl;
+                MOVIE = new movie(qry.value(qry.record().indexOf          ("id")).toString(),
+                                  qry.value(qry.record().indexOf        ("name")).toString(),
+                                  qry.value(qry.record().indexOf        ("type")).toString(),
+                                  qry.value(qry.record().indexOf       ("price")).toString(),
+                                  qry.value(qry.record().indexOf ("description")).toString(),
+                                  qry.value(qry.record().indexOf   ("imagelink")).toString(),
+                                  qry.value(qry.record().indexOf("sub_language")).toString(),
+                                  qry.value(qry.record().indexOf("dub_language")).toString(),
                                   ui);
                 MOVIE->Display();
             }
@@ -120,13 +118,15 @@ void tab_movies::AddMovie()
                              ui->FilmPriceAdd       ->text(),
                              ui->FilmDescriptionAdd ->text(),
                              ui->FilmAddImageButton ->text(),
-                             ui->FilmArCheckAdd->isChecked(),
-                             ui->FilmFrCheckAdd->isChecked(),
-                             ui->FilmEnCheckAdd->isChecked(),
+                             ui->FilmSubLanguageAdd ->text(),
+                             ui->FilmDubLanguageAdd ->text(),
                              ui);
 
-    Movie->StoreInDatabase();
-    Movie->Display();
+    if(Movie->StoreInDatabase() == 1)
+    {
+        Movie->Display();
+    }
+
 }
 
 

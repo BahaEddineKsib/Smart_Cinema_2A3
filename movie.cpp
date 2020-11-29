@@ -4,7 +4,7 @@
 #include <QMessageBox>
 #include <QHBoxLayout>
 movie::movie(){}
-movie::movie(QString ID, QString NAME, QString TYPE, QString PRICE, QString DESCRIPTION, QString IMAGELINK, bool AR, bool FR, bool EN,Ui::MainWindow *ui)
+movie::movie(QString ID, QString NAME, QString TYPE, QString PRICE, QString DESCRIPTION, QString IMAGELINK, QString SUBLANGUAGE, QString DUBLANGUAGE, Ui::MainWindow *ui)
 {
     this->ui=ui;
     id =          ID;
@@ -12,56 +12,55 @@ movie::movie(QString ID, QString NAME, QString TYPE, QString PRICE, QString DESC
     type =        TYPE;
     price =       PRICE;
     description = DESCRIPTION;
-    ar =          AR;
-    fr =          FR;
-    en =          EN;
+    SubLaguage  = SUBLANGUAGE;
+    DubLaguage  = DUBLANGUAGE;
     ImageLink=    IMAGELINK;
 }
-void movie::StoreInDatabase()
+int movie::StoreInDatabase()
 {
     if(database::get()->db.open())
     {
+        bool ID_VERIFICATION=true;
         QSqlQuery qry;
-        qry.prepare("INSERT INTO movies (id,name,type,price,fr,ar,en,description,imagelink) VALUES (:id,:name,:type,:price,:fr,:ar,:en,:description,:imagelink)");
+        qry.prepare("SELECT id FROM  movies");
+        if(!qry.exec())
+        {QMessageBox::information(nullptr,"Error","Failed to exec query");
+         return 0;}
+        else{
 
-        qry.bindValue(":id",         id);
-        qry.bindValue(":name",       name);
-        qry.bindValue(":type",       type);
-        qry.bindValue(":price",      price);
-        qry.bindValue(":description",description);
-        qry.bindValue(":imagelink",ImageLink);
-        if(fr)
-        {
-            qry.bindValue(":fr","1");
-        }
-        else
-        {
-            qry.bindValue(":fr","0");
-        }
-        if(ar)
-        {
-            qry.bindValue(":ar","1");
-        }
-        else
-        {
-            qry.bindValue(":ar","0");
-        }
-        if(en)
-        {
-            qry.bindValue(":en","1");
-        }
-        else
-        {
-            qry.bindValue(":en","0");
-        }
-        if(qry.exec())
-        {
-            QMessageBox::information(nullptr,"Success","Employee registered successfully.");
-        }
-        else
-        {
-            QMessageBox::information(nullptr,"Error",qry.lastError().text());
-        }
+            while(qry.next() && ID_VERIFICATION){
+                if(qry.value(qry.record().indexOf("id")).toString() == id){
+                    ID_VERIFICATION=false;}}}
+
+        if(ID_VERIFICATION == false)
+        {QMessageBox::information(nullptr,"ERROR","ID ALREADY EXIST!.");
+         return 0;}
+            else if(id == "" || name == "" || type == "" || price == "" || description == "" || ImageLink == "" || SubLaguage == "" || DubLaguage == "" )
+                    {QMessageBox::information(nullptr,"ERROR","EMPTY INPUTS!.");
+                     return 0;}
+                        else
+                        {
+                            qry.prepare("INSERT INTO movies (id,name,type,price,description,imagelink,sub_language,dub_language) VALUES (:id,:name,:type,:price,:description,:imagelink,:sub_language,:dub_language)");
+                            qry.bindValue(":id",          id);
+                            qry.bindValue(":name",        name);
+                            qry.bindValue(":type",        type);
+                            qry.bindValue(":price",       price);
+                            qry.bindValue(":description", description);
+                            qry.bindValue(":imagelink",   ImageLink);
+                            qry.bindValue(":sub_language",SubLaguage);
+                            qry.bindValue(":dub_language",DubLaguage);
+                            if(qry.exec())
+                            {
+                                QMessageBox::information(nullptr,"Success","Movie registered successfully.");
+                                return 1;
+                            }
+                            else
+                            {
+                                QMessageBox::information(nullptr,"Error",qry.lastError().text());
+                                QMessageBox::information(nullptr,"error","database error");
+                                return 0;
+                            }
+                         }
 
     }
 
@@ -75,9 +74,8 @@ void movie::Display()
     DisplayBox->MovieTypeEdit->setText(type);
     DisplayBox->MoviePriceEdit->setText(price);
     DisplayBox->MovieDescriptionEdit->setPlainText(description);
-    DisplayBox->MovieArCheck->setChecked(ar);
-    DisplayBox->MovieFrCheck->setChecked(fr);
-    DisplayBox->MovieEnCheck->setChecked(en);
+    DisplayBox->MovieSubLanguageEdit->setText(SubLaguage);
+    DisplayBox->MovieDubLanguageEdit->setText(DubLaguage);
     QIcon icon1;
     icon1.addFile(ImageLink, QSize(), QIcon::Normal, QIcon::Off);
     DisplayBox->MovieImageButton->setIcon(icon1);

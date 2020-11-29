@@ -16,26 +16,26 @@ public:
     ~MovieGroupBox();
 
     QGroupBox      *MovieBox;
-    QPushButton    *MovieImageButton;
     QGroupBox      *MovieBottomBox;
     QGroupBox      *MovieDetailsBox;
-    QLineEdit      *MoviePriceEdit;
     QLabel         *MovieDescriptionTitle;
     QLabel         *MovieNameTitle;
     QLabel         *MoviePriceTitle;
     QLabel         *MovieDT;
     QLabel         *MovieIdTitle;
-    QLineEdit      *MovieIdEdit;
-    QLabel         *MovieSubtitle;
-    QLineEdit      *MovieTypeEdit;
+    QLabel         *MovieIdEdit;
     QLabel         *MovieTypeTitle;
+    QLabel         *MovieSubLanguageTitle;
+    QLabel         *MovieDubLanguageTitle;
+    QLineEdit      *MovieTypeEdit;
     QLineEdit      *MovieNameEdit;
-    QPushButton    *MovieUpdateButton;
+    QLineEdit      *MoviePriceEdit;
+    QLineEdit      *MovieSubLanguageEdit;
+    QLineEdit      *MovieDubLanguageEdit;
     QPlainTextEdit *MovieDescriptionEdit;
-    QCheckBox      *MovieFrCheck;
-    QCheckBox      *MovieArCheck;
-    QCheckBox      *MovieEnCheck;
+    QPushButton    *MovieUpdateButton;
     QPushButton    *MovieDeleteButton;
+    QPushButton    *MovieImageButton;
     QPushButton    *MovieSwipeButton;
 public slots:
     void UpdateMovieSlot();
