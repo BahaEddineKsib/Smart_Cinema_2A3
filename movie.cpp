@@ -52,7 +52,7 @@ int movie::StoreInDatabase()
                             if(qry.exec())
                             {
                                 QMessageBox::information(nullptr,"Success","Movie registered successfully.");
-                                return 1;
+
                             }
                             else
                             {
@@ -63,10 +63,12 @@ int movie::StoreInDatabase()
                          }
 
     }
+     return 1;
 
 }
 
 void movie::Display()
+
 {
     DisplayBox = new MovieGroupBox(ui->MoviesArea);
     DisplayBox->MovieIdEdit->setText(id);

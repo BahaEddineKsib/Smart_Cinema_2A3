@@ -10,7 +10,7 @@
 #include "tab_employees.h"
 #include "tab_theatres.h"
 #include "tab_movies.h"
-
+#include "tab_tickets.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -30,6 +30,7 @@ public:
     tab_employees *employees;
     tab_theatres  *theatres;
     tab_movies    *movies;
+    tab_tickets   *tickets;
 
 public slots:
     void TimeOfWork();
@@ -79,6 +80,8 @@ private slots:
     void on_SearchFilmButton_clicked();
 
     void on_FilmAddImageButton_clicked();
+
+    void on_TicketAddButton_clicked();
 
 
 };

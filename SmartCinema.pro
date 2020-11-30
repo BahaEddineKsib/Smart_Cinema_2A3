@@ -7,7 +7,6 @@ CONFIG += c++11
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
-
 SOURCES += \
     current_user.cpp \
     database.cpp \
@@ -20,7 +19,8 @@ SOURCES += \
     tab_employees.cpp \
     tab_movies.cpp \
     tab_theatres.cpp \
-    ticketgroupbox.cpp
+    tab_tickets.cpp \
+    ticket.cpp
 
 HEADERS += \
     current_user.h \
@@ -33,7 +33,8 @@ HEADERS += \
     tab_employees.h \
     tab_movies.h \
     tab_theatres.h \
-    ticketgroupbox.h
+    tab_tickets.h \
+    ticket.h
 
 FORMS += \
     mainwindow.ui
