@@ -21,10 +21,7 @@ public:
     QLabel       *TicketId;
     QComboBox    *TicketShowId;
     QCheckBox    *TicketVIP;
-    QRadioButton *TicketNotSub;
-    QLineEdit    *TicketEmail;
-    QRadioButton *TicketSub;
-    QComboBox    *TicketClient;
+    QLineEdit    *TicketBuyerEmail;
     QLabel       *TicketPrice;
 
 signals:

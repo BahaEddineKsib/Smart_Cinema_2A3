@@ -1296,7 +1296,7 @@ QPushButton:focus
 </string>
       </property>
       <property name="currentIndex">
-       <number>5</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="profil">
        <widget class="QLabel" name="ProfilPhoto">
@@ -1469,8 +1469,8 @@ QPushButton:focus
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>281</width>
-           <height>37</height>
+           <width>100</width>
+           <height>30</height>
           </rect>
          </property>
          <attribute name="label">
@@ -1553,8 +1553,8 @@ QPushButton:focus
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>281</width>
-           <height>37</height>
+           <width>100</width>
+           <height>30</height>
           </rect>
          </property>
          <attribute name="label">
@@ -1637,8 +1637,8 @@ color: rgb(255, 255, 255);</string>
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>281</width>
-           <height>37</height>
+           <width>100</width>
+           <height>30</height>
           </rect>
          </property>
          <attribute name="label">
@@ -1758,8 +1758,8 @@ color: rgb(255, 255, 255);</string>
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>281</width>
-           <height>37</height>
+           <width>100</width>
+           <height>30</height>
           </rect>
          </property>
          <attribute name="label">
@@ -1793,8 +1793,8 @@ color: rgb(255, 255, 255);</string>
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>281</width>
-           <height>37</height>
+           <width>100</width>
+           <height>30</height>
           </rect>
          </property>
          <attribute name="label">
@@ -1929,7 +1929,7 @@ QTabBar::tab:selected
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>942</width>
+               <width>122</width>
                <height>825</height>
               </rect>
              </property>
@@ -5283,7 +5283,7 @@ QPushButton:focus
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>942</width>
+               <width>100</width>
                <height>660</height>
               </rect>
              </property>
@@ -10237,7 +10237,7 @@ color: rgb(255, 255, 255);
             <widget class="QLabel" name="label_199">
              <property name="geometry">
               <rect>
-               <x>340</x>
+               <x>380</x>
                <y>10</y>
                <width>135</width>
                <height>17</height>
@@ -10267,46 +10267,13 @@ color: rgb(255, 255, 255);
               <string notr="true">color: rgb(255, 255, 255);</string>
              </property>
              <property name="text">
-              <string>Not Subscribed</string>
-             </property>
-            </widget>
-            <widget class="QLabel" name="label_200">
-             <property name="geometry">
-              <rect>
-               <x>530</x>
-               <y>10</y>
-               <width>135</width>
-               <height>17</height>
-              </rect>
-             </property>
-             <property name="minimumSize">
-              <size>
-               <width>135</width>
-               <height>0</height>
-              </size>
-             </property>
-             <property name="maximumSize">
-              <size>
-               <width>135</width>
-               <height>16777215</height>
-              </size>
-             </property>
-             <property name="font">
-              <font>
-               <family>Arial Black</family>
-               <pointsize>9</pointsize>
-               <weight>75</weight>
-               <bold>true</bold>
-              </font>
-             </property>
-             <property name="styleSheet">
-              <string notr="true">color: rgb(255, 255, 255);</string>
-             </property>
-             <property name="text">
-              <string>Subscribed</string>
+              <string>Buyer Email</string>
              </property>
             </widget>
            </widget>
+          </item>
+          <item>
+           <widget class="TicketGroupBox" name="widget_3" native="true"/>
           </item>
           <item>
            <widget class="QScrollArea" name="TicketsDetailsScrollArea">
@@ -10328,7 +10295,7 @@ color: rgb(255, 255, 255);
                <x>0</x>
                <y>0</y>
                <width>965</width>
-               <height>504</height>
+               <height>487</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_8">
@@ -10621,166 +10588,6 @@ QCheckBox::indicator:checked {
                   <bool>false</bool>
                  </property>
                 </widget>
-                <widget class="QRadioButton" name="TicketNotSub">
-                 <property name="geometry">
-                  <rect>
-                   <x>330</x>
-                   <y>9</y>
-                   <width>19</width>
-                   <height>16</height>
-                  </rect>
-                 </property>
-                 <property name="minimumSize">
-                  <size>
-                   <width>0</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>67</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>Arial Black</family>
-                   <pointsize>9</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">color: rgb(255, 255, 255);</string>
-                 </property>
-                 <property name="text">
-                  <string/>
-                 </property>
-                </widget>
-                <widget class="QLineEdit" name="TicketEmail">
-                 <property name="geometry">
-                  <rect>
-                   <x>350</x>
-                   <y>7</y>
-                   <width>131</width>
-                   <height>17</height>
-                  </rect>
-                 </property>
-                 <property name="minimumSize">
-                  <size>
-                   <width>100</width>
-                   <height>0</height>
-                  </size>
-                 </property>
-                 <property name="maximumSize">
-                  <size>
-                   <width>300</width>
-                   <height>16777215</height>
-                  </size>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>Bahnschrift Light</family>
-                   <pointsize>9</pointsize>
-                   <weight>50</weight>
-                   <bold>false</bold>
-                  </font>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">border: 0px solid rgb(249, 167, 43);
-border-bottom-width: 1px;
-border-radius: 5px;
-background-color: rgba(255, 255, 255, 0);
-color: rgb(255, 255, 255);</string>
-                 </property>
-                 <property name="inputMask">
-                  <string/>
-                 </property>
-                 <property name="text">
-                  <string/>
-                 </property>
-                 <property name="placeholderText">
-                  <string>Email@Exemple.com</string>
-                 </property>
-                </widget>
-                <widget class="QRadioButton" name="TicketSub">
-                 <property name="geometry">
-                  <rect>
-                   <x>530</x>
-                   <y>9</y>
-                   <width>19</width>
-                   <height>16</height>
-                  </rect>
-                 </property>
-                 <property name="font">
-                  <font>
-                   <family>Arial Black</family>
-                   <pointsize>9</pointsize>
-                   <weight>75</weight>
-                   <bold>true</bold>
-                  </font>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">color: rgb(255, 255, 255);</string>
-                 </property>
-                 <property name="text">
-                  <string/>
-                 </property>
-                </widget>
-                <widget class="QComboBox" name="TicketClient">
-                 <property name="geometry">
-                  <rect>
-                   <x>550</x>
-                   <y>7</y>
-                   <width>81</width>
-                   <height>16</height>
-                  </rect>
-                 </property>
-                 <property name="styleSheet">
-                  <string notr="true">QComboBox {
-	border: 0px solid #333333;
-
-	background: #00000000;
-	color: #ffffff;
-
-}
-
-QComboBox::drop-down {
-	color: #ffffff;
-
-
-}
-QComboBox::down-arrow {
-	color: #ffffff;
-
-
-}
- 
-QComboBox QAbstractItemView{
-	/*background-color: #4f4f4f;
-	color: #999999;*/
- 	color: #ffffff;
-	/*selection-background-color: #999999;
-	selection-color: #4f4f4f;*/
-}
-</string>
-                 </property>
-                 <item>
-                  <property name="text">
-                   <string>Client ID</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>852</string>
-                  </property>
-                 </item>
-                 <item>
-                  <property name="text">
-                   <string>025</string>
-                  </property>
-                 </item>
-                </widget>
                 <widget class="QLabel" name="TicketPrice">
                  <property name="geometry">
                   <rect>
@@ -10801,6 +10608,40 @@ QComboBox QAbstractItemView{
                  </property>
                  <property name="text">
                   <string>25DT</string>
+                 </property>
+                </widget>
+                <widget class="QLineEdit" name="TicketBuyerEmail">
+                 <property name="geometry">
+                  <rect>
+                   <x>350</x>
+                   <y>0</y>
+                   <width>191</width>
+                   <height>31</height>
+                  </rect>
+                 </property>
+                 <property name="font">
+                  <font>
+                   <family>Arial Black</family>
+                   <pointsize>9</pointsize>
+                   <weight>75</weight>
+                   <bold>true</bold>
+                  </font>
+                 </property>
+                 <property name="styleSheet">
+                  <string notr="true">border: 0px solid rgb(249, 167, 43);
+border-bottom-width: 2px;
+border-radius: px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+                 </property>
+                 <property name="inputMask">
+                  <string/>
+                 </property>
+                 <property name="text">
+                  <string/>
+                 </property>
+                 <property name="placeholderText">
+                  <string>Email@Exemple.com</string>
                  </property>
                 </widget>
                </widget>
@@ -11235,7 +11076,7 @@ QTabBar::tab:selected
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>942</width>
+               <width>778</width>
                <height>631</height>
               </rect>
              </property>
@@ -11633,7 +11474,7 @@ QPushButton:focus
                <x>0</x>
                <y>0</y>
                <width>1494</width>
-               <height>584</height>
+               <height>501</height>
               </rect>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_23">
@@ -13824,7 +13665,7 @@ QComboBox QAbstractItemView{
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>944</width>
+               <width>122</width>
                <height>687</height>
               </rect>
              </property>
@@ -20221,7 +20062,7 @@ QTabBar::tab:selected
 </string>
         </property>
         <property name="currentIndex">
-         <number>1</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="MoviesWidget">
          <attribute name="title">
@@ -24521,8 +24362,8 @@ border-radius:5px;
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>963</width>
-               <height>549</height>
+               <width>100</width>
+               <height>322</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_14">
@@ -31211,6 +31052,12 @@ border-radius:5px;</string>
    <class>poll_chart</class>
    <extends>QWidget</extends>
    <header>poll_chart.h</header>
+   <container>1</container>
+  </customwidget>
+  <customwidget>
+   <class>TicketGroupBox</class>
+   <extends>QWidget</extends>
+   <header location="global">ticketgroupbox.h</header>
    <container>1</container>
   </customwidget>
  </customwidgets>
