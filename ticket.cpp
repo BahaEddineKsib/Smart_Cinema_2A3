@@ -1,12 +1,19 @@
 #include "ticket.h"
 #include "database.h"
 #include <QMessageBox>
-ticket::ticket(int ID, int SHOWID, int PRICE, QString VIPSEAT, QString BUYEREMAIL, Ui::MainWindow *ui)
+ticket::ticket(int ID, int SHOWID, int PRICE, bool VIPSEAT, QString BUYEREMAIL, Ui::MainWindow *ui)
 {
     this->ui   = ui;
     id         = ID;
     ShowId     = SHOWID;
-    VIPseat    = VIPSEAT;
+    if(VIPSEAT)
+    {
+        VIPseat    = "0";
+    }
+    else
+    {
+        VIPseat    = "1";
+    }
     BuyerEmail = BUYEREMAIL;
     price      = PRICE;
 }
@@ -40,7 +47,7 @@ int ticket::StoreInDatabase()
             QMessageBox::information(nullptr,"ERROR","ID ALREADY EXIST!.");
             return 0;
         }
-        else if(id == 0 || ShowId == 0 || price == 0 || VIPseat == "" || BuyerEmail == "")
+        else if(id == 0 || ShowId == 0 || BuyerEmail == "")
         {
             QMessageBox::information(nullptr,"ERROR","EMPTY INPUTS!.");
             return 0;
@@ -61,8 +68,9 @@ int ticket::StoreInDatabase()
             }
             else
             {
-                QMessageBox::information(nullptr,"Error",qry.lastError().text());
-                QMessageBox::information(nullptr,"error","database error");
+                //QMessageBox::information(nullptr,"Error",qry.lastError().text());
+                QMessageBox::information(nullptr,"error","SHOW ID DOESN'T EXIST ");
+                //QMessageBox::information(nullptr,"error","database error");
                 return 0;
             }
          }
@@ -74,7 +82,19 @@ int ticket::StoreInDatabase()
 
 void ticket::Display()
 {
-    //TicketGroupBox* displayBox = new TicketGroupBox(ui->TicketsArea);
-    //DisplayBox->PrepareToDisplay(id, ShowId, price, VIPseat, BuyerEmail);
-    //ui->verticalLayout_8->addWidget(displayBox);
+    DisplayBox = new TicketGroupBox(ui->TicketsArea);
+    DisplayBox->TicketId->setText(QString::number(id));
+    DisplayBox->TicketShowId->setText(QString::number(ShowId));
+    DisplayBox->TicketBuyerEmail->setText(BuyerEmail);
+    DisplayBox->TicketPrice->setText(QString::number(price));
+    if(VIPseat == "1")
+    {
+        DisplayBox->TicketVIP->setChecked(true);
+    }
+    else
+    {
+        DisplayBox->TicketVIP->setChecked(false);
+    }
+
+    ui->verticalLayout_tickets->addWidget(DisplayBox);
 }

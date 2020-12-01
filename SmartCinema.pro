@@ -20,7 +20,8 @@ SOURCES += \
     tab_movies.cpp \
     tab_theatres.cpp \
     tab_tickets.cpp \
-    ticket.cpp
+    ticket.cpp \
+    ticketgroupbox.cpp
 
 HEADERS += \
     current_user.h \
@@ -34,7 +35,8 @@ HEADERS += \
     tab_movies.h \
     tab_theatres.h \
     tab_tickets.h \
-    ticket.h
+    ticket.h \
+    ticketgroupbox.h
 
 FORMS += \
     mainwindow.ui

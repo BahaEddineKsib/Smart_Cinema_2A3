@@ -171,7 +171,7 @@ void MovieGroupBox::DeleteMovieSlot()
         qry.bindValue(":id",MovieIdEdit->text());
         if(!qry.exec())
         {
-            QMessageBox::information(nullptr,"Error","Failed to exec query");
+            QMessageBox::information(nullptr,"Error","there is a show contain this movie");
         }
         else
         {

@@ -66,6 +66,8 @@ void MainWindow::setup_tabs()
     movies = new  tab_movies(ui);
     movies->DisplayAllMovies();
 
+    tickets = new tab_tickets(ui);
+    tickets->DisplayAllTickets();
 }
 
 

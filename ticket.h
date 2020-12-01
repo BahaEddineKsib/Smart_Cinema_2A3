@@ -6,16 +6,16 @@
 class ticket
 {
 public:
-    ticket(int, int, int, QString, QString, Ui::MainWindow *ui);
-    int StoreInDatabase();
+    ticket(int, int, int, bool, QString, Ui::MainWindow *ui);
     void Display();
+    int  StoreInDatabase();
     Ui::MainWindow *ui;
     int             id;
     int             ShowId;
     QString         VIPseat;
     QString         BuyerEmail;
     int             price;
-    TicketGroupBox* DisplayBox;
+    TicketGroupBox* DisplayBox =nullptr;
 
 };
 
