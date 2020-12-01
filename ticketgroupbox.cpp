@@ -86,12 +86,12 @@ void TicketGroupBox::UpdateTicketSlot()
     if(database::get()->db.open())
     {
         QSqlQuery qry;
-        qry.prepare("UPDATE tickets SET vip_seat=:vip_seat, price=:price, buyer_email=:buyer_email, show_id WHERE id=:id ");
-        qry.bindValue(":vip_seat",        TicketVIP->text());
-        qry.bindValue(":price",        TicketPrice->text());
-        qry.bindValue(":buyer_email",       TicketBuyerEmail->text());
+        qry.prepare("UPDATE tickets SET vip_seat=:vip_seat, price=:price, buyer_email=:buyer_email, show_id=:show_id WHERE id=:id ");
+        qry.bindValue(":vip_seat",TicketVIP->text());
+        qry.bindValue(":price",TicketPrice->text());
+        qry.bindValue(":buyer_email",TicketBuyerEmail->text());
         qry.bindValue(":show_id",TicketShowId->text());
-        qry.bindValue(":id",          TicketId->text());
+        qry.bindValue(":id",TicketId->text());
 
         if(!qry.exec())
         {

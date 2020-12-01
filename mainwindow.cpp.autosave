@@ -263,7 +263,8 @@ void MainWindow::on_PrintTicketButton_clicked()
         painter.drawText(2800,1600,"YOU ARE VIP! YOU ARE A ROCKSTAR!");
     painter.drawText(100,1800,"Your Email :");
     painter.drawText(2800,1800,ui->TicketBuyerEmailAdd->text());
-
     painter.end();
+    
+    
 }
 

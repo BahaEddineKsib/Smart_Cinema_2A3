@@ -83,6 +83,10 @@ private slots:
 
     void on_TicketAddButton_clicked();
 
+    void on_HidePrintAndSendButton_clicked();
+
+    void on_PrintTicketButton_clicked();
+
 
 
 };

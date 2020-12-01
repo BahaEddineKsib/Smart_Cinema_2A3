@@ -1296,7 +1296,7 @@ QPushButton:focus
 </string>
       </property>
       <property name="currentIndex">
-       <number>5</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="profil">
        <widget class="QLabel" name="ProfilPhoto">
@@ -1372,7 +1372,7 @@ QToolBox::tab:selected
 </string>
         </property>
         <property name="currentIndex">
-         <number>0</number>
+         <number>5</number>
         </property>
         <widget class="QWidget" name="ProfilName">
          <property name="geometry">
@@ -1469,8 +1469,8 @@ QPushButton:focus
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>100</width>
-           <height>30</height>
+           <width>281</width>
+           <height>37</height>
           </rect>
          </property>
          <attribute name="label">
@@ -1553,8 +1553,8 @@ QPushButton:focus
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>100</width>
-           <height>30</height>
+           <width>281</width>
+           <height>37</height>
           </rect>
          </property>
          <attribute name="label">
@@ -1637,8 +1637,8 @@ color: rgb(255, 255, 255);</string>
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>100</width>
-           <height>30</height>
+           <width>281</width>
+           <height>37</height>
           </rect>
          </property>
          <attribute name="label">
@@ -1758,8 +1758,8 @@ color: rgb(255, 255, 255);</string>
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>100</width>
-           <height>30</height>
+           <width>281</width>
+           <height>37</height>
           </rect>
          </property>
          <attribute name="label">
@@ -1793,8 +1793,8 @@ color: rgb(255, 255, 255);</string>
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>100</width>
-           <height>30</height>
+           <width>281</width>
+           <height>37</height>
           </rect>
          </property>
          <attribute name="label">
@@ -1929,7 +1929,7 @@ QTabBar::tab:selected
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>122</width>
+               <width>942</width>
                <height>825</height>
               </rect>
              </property>
@@ -5283,7 +5283,7 @@ QPushButton:focus
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>100</width>
+               <width>942</width>
                <height>660</height>
               </rect>
              </property>
@@ -9695,7 +9695,7 @@ QTabBar::tab:selected
          <enum>QTabWidget::Rounded</enum>
         </property>
         <property name="currentIndex">
-         <number>1</number>
+         <number>0</number>
         </property>
         <property name="elideMode">
          <enum>Qt::ElideRight</enum>
@@ -9967,6 +9967,213 @@ color: rgb(255, 255, 255);</string>
             </widget>
            </item>
           </layout>
+         </widget>
+         <widget class="QWidget" name="PrintAndSendWidget" native="true">
+          <property name="geometry">
+           <rect>
+            <x>280</x>
+            <y>100</y>
+            <width>341</width>
+            <height>431</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">background-color: rgb(33, 37, 41);</string>
+          </property>
+          <widget class="QLabel" name="ProfilPersonelAccessEdit_60">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>50</y>
+             <width>61</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Yu Gothic UI Semilight</family>
+             <pointsize>14</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>PRINT</string>
+           </property>
+          </widget>
+          <widget class="QLabel" name="ProfilPersonelAccessEdit_62">
+           <property name="geometry">
+            <rect>
+             <x>30</x>
+             <y>90</y>
+             <width>131</width>
+             <height>31</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Yu Gothic UI Semilight</family>
+             <pointsize>14</pointsize>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="text">
+            <string>SEND EMAIL</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="SendTicketButton">
+           <property name="geometry">
+            <rect>
+             <x>170</x>
+             <y>100</y>
+             <width>21</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton
+{
+	background-color:rgb(50, 53, 57);
+	border-style:solid;
+	border-radius:7px;
+	border-width:1px;
+border-color: rgb(50, 53, 57);
+	color:#ffffff;
+	font-size:16px;
+font-family:Calibri;
+}
+
+QPushButton:hover
+{
+	background-color: #00000000;
+	border-color: rgb(30, 227, 0);
+	/*color:rgb(30, 227, 0);*/
+}
+
+QPushButton:focus
+{
+	background-color:  rgb(30, 227, 0);
+	border-color: rgba(30, 227, 0,0);
+	color:rgb(255, 255, 255);
+}
+</string>
+           </property>
+           <property name="text">
+            <string>x</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="PrintTicketButton">
+           <property name="geometry">
+            <rect>
+             <x>170</x>
+             <y>60</y>
+             <width>21</width>
+             <height>21</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton
+{
+	background-color:rgb(50, 53, 57);
+	border-style:solid;
+	border-radius:7px;
+	border-width:1px;
+border-color: rgb(50, 53, 57);
+	color:#ffffff;
+	font-size:16px;
+font-family:Calibri;
+}
+
+QPushButton:hover
+{
+	background-color: #00000000;
+	border-color: rgb(30, 227, 0);
+	/*color:rgb(30, 227, 0);*/
+}
+
+QPushButton:focus
+{
+	background-color:  rgb(30, 227, 0);
+	border-color: rgba(30, 227, 0,0);
+	color:rgb(255, 255, 255);
+}
+</string>
+           </property>
+           <property name="text">
+            <string>x</string>
+           </property>
+          </widget>
+          <widget class="QLineEdit" name="TicketBuyerEmailSend">
+           <property name="geometry">
+            <rect>
+             <x>20</x>
+             <y>140</y>
+             <width>205</width>
+             <height>26</height>
+            </rect>
+           </property>
+           <property name="font">
+            <font>
+             <family>Arial Black</family>
+             <pointsize>9</pointsize>
+             <weight>75</weight>
+             <bold>true</bold>
+            </font>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">border: 0px solid rgb(249, 167, 43);
+border-bottom-width: 2px;
+border-radius: px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+           </property>
+           <property name="inputMask">
+            <string/>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+           <property name="placeholderText">
+            <string>Email@Exemple.com</string>
+           </property>
+          </widget>
+          <widget class="QPushButton" name="HidePrintAndSendButton">
+           <property name="geometry">
+            <rect>
+             <x>320</x>
+             <y>10</y>
+             <width>15</width>
+             <height>15</height>
+            </rect>
+           </property>
+           <property name="styleSheet">
+            <string notr="true">QPushButton
+{
+	background-color:rgb(255,0 , 0);
+border-radius: 7px;
+
+}
+
+
+QPushButton:hover
+{
+
+background-color: rgb(190, 0, 0);
+}
+QPushButton:focus
+{
+	background-color: rgb(190, 0, 0);
+
+}
+</string>
+           </property>
+           <property name="text">
+            <string/>
+           </property>
+          </widget>
          </widget>
         </widget>
         <widget class="QWidget" name="TicketsDetails">
@@ -10665,7 +10872,7 @@ QTabBar::tab:selected
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>778</width>
+               <width>942</width>
                <height>631</height>
               </rect>
              </property>
@@ -11063,7 +11270,7 @@ QPushButton:focus
                <x>0</x>
                <y>0</y>
                <width>1494</width>
-               <height>501</height>
+               <height>584</height>
               </rect>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_23">
@@ -13254,7 +13461,7 @@ QComboBox QAbstractItemView{
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>122</width>
+               <width>944</width>
                <height>687</height>
               </rect>
              </property>
@@ -24011,8 +24218,8 @@ border-radius:5px;
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>100</width>
-               <height>322</height>
+               <width>963</width>
+               <height>549</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_14">
