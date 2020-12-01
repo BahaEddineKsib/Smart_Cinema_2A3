@@ -4,6 +4,7 @@
 #include <QMessageBox>
 #include <QDebug>
 #include <QLatin1String>
+#include <QRect>
 MovieGroupBox::MovieGroupBox(QWidget *parent) : QWidget(parent)
 {
     this->setMinimumSize(QSize(381, 531));
@@ -128,6 +129,8 @@ MovieGroupBox::MovieGroupBox(QWidget *parent) : QWidget(parent)
     MovieSwipeButton->setStyleSheet(QLatin1String("QPushButton\n{\n	background-color:#00000000;\n	border-width:0px;\n	color:#ffffff;\n}\n\nQPushButton:hover\n{\n\n	color:rgb(30, 227, 0);\n}\n\nQPushButton:focus\n{\n\n	color:rgb(30, 227, 0);\n}\n"));
     connect(MovieUpdateButton,SIGNAL(clicked()),this,SLOT(UpdateMovieSlot()));
     connect(MovieDeleteButton,SIGNAL(clicked()),this,SLOT(DeleteMovieSlot()));
+    connect(MovieSwipeButton, SIGNAL(clicked()),this,SLOT(Animation()));
+    Animation();
 }
 MovieGroupBox::~MovieGroupBox()
 {
@@ -179,5 +182,28 @@ void MovieGroupBox::DeleteMovieSlot()
         }
         delete this;
     }
+}
+
+void MovieGroupBox::Animation()
+{
+    if(!MovieDetailsBox->isHidden())
+    {
+        animation = new QPropertyAnimation(MovieBottomBox,"geometry");
+        animation->setDuration(100);
+        animation->setStartValue(MovieBottomBox->geometry());
+        animation->setEndValue(QRect(MovieBottomBox->x(),0,MovieBottomBox->width(),MovieImageButton->height()));
+        animation->start();
+        MovieDetailsBox->setHidden(true);
+    }
+    else
+    {
+        animation = new QPropertyAnimation(MovieBottomBox,"geometry");
+        animation->setDuration(100);
+        animation->setStartValue(MovieBottomBox->geometry());
+        animation->setEndValue(QRect(0, 197, 381, 331));
+        animation->start();
+        MovieDetailsBox->setHidden(false);
+    }
+        qDebug() << "animation";
 }
 

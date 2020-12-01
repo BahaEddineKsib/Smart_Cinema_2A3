@@ -85,6 +85,11 @@ void tab_movies::SearchMovies()
             qry.bindValue(":price",ui->SearchFilmByPrice->text());
         }
 
+        if(ui->SearchDisplayAll->isChecked())
+        {
+            qry.prepare("SELECT * FROM  movies");
+        }
+
         if(!qry.exec())
         {
             QMessageBox::information(nullptr,"Error","Failed to exec query");

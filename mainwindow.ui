@@ -1296,7 +1296,7 @@ QPushButton:focus
 </string>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>5</number>
       </property>
       <widget class="QWidget" name="profil">
        <widget class="QLabel" name="ProfilPhoto">
@@ -20094,6 +20094,66 @@ QCheckBox::indicator:checked {
               <string/>
              </property>
             </widget>
+            <widget class="QLabel" name="FilmPriceTitle_7">
+             <property name="geometry">
+              <rect>
+               <x>10</x>
+               <y>290</y>
+               <width>91</width>
+               <height>17</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Arial Black</family>
+               <pointsize>9</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;</string>
+             </property>
+             <property name="text">
+              <string>Display All</string>
+             </property>
+            </widget>
+            <widget class="QRadioButton" name="SearchDisplayAll">
+             <property name="geometry">
+              <rect>
+               <x>130</x>
+               <y>290</y>
+               <width>21</width>
+               <height>16</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QCheckBox
+{
+color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;
+}
+QCheckBox::indicator:unchecked {
+    border: 1px solid #ffffff;
+	border-radius: 5px;
+	border-color: rgb(249, 167, 43);
+    background: none;
+}
+QCheckBox::indicator:checked {
+    border: 0px solid #5A5A5A;
+	border-radius: 5px;
+
+    background: qradialgradient(spread:pad, cx:0.494, cy:0.528182, radius:2, fx:0.494, fy:0.528, stop:0.153409 rgba(255, 171, 44, 255), stop:0.3125 rgba(252, 128, 128, 0));
+}
+</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
            </widget>
           </item>
           <item>
@@ -20112,8 +20172,8 @@ QCheckBox::indicator:checked {
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>46</width>
-               <height>30</height>
+               <width>758</width>
+               <height>606</height>
               </rect>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_4">

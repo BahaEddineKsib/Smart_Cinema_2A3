@@ -8,6 +8,7 @@
 #include <QLabel>
 #include <QPlainTextEdit>
 #include <QCheckBox>
+#include <QPropertyAnimation>
 class MovieGroupBox : public QWidget
 {
     Q_OBJECT
@@ -37,9 +38,11 @@ public:
     QPushButton    *MovieDeleteButton;
     QPushButton    *MovieImageButton;
     QPushButton    *MovieSwipeButton;
+    QPropertyAnimation *animation;
 public slots:
     void UpdateMovieSlot();
     void DeleteMovieSlot();
+    void Animation();
 
 signals:
 
