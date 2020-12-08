@@ -5,7 +5,7 @@
 #include <QTimer>
 #include <QWidget>
 #include <QScrollArea>
-
+#include "smtp.h"
 #include "loginpage.h"
 #include "tab_employees.h"
 #include "tab_theatres.h"
@@ -86,7 +86,9 @@ private slots:
     void on_HidePrintAndSendButton_clicked();
 
     void on_PrintTicketButton_clicked();
-
+    void on_SendTicketButton_clicked();
+    void sendMail();
+    void mailSent(QString);
 
 
 };

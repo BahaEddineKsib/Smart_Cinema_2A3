@@ -87,7 +87,12 @@ void TicketGroupBox::UpdateTicketSlot()
     {
         QSqlQuery qry;
         qry.prepare("UPDATE tickets SET vip_seat=:vip_seat, price=:price, buyer_email=:buyer_email, show_id=:show_id WHERE id=:id ");
-        qry.bindValue(":vip_seat",TicketVIP->text());
+        QString VIP = "1";
+        if(TicketVIP->isChecked())
+        {
+            VIP = "0";
+        }
+        qry.bindValue(":vip_seat",VIP);
         qry.bindValue(":price",TicketPrice->text());
         qry.bindValue(":buyer_email",TicketBuyerEmail->text());
         qry.bindValue(":show_id",TicketShowId->text());

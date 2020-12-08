@@ -14,7 +14,7 @@
 #include <QPdfWriter>
 #include <QDesktopServices>
 #include <QUrl>
-
+#include "smtp.h"
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -263,7 +263,25 @@ void MainWindow::on_PrintTicketButton_clicked()
         painter.drawText(2800,1600,"YOU ARE VIP! YOU ARE A ROCKSTAR!");
     painter.drawText(100,1800,"Your Email :");
     painter.drawText(2800,1800,ui->TicketBuyerEmailAdd->text());
-
     painter.end();
+
+}
+void MainWindow::sendMail()
+{
+    Smtp* smtp = new Smtp("monemehamila@gmail.com", "Troxy26984677", "smtp.gmail.com", 465);
+    connect(smtp, SIGNAL(status(QString)), this, SLOT(mailSent(QString)));
+
+
+    smtp->sendMail("monemehamila@gmail.com", ui->TicketBuyerEmailSend->text() , "smartcinema","welcome");
 }
 
+void MainWindow::mailSent(QString status)
+{
+    if(status == "Message sent")
+        QMessageBox::warning( 0, tr( "Qt Simple SMTP client" ), tr( "Message sent!\n\n" ) );
+}
+
+void MainWindow::on_SendTicketButton_clicked()
+{
+  sendMail();
+}

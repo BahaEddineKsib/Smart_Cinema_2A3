@@ -1,5 +1,5 @@
 QT       += core gui charts sql
-QT       += printsupport
+QT       += printsupport network
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
 CONFIG += c++11
@@ -7,6 +7,7 @@ CONFIG += c++11
 # You can make your code fail to compile if it uses deprecated APIs.
 # In order to do so, uncomment the following line.
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
+
 SOURCES += \
     current_user.cpp \
     database.cpp \
@@ -16,6 +17,7 @@ SOURCES += \
     movie.cpp \
     moviegroupbox.cpp \
     poll_chart.cpp \
+    smtp.cpp \
     tab_employees.cpp \
     tab_movies.cpp \
     tab_theatres.cpp \
@@ -31,6 +33,7 @@ HEADERS += \
     movie.h \
     moviegroupbox.h \
     poll_chart.h \
+    smtp.h \
     tab_employees.h \
     tab_movies.h \
     tab_theatres.h \

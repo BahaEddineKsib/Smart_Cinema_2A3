@@ -17,6 +17,8 @@ public:
     int             price;
     TicketGroupBox* DisplayBox =nullptr;
 
+private slots:
+    void on_FilmIdAdd_textChanged(const QString &arg1);
 };
 
 #endif // TICKET_H

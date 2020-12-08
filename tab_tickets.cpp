@@ -54,11 +54,7 @@ void tab_tickets::AddTicket()
 
     if(Ticket->StoreInDatabase() == 1)
     {
-        ui->PrintAndSendWidget->setHidden(false);
         Ticket->Display();
+        ui->PrintAndSendWidget->setHidden(false);
     }
 }
-
-
-
-
