@@ -63,7 +63,7 @@ void tab_theatres::add_theatre()
         QMessageBox::information(nullptr,"Notice","Please fill out all forms.");
     }
 
-    else if(database::get()->db.open())
+    else if(database::get()->db.isOpen())
     {
 
         QSqlQuery qry;

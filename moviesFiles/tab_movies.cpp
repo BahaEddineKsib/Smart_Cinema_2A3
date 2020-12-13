@@ -13,7 +13,7 @@ void tab_movies::DisplayAllMovies()
 {
     qDebug() << "DISPLAY ALL MOVIES";
     movie *MOVIE;
-    if(database::get()->db.open())
+    if(database::get()->db.isOpen())
     {
         QSqlQuery qry;
         qry.prepare("SELECT * FROM  movies");
@@ -58,7 +58,7 @@ void tab_movies::SearchMovies()
 {
     UndisplayAllMovies();
     movie *MOVIE;
-    if(database::get()->db.open())
+    if(database::get()->db.isOpen())
     {
         QSqlQuery qry;
         if(ui->SearchFilmByIdCheck   ->isChecked())

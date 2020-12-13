@@ -11,7 +11,7 @@ void tab_tickets::DisplayAllTickets()
 {
     qDebug() << "DISPLAY ALL MOVIES";
     ticket *TICKET;
-    if(database::get()->db.open())
+    if(database::get()->db.isOpen())
     {
         QSqlQuery qry;
         qry.prepare("SELECT * FROM  tickets");

@@ -22,7 +22,7 @@ void loginpage::login()
         {
             QMessageBox::information(nullptr,"Notice","Please fill out both forms.");
         }
-        else if(database::get()->db.open())
+        else if(database::get()->db.isOpen())
         {
 
             bool succ=false;

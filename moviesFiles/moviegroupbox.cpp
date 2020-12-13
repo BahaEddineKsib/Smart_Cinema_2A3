@@ -139,7 +139,7 @@ MovieGroupBox::~MovieGroupBox()
 void MovieGroupBox::UpdateMovieSlot()
 {
     qDebug() << "UPDATE MOVIE";
-    if(database::get()->db.open())
+    if(database::get()->db.isOpen())
     {
         QSqlQuery qry;
         qry.prepare("UPDATE movies SET name=:name, type=:type, price=:price, description=:description, sub_language=:sub_language, dub_language=:dub_language WHERE id=:id ");
@@ -167,7 +167,7 @@ void MovieGroupBox::UpdateMovieSlot()
 void MovieGroupBox::DeleteMovieSlot()
 {
     qDebug() << "DELETE MOVIE FROM DATA BASE";
-    if(database::get()->db.open())
+    if(database::get()->db.isOpen())
     {
         QSqlQuery qry;
         qry.prepare("DELETE FROM movies WHERE id=:id ");

@@ -83,7 +83,7 @@ TicketGroupBox::~TicketGroupBox()
 void TicketGroupBox::UpdateTicketSlot()
 {
     qDebug() << "UPDATE Ticket";
-    if(database::get()->db.open())
+    if(database::get()->db.isOpen())
     {
         QSqlQuery qry;
         qry.prepare("UPDATE tickets SET vip_seat=:vip_seat, price=:price, buyer_email=:buyer_email, show_id=:show_id WHERE id=:id ");
@@ -113,7 +113,7 @@ void TicketGroupBox::UpdateTicketSlot()
 void TicketGroupBox::DeleteTicketSlot()
 {
     qDebug() << "DELETE ticket FROM DATA BASE";
-    if(database::get()->db.open())
+    if(database::get()->db.isOpen())
     {
         QSqlQuery qry;
         qry.prepare("DELETE FROM tickets WHERE id=:id ");
