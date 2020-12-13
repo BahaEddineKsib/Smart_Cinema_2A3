@@ -1,6 +1,6 @@
-#include "moviegroupbox.h"
+#include "moviesFiles\moviegroupbox.h"
 #include "database.h"
-#include "tab_movies.h"
+#include "moviesFiles\tab_movies.h"
 #include <QMessageBox>
 #include <QDebug>
 #include <QLatin1String>

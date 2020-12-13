@@ -1,5 +1,5 @@
 #include "mainwindow.h"
-#include "movie.h"
+#include "moviesFiles\movie.h"
 #include "database.h"
 #include <QMessageBox>
 #include <QHBoxLayout>

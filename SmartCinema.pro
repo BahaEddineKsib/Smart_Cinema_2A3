@@ -11,35 +11,39 @@ CONFIG += c++11
 SOURCES += \
     current_user.cpp \
     database.cpp \
+    employeesFiles/employee.cpp \
+    employeesFiles/employeegroupbox.cpp \
+    employeesFiles/tab_employees.cpp \
     loginpage.cpp \
     main.cpp \
     mainwindow.cpp \
-    movie.cpp \
-    moviegroupbox.cpp \
+    moviesFiles\movie.cpp \
+    moviesFiles\moviegroupbox.cpp \
     poll_chart.cpp \
     smtp.cpp \
-    tab_employees.cpp \
-    tab_movies.cpp \
+    moviesFiles\tab_movies.cpp \
     tab_theatres.cpp \
-    tab_tickets.cpp \
-    ticket.cpp \
-    ticketgroupbox.cpp
+    ticketsFiles\tab_tickets.cpp \
+    ticketsFiles\ticket.cpp \
+    ticketsFiles\ticketgroupbox.cpp
 
 HEADERS += \
     current_user.h \
     database.h \
+    employeesFiles/employee.h \
+    employeesFiles/employeegroupbox.h \
+    employeesFiles/tab_employees.h \
     loginpage.h \
     mainwindow.h \
-    movie.h \
-    moviegroupbox.h \
+    moviesFiles\movie.h \
+    moviesFiles\moviegroupbox.h \
     poll_chart.h \
     smtp.h \
-    tab_employees.h \
-    tab_movies.h \
+    moviesFiles\tab_movies.h \
     tab_theatres.h \
-    tab_tickets.h \
-    ticket.h \
-    ticketgroupbox.h
+    ticketsFiles\tab_tickets.h \
+    ticketsFiles\ticket.h \
+    ticketsFiles\ticketgroupbox.h
 
 FORMS += \
     mainwindow.ui

@@ -1,5 +1,5 @@
-#include "tab_movies.h"
-#include "movie.h"
+#include "moviesFiles\tab_movies.h"
+#include "moviesFiles\movie.h"
 #include "database.h"
 #include <QMessageBox>
 #include <QLayoutItem>

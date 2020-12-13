@@ -103,3 +103,7 @@ void tab_theatres::hide_add_theatre()
 {
     ui->add_theatre_widget->hide();
 }
+
+
+
+

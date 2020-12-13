@@ -6,7 +6,7 @@
 #include <QWidget>
 #include <QScrollArea>
 #include <QMessageBox>
-#include <moviegroupbox.h>
+#include "moviesFiles\moviegroupbox.h"
 #include "database.h"
 #include <QFileDialog>
 #include <QFile>
@@ -35,7 +35,7 @@ MainWindow::MainWindow(QWidget *parent)
     /***********************TEMPORARY CODE*********************************/
     /**/QPixmap ProfilIcon(":/profil_icon/profile_icon.png");
     /**/ui->ProfilPhoto->setPixmap(ProfilIcon.scaled(100,100,Qt::KeepAspectRatio));
-    /**/ui->label->setPixmap(ProfilIcon.scaled(100,100,Qt::KeepAspectRatio));
+    /**///ui->label->setPixmap(ProfilIcon.scaled(100,100,Qt::KeepAspectRatio));
     /**********************************************************************/
 
     ui->BigStack->setCurrentIndex(0);       //default page set to loginpage
@@ -58,7 +58,7 @@ void MainWindow::setup_tabs()
 
     //tabs
     employees = new tab_employees(ui);
-    connect(ui->add_employee_btn, SIGNAL (clicked()),this, SLOT (tab_employees_add_employee()));
+    employees->DisplayAllEmployees();
 
     theatres = new tab_theatres(ui);
     connect(ui->btn_show_add_theatre, SIGNAL (clicked()),this, SLOT (tab_theatres_show_add()));
@@ -201,10 +201,6 @@ void MainWindow::loginpage_login()
     login_page->login();
 }
 
-void MainWindow::tab_employees_add_employee()
-{
-    employees->add_employee();
-}
 
 void MainWindow::tab_theatres_show_add()
 {
@@ -240,6 +236,21 @@ void MainWindow::on_TicketAddButton_clicked()
 {
     tickets->AddTicket();
 }
+
+void MainWindow::on_EmployeeAddButton_clicked()
+{
+    employees->AddEmployee();
+}
+
+void MainWindow::on_EmployeeImageAddButton_clicked()
+{
+    qDebug() << "EmployeeImageAddButton_clicked" << endl;
+    QString ImagePath = QFileDialog::getOpenFileName(this,"choose image");
+    qDebug() << ImagePath << endl;
+    ui->EmployeeImageAddButton->setText(ImagePath);
+    qDebug() << ui->EmployeeImageAddButton->text() << endl;
+}
+
 void MainWindow::on_HidePrintAndSendButton_clicked()
 {
     ui->PrintAndSendWidget->setHidden(true);

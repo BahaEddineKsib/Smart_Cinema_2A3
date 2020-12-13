@@ -7,10 +7,10 @@
 #include <QScrollArea>
 #include "smtp.h"
 #include "loginpage.h"
-#include "tab_employees.h"
+#include "employeesFiles\tab_employees.h"
 #include "tab_theatres.h"
-#include "tab_movies.h"
-#include "tab_tickets.h"
+#include "moviesFiles\tab_movies.h"
+#include "ticketsFiles\tab_tickets.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -73,8 +73,6 @@ private slots:
 
     void loginpage_login();
 
-    void tab_employees_add_employee();
-
     void on_FilmAddButton_clicked();
 
     void on_SearchFilmButton_clicked();
@@ -84,6 +82,10 @@ private slots:
     void on_TicketAddButton_clicked();
 
     void on_HidePrintAndSendButton_clicked();
+
+    void on_EmployeeAddButton_clicked();
+
+    void on_EmployeeImageAddButton_clicked();
 
     void on_PrintTicketButton_clicked();
     void on_SendTicketButton_clicked();

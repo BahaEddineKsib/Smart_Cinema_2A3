@@ -17,6 +17,8 @@ public:
     void add_theatre();
     void show_add_theatre();
     void hide_add_theatre();
+private slots:
+
 };
 
 #endif // TAB_THEATRES_H
