@@ -11,6 +11,7 @@
 #include <QFileDialog>
 #include <QFile>
 #include <QPrinter>
+#include <QPainter>
 #include <QPdfWriter>
 #include <QDesktopServices>
 #include <QUrl>
