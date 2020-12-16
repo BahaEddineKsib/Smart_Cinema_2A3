@@ -91,4 +91,5 @@ void employee::Display()
     DisplayBox->EmployeePhotoButtonEdit->setIcon(icon1);
     ui->verticalLayout_3->addWidget(DisplayBox);
 }
+//employee end
 
