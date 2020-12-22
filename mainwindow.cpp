@@ -68,9 +68,13 @@ void MainWindow::setup_tabs()
 
     movies = new  tab_movies(ui);
     movies->DisplayAllMovies();
+
     tickets = new tab_tickets(ui);
     tickets->DisplayAllTickets();
     ui->PrintAndSendWidget->setHidden(true);
+
+    clients = new tab_clients(ui);
+    clients->DisplayAllClients();
 }
 
 
@@ -235,6 +239,11 @@ void MainWindow::on_SearchFilmButton_clicked()
 void MainWindow::on_TicketAddButton_clicked()
 {
     tickets->AddTicket();
+}
+
+void MainWindow::on_ClientAddButton_clicked()
+{
+    clients->AddClient();
 }
 
 void MainWindow::on_EmployeeAddButton_clicked()

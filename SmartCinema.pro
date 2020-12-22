@@ -9,6 +9,9 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    clientsFiles/client.cpp \
+    clientsFiles/clientgroupbox.cpp \
+    clientsFiles/tab_clients.cpp \
     current_user.cpp \
     database.cpp \
     employeesFiles/employee.cpp \
@@ -28,6 +31,9 @@ SOURCES += \
     ticketsFiles\ticketgroupbox.cpp
 
 HEADERS += \
+    clientsFiles/client.h \
+    clientsFiles/clientgroupbox.h \
+    clientsFiles/tab_clients.h \
     current_user.h \
     database.h \
     employeesFiles/employee.h \
