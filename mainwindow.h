@@ -11,7 +11,6 @@
 #include "tab_theatres.h"
 #include "moviesFiles\tab_movies.h"
 #include "ticketsFiles\tab_tickets.h"
-#include "CLIENTANDSUBS\tab_client.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -32,7 +31,6 @@ public:
     tab_theatres  *theatres;
     tab_movies    *movies;
     tab_tickets   *tickets;
-    tab_client   *client;
 public slots:
     void TimeOfWork();
     void tab_theatres_show_add();
@@ -87,12 +85,13 @@ private slots:
     void on_EmployeeAddButton_clicked();
 
     void on_EmployeeImageAddButton_clicked();
-    void on_subscriptionAddButton_clicked();
-    void on_add_client_btn_clicked();
-    void on_searchsubscription_clicked();
+
     void on_PrintTicketButton_clicked();
+
     void on_SendTicketButton_clicked();
+
     void sendMail();
+
     void mailSent(QString);
 
 

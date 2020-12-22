@@ -9,12 +9,6 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
-    CLIENTANDSUBS/client.cpp \
-    CLIENTANDSUBS/clientgroupbox.cpp \
-    CLIENTANDSUBS/subscription.cpp \
-    CLIENTANDSUBS/subscriptiongroupbox.cpp \
-    CLIENTANDSUBS/tab_client.cpp \
-    CLIENTANDSUBS/tab_subscription.cpp \
     current_user.cpp \
     database.cpp \
     employeesFiles/employee.cpp \
@@ -34,12 +28,6 @@ SOURCES += \
     ticketsFiles\ticketgroupbox.cpp
 
 HEADERS += \
-    CLIENTANDSUBS/client.h \
-    CLIENTANDSUBS/clientgroupbox.h \
-    CLIENTANDSUBS/subscription.h \
-    CLIENTANDSUBS/subscriptiongroupbox.h \
-    CLIENTANDSUBS/tab_client.h \
-    CLIENTANDSUBS/tab_subscription.h \
     current_user.h \
     database.h \
     employeesFiles/employee.h \

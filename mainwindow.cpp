@@ -68,8 +68,6 @@ void MainWindow::setup_tabs()
 
     movies = new  tab_movies(ui);
     movies->DisplayAllMovies();
-    client = new  tab_client(ui);
-    client->DisplayAllclient();
     tickets = new tab_tickets(ui);
     tickets->DisplayAllTickets();
     ui->PrintAndSendWidget->setHidden(true);
