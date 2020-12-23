@@ -136,12 +136,13 @@ void ClientGroupBox::UpdateClientSlot()
     {
         QSqlQuery qry;
 
-        qry.prepare("UPDATE employees SET name=:name, email=:email, subscription_id=:subscription_id, subscription_date=:subscription_date WHERE id=:id ");
+        qry.prepare("UPDATE clients SET name=:name, email=:email, subscription_id=:subscription_id, subscription_date=:subscription_date WHERE id=:id ");
 
-        qry.bindValue(":name",    ClientNameEdit    ->text()        );
-        qry.bindValue(":email",   ClientEmailEdit   ->text()        );
-        qry.bindValue(":subscription_id",ClientSubscriptionIdEdit->text()        );
+        qry.bindValue(":name"             ,ClientNameEdit            ->text()        );
+        qry.bindValue(":email"            ,ClientEmailEdit           ->text()        );
+        qry.bindValue(":subscription_id"  ,ClientSubscriptionIdEdit  ->text()        );
         qry.bindValue(":subscription_date",ClientSubscriptionDateEdit->date()        );
+        qry.bindValue(":id"               ,ClientId                  ->text().toInt());
 
         if(!qry.exec())
         {
@@ -162,7 +163,7 @@ void ClientGroupBox::DeleteClientSlot()
     {
         QSqlQuery qry;
         qry.prepare("DELETE FROM clients WHERE id=:id ");
-        qry.bindValue(":id",ClientId->text());
+        qry.bindValue(":id",ClientId->text().toInt());
         if(!qry.exec())
         {
             QMessageBox::information(nullptr,"Error","Failed to exec query");

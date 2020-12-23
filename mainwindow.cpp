@@ -75,6 +75,9 @@ void MainWindow::setup_tabs()
 
     clients = new tab_clients(ui);
     clients->DisplayAllClients();
+
+    subscriptions = new tab_subscriptions(ui);
+    subscriptions->DisplayAllSubscriptions();
 }
 
 
@@ -251,6 +254,11 @@ void MainWindow::on_EmployeeAddButton_clicked()
     employees->AddEmployee();
 }
 
+void MainWindow::on_SubscriptionAddButton_clicked()
+{
+    subscriptions->AddSubscription();
+}
+
 void MainWindow::on_EmployeeImageAddButton_clicked()
 {
     qDebug() << "EmployeeImageAddButton_clicked" << endl;
@@ -305,3 +313,5 @@ void MainWindow::on_SendTicketButton_clicked()
 {
   sendMail();
 }
+
+

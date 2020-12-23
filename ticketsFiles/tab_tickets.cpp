@@ -9,7 +9,7 @@ tab_tickets::tab_tickets(Ui::MainWindow *ui)
 
 void tab_tickets::DisplayAllTickets()
 {
-    qDebug() << "DISPLAY ALL MOVIES";
+    qDebug() << "DISPLAY ALL TICKETS";
     ticket *TICKET;
     if(database::get()->db.isOpen())
     {

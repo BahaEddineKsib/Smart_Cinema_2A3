@@ -12,6 +12,7 @@
 #include "moviesFiles\tab_movies.h"
 #include "ticketsFiles\tab_tickets.h"
 #include "clientsFiles/tab_clients.h"
+#include "subscriptionsFiles/tab_subscriptions.h"
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -28,11 +29,12 @@ public:
     loginpage *login_page;
 
     //dashboard tabs
-    tab_employees *employees;
-    tab_theatres  *theatres;
-    tab_movies    *movies;
-    tab_tickets   *tickets;
-    tab_clients   *clients;
+    tab_employees     *employees;
+    tab_theatres      *theatres;
+    tab_movies        *movies;
+    tab_tickets       *tickets;
+    tab_clients       *clients;
+    tab_subscriptions *subscriptions;
 public slots:
     void TimeOfWork();
     void tab_theatres_show_add();
@@ -99,5 +101,6 @@ private slots:
     void mailSent(QString);
 
 
+    void on_SubscriptionAddButton_clicked();
 };
 #endif // MAINWINDOW_H

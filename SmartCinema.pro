@@ -25,6 +25,9 @@ SOURCES += \
     poll_chart.cpp \
     smtp.cpp \
     moviesFiles\tab_movies.cpp \
+    subscriptionsFiles/subscription.cpp \
+    subscriptionsFiles/subscriptiongroupbox.cpp \
+    subscriptionsFiles/tab_subscriptions.cpp \
     tab_theatres.cpp \
     ticketsFiles\tab_tickets.cpp \
     ticketsFiles\ticket.cpp \
@@ -46,6 +49,9 @@ HEADERS += \
     poll_chart.h \
     smtp.h \
     moviesFiles\tab_movies.h \
+    subscriptionsFiles/subscription.h \
+    subscriptionsFiles/subscriptiongroupbox.h \
+    subscriptionsFiles/tab_subscriptions.h \
     tab_theatres.h \
     ticketsFiles\tab_tickets.h \
     ticketsFiles\ticket.h \
