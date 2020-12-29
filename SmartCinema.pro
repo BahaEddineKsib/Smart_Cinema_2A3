@@ -71,5 +71,11 @@ RESOURCES += \
     logo.qrc \
     profil_icon.qrc
 
+
 DISTFILES += \
     imgs/mother-poster-crop.jpg
+
+
+INCLUDEPATH += ticketsOnPdf/
+
+

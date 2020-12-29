@@ -10,6 +10,12 @@
     <height>695</height>
    </rect>
   </property>
+  <property name="font">
+   <font>
+    <family>Nirmala UI Semilight</family>
+    <pointsize>10</pointsize>
+   </font>
+  </property>
   <property name="windowTitle">
    <string>MainWindow</string>
   </property>
@@ -1415,8 +1421,8 @@ QToolBox::tab:selected
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>281</width>
-           <height>37</height>
+           <width>100</width>
+           <height>30</height>
           </rect>
          </property>
          <property name="layoutDirection">
@@ -21133,7 +21139,7 @@ QTabBar::tab:selected
 </string>
         </property>
         <property name="currentIndex">
-         <number>0</number>
+         <number>1</number>
         </property>
         <widget class="QWidget" name="SubscriptionsWidget">
          <attribute name="title">

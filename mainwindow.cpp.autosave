@@ -274,10 +274,9 @@ void MainWindow::on_HidePrintAndSendButton_clicked()
 }
 void MainWindow::on_PrintTicketButton_clicked()
 {
-    QPdfWriter pdf(QFileDialog::getExistingDirectory(this, tr("Open Directory"),
-                                                                   "",
-                                                                   QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks)+ui->TicketIdAdd->text()+".pdf");
-    qDebug() << qApp->applicationDirPath()+"/ticketsOnPdf/"+ui->TicketIdAdd->text()+".pdf" << endl;
+    QString link =QFileDialog::getExistingDirectory(this, tr("Open Directory"),"",QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks)+ui->TicketIdAdd->text()+".pdf";
+    QPdfWriter pdf(link);
+
     QPainter painter(&pdf);
     QImage  img("C:/Users/baha/Downloads/968881.jpg");
     painter.drawImage(QRect(2800, 50,img.width()*(3000.0/img.height()), 3000), img);
@@ -362,8 +361,7 @@ void MainWindow::on_PrintTicketButton_clicked()
     }
 
     painter.end();
-        qDebug() << qApp->applicationDirPath()+"/ticketsOnPdf/"+ui->TicketIdAdd->text()+".pdf" << endl;
-    QDesktopServices::openUrl(QUrl::fromLocalFile("C:/Users/baha/Desktop/TheSmartCinemaGit/ticketsOnPdf/"+ui->TicketIdAdd->text()+".pdf"));
+    QDesktopServices::openUrl(link);
 }
 void MainWindow::sendMail()
 {
