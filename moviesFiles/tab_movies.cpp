@@ -117,12 +117,30 @@ void tab_movies::SearchMovies()
 
 void tab_movies::AddMovie()
 {
+    QString link = "" ;
+    if(ui->FilmAddImageButton->text().indexOf(".png")!=-1 || ui->FilmAddImageButton->text().indexOf(".PNG")!=-1)
+    {
+        link = QCoreApplication::applicationDirPath()+"/"+ui->FilmIdAdd->text()+".png";
+    }
+    else if (ui->FilmAddImageButton->text().indexOf(".jpg")!=-1 || ui->FilmAddImageButton->text().indexOf(".JPG")!=-1)
+    {
+        link = QCoreApplication::applicationDirPath()+"/"+ui->FilmIdAdd->text()+".jpg";
+    }
+    else if (ui->FilmAddImageButton->text().indexOf(".gif")!=-1 || ui->FilmAddImageButton->text().indexOf(".GIF")!=-1)
+    {
+        link = QCoreApplication::applicationDirPath()+"/"+ui->FilmIdAdd->text()+".gif";
+    }
+    else if (ui->FilmAddImageButton->text().indexOf(".jpeg")!=-1 || ui->FilmAddImageButton->text().indexOf(".JPEG")!=-1)
+    {
+        link = QCoreApplication::applicationDirPath()+"/"+ui->FilmIdAdd->text()+".jpeg";
+    }
+    QFile::copy(ui->FilmAddImageButton ->text(),link);
     movie* Movie = new movie(ui->FilmIdAdd          ->text(),
                              ui->FilmNameAdd        ->text(),
                              ui->FilmTypeAdd        ->text(),
                              ui->FilmPriceAdd       ->text(),
                              ui->FilmDescriptionAdd ->text(),
-                             ui->FilmAddImageButton ->text(),
+                             link,
                              ui->FilmSubLanguageAdd ->text(),
                              ui->FilmDubLanguageAdd ->text(),
                              ui);

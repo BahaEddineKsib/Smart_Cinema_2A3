@@ -78,6 +78,7 @@ void movie::Display()
     DisplayBox->MovieDescriptionEdit->setPlainText(description);
     DisplayBox->MovieSubLanguageEdit->setText(SubLaguage);
     DisplayBox->MovieDubLanguageEdit->setText(DubLaguage);
+    DisplayBox->MovieSwipeButton->setText(name);
     QIcon icon1;
     icon1.addFile(ImageLink, QSize(), QIcon::Normal, QIcon::Off);
     DisplayBox->MovieImageButton->setIcon(icon1);

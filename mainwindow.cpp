@@ -274,35 +274,16 @@ void MainWindow::on_HidePrintAndSendButton_clicked()
 }
 void MainWindow::on_PrintTicketButton_clicked()
 {
-    QPdfWriter pdf(QFileDialog::getExistingDirectory(this, tr("Open Directory"),
-                                                                   "",
-                                                                   QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks)+ui->TicketIdAdd->text()+".pdf");
-    qDebug() << qApp->applicationDirPath()+"/ticketsOnPdf/"+ui->TicketIdAdd->text()+".pdf" << endl;
+    QString link =QFileDialog::getExistingDirectory(this, tr("Open Directory"),"",QFileDialog::ShowDirsOnly | QFileDialog::DontResolveSymlinks)+"/"+ui->TicketIdAdd->text()+".pdf";
+    QPdfWriter pdf(link);
+
     QPainter painter(&pdf);
-    QImage  img("C:/Users/baha/Downloads/968881.jpg");
-    painter.drawImage(QRect(2800, 50,img.width()*(3000.0/img.height()), 3000), img);
 
-    QImage  temp("C:/Users/baha/Downloads/TemplateTicket.png");
-    painter.drawImage(QRect(100, 50,temp.width()*(3000.0/temp.height()), 3000), temp);
 
-    painter.setFont(QFont("Nirmala UI Semilight", 8));
-    QPen penHText(QColor("#ffd7a1"));
-    painter.setPen(penHText);
-    painter.drawText(4110,441,ui->TicketIdAdd->text());
 
-    painter.setFont(QFont("Nirmala UI Semilight", 20));
-    QPen penHText2(QColor("#ffffff"));
-    painter.setPen(penHText2);
-    painter.drawText(8000,2800,ui->TicketPriceAdd->text()+"DT");
 
-    if(ui->TicketVIPseatAdd->isChecked())
-    {
-        painter.setFont(QFont("Nirmala UI Semilight", 50));
-        QPen penHText(QColor("#ffd7a1"));
-        painter.setPen(penHText);
-        painter.drawText(3200,1800,"VIP");
 
-    }
+
     if(database::get()->db.isOpen())
     {
         QSqlQuery qry;
@@ -317,6 +298,31 @@ void MainWindow::on_PrintTicketButton_clicked()
     {
         while(qry.next())
         {
+
+
+            QSqlQuery MoviesQry;
+            MoviesQry.prepare("SELECT * FROM  movies WHERE id = :id");
+            MoviesQry.bindValue(":id",qry.value(qry.record().indexOf("movie_id")).toString());
+            if(!MoviesQry.exec())
+            {
+                QMessageBox::information(nullptr,"Error","Failed to exec query");
+            }
+            else
+            {
+                while(MoviesQry.next())
+                {
+                    qDebug() << MoviesQry.value(MoviesQry.record().indexOf("ImageLink")).toString() << "debug" << endl;
+                    QImage  img(MoviesQry.value(MoviesQry.record().indexOf("ImageLink")).toString());
+                    painter.drawImage(QRect(2800, 50,img.width()*(3000.0/img.height()), 3000), img);
+
+                    QImage  temp(":/new/prefix1/imgs/TemplateTicket.PNG");
+                    painter.drawImage(QRect(100, 50,temp.width()*(3000.0/temp.height()), 3000), temp);
+
+                    painter.setFont(QFont("Gabriola", 37));
+                    painter.setPen(QPen(QColor("#ffffff")));
+                    painter.drawText(3020,950,MoviesQry.value(MoviesQry.record().indexOf("name")).toString());
+                }
+            }
             painter.setFont(QFont("Nirmala UI Semilight", 9));
             QPen penHText2(QColor("#ffd7a1"));
             painter.setPen(penHText2);
@@ -340,30 +346,31 @@ void MainWindow::on_PrintTicketButton_clicked()
                 }
             }
 
-            QSqlQuery MoviesQry;
-            MoviesQry.prepare("SELECT * FROM  movies WHERE id = :id");
-            MoviesQry.bindValue(":id",qry.value(qry.record().indexOf("movie_id")).toString());
-            if(!MoviesQry.exec())
-            {
-                QMessageBox::information(nullptr,"Error","Failed to exec query");
-            }
-            else
-            {
-                while(MoviesQry.next())
-                {
-                    painter.setFont(QFont("Gabriola", 37));
-                    painter.setPen(QPen(QColor("#ffffff")));
-                    painter.drawText(3020,950,MoviesQry.value(MoviesQry.record().indexOf("name")).toString());
-                }
-            }
-
         }
     }
     }
 
+    if(ui->TicketVIPseatAdd->isChecked())
+    {
+        painter.setFont(QFont("Nirmala UI Semilight", 50));
+        QPen penHText(QColor("#ffd7a1"));
+        painter.setPen(penHText);
+        painter.drawText(3200,1800,"VIP");
+
+    }
+    painter.setFont(QFont("Nirmala UI Semilight", 8));
+    QPen penHText(QColor("#ffd7a1"));
+    painter.setPen(penHText);
+    painter.drawText(4110,441,ui->TicketIdAdd->text());
+
+    painter.setFont(QFont("Nirmala UI Semilight", 20));
+    QPen penHText2(QColor("#ffffff"));
+    painter.setPen(penHText2);
+    painter.drawText(8000,2800,ui->TicketPriceAdd->text()+"DT");
+
+
     painter.end();
-        qDebug() << qApp->applicationDirPath()+"/ticketsOnPdf/"+ui->TicketIdAdd->text()+".pdf" << endl;
-    QDesktopServices::openUrl(QUrl::fromLocalFile("C:/Users/baha/Desktop/TheSmartCinemaGit/ticketsOnPdf/"+ui->TicketIdAdd->text()+".pdf"));
+    QDesktopServices::openUrl(link);
 }
 void MainWindow::sendMail()
 {

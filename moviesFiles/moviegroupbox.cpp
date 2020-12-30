@@ -27,7 +27,7 @@ MovieGroupBox::MovieGroupBox(QWidget *parent) : QWidget(parent)
     icon1.addFile(QStringLiteral(":/new/prefix1/imgs/deadpool.png"), QSize(), QIcon::Normal, QIcon::Off);
     MovieImageButton->setIcon(icon1);
     MovieImageButton->setIconSize(QSize(400, 400));
-    MovieImageButton->setStyleSheet(QLatin1String("border: 2px solid rgb(255, 255, 255);\nbackground-color:red;"));
+    MovieImageButton->setStyleSheet(QLatin1String("border: 2px solid rgba(255, 255, 255,0);\nbackground-color:rgba(255, 255, 255,0);"));
     MovieBottomBox = new QGroupBox(MovieBox);
     MovieBottomBox->setGeometry(QRect(0, 197, 381, 331));
     MovieBottomBox->setStyleSheet(QLatin1String("QGroupBox\n{\nbackground-color: qlineargradient(spread:pad, x1:1, y1:1, x2:1, y2:0, stop:0 rgba(59, 62, 66, 255), stop:1 rgba(255, 255, 255, 92));\nborder: 0px solid rgb(255, 255, 255);\nborder-bottom-width: 1px;\nborder-radius: 10px;\n}"));
