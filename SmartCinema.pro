@@ -9,6 +9,7 @@ CONFIG += c++11
 #DEFINES += QT_DISABLE_DEPRECATED_BEFORE=0x060000    # disables all the APIs deprecated before Qt 6.0.0
 
 SOURCES += \
+    QrCodeGenerator/QrCode.cpp \
     clientsFiles/client.cpp \
     clientsFiles/clientgroupbox.cpp \
     clientsFiles/tab_clients.cpp \
@@ -34,6 +35,7 @@ SOURCES += \
     ticketsFiles\ticketgroupbox.cpp
 
 HEADERS += \
+    QrCodeGenerator/QrCode.hpp \
     clientsFiles/client.h \
     clientsFiles/clientgroupbox.h \
     clientsFiles/tab_clients.h \
