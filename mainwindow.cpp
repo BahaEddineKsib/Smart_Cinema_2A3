@@ -265,6 +265,10 @@ void MainWindow::on_SearchFilmButton_clicked()
 {
     movies->SearchMovies();
 }
+void MainWindow::on_SearchClientButton_clicked()
+{
+    clients->SearchClients();
+}
 void MainWindow::on_TicketAddButton_clicked()
 {
     tickets->AddTicket();

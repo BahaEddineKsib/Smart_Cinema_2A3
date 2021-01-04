@@ -13,6 +13,8 @@ public:
     Ui::MainWindow *ui;
 
     void login();
+private slots:
+
 };
 
 #endif // LOGINPAGE_H

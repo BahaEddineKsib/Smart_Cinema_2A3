@@ -1338,7 +1338,7 @@ QPushButton:focus
 </string>
       </property>
       <property name="currentIndex">
-       <number>5</number>
+       <number>7</number>
       </property>
       <widget class="QWidget" name="profil">
        <widget class="QLabel" name="ProfilPhoto">
@@ -1511,8 +1511,8 @@ QPushButton:focus
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>100</width>
-           <height>30</height>
+           <width>281</width>
+           <height>37</height>
           </rect>
          </property>
          <attribute name="label">
@@ -1595,8 +1595,8 @@ QPushButton:focus
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>100</width>
-           <height>30</height>
+           <width>281</width>
+           <height>37</height>
           </rect>
          </property>
          <attribute name="label">
@@ -1679,8 +1679,8 @@ color: rgb(255, 255, 255);</string>
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>100</width>
-           <height>30</height>
+           <width>281</width>
+           <height>37</height>
           </rect>
          </property>
          <attribute name="label">
@@ -1800,8 +1800,8 @@ color: rgb(255, 255, 255);</string>
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>100</width>
-           <height>30</height>
+           <width>281</width>
+           <height>37</height>
           </rect>
          </property>
          <attribute name="label">
@@ -1835,8 +1835,8 @@ color: rgb(255, 255, 255);</string>
           <rect>
            <x>0</x>
            <y>0</y>
-           <width>100</width>
-           <height>30</height>
+           <width>281</width>
+           <height>37</height>
           </rect>
          </property>
          <attribute name="label">
@@ -1971,8 +1971,8 @@ QTabBar::tab:selected
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>122</width>
-               <height>177</height>
+               <width>963</width>
+               <height>616</height>
               </rect>
              </property>
              <property name="styleSheet">
@@ -2477,7 +2477,7 @@ QComboBox QAbstractItemView{
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>100</width>
+               <width>942</width>
                <height>660</height>
               </rect>
              </property>
@@ -7462,8 +7462,8 @@ color: rgb(255, 255, 255);
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>79</width>
-               <height>16</height>
+               <width>965</width>
+               <height>504</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="verticalLayout_tickets">
@@ -7610,7 +7610,7 @@ QTabBar::tab:selected
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>778</width>
+               <width>942</width>
                <height>631</height>
               </rect>
              </property>
@@ -8008,7 +8008,7 @@ QPushButton:focus
                <x>0</x>
                <y>0</y>
                <width>1494</width>
-               <height>501</height>
+               <height>584</height>
               </rect>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_23">
@@ -10199,7 +10199,7 @@ QComboBox QAbstractItemView{
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>122</width>
+               <width>944</width>
                <height>687</height>
               </rect>
              </property>
@@ -20834,8 +20834,8 @@ color: rgb(255, 255, 255);
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>79</width>
-               <height>16</height>
+               <width>965</width>
+               <height>464</height>
               </rect>
              </property>
              <layout class="QVBoxLayout" name="ClientVerticalLayout">
@@ -20856,11 +20856,11 @@ color: rgb(255, 255, 255);
            </widget>
           </item>
           <item>
-           <widget class="QWidget" name="widget_2" native="true">
+           <widget class="QWidget" name="SearchClientWidget" native="true">
             <property name="minimumSize">
              <size>
               <width>0</width>
-              <height>60</height>
+              <height>100</height>
              </size>
             </property>
             <property name="maximumSize">
@@ -20872,6 +20872,358 @@ color: rgb(255, 255, 255);
             <property name="styleSheet">
              <string notr="true">background-color: qlineargradient(spread:pad, x1:0, y1:0, x2:0, y2:1, stop:0 rgba(42, 46, 50, 0), stop:1 rgba(71, 78, 85, 255));</string>
             </property>
+            <widget class="QLabel" name="ClientIdTitleSearch">
+             <property name="geometry">
+              <rect>
+               <x>0</x>
+               <y>0</y>
+               <width>41</width>
+               <height>37</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Yu Gothic UI Semilight</family>
+               <pointsize>20</pointsize>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;</string>
+             </property>
+             <property name="text">
+              <string>ID</string>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="SearchClientById">
+             <property name="geometry">
+              <rect>
+               <x>40</x>
+               <y>10</y>
+               <width>61</width>
+               <height>21</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Arial Black</family>
+               <pointsize>9</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border: 0px solid rgb(249, 167, 43);
+border-bottom-width: 2px;
+border-radius: px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="placeholderText">
+              <string/>
+             </property>
+            </widget>
+            <widget class="QLabel" name="ClientNameTitleSearch">
+             <property name="geometry">
+              <rect>
+               <x>110</x>
+               <y>10</y>
+               <width>61</width>
+               <height>17</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Arial Black</family>
+               <pointsize>9</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255, 0);
+border: 0px;</string>
+             </property>
+             <property name="text">
+              <string>Name</string>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="SearchClientByName">
+             <property name="geometry">
+              <rect>
+               <x>160</x>
+               <y>10</y>
+               <width>121</width>
+               <height>21</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Arial Black</family>
+               <pointsize>9</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border: 0px solid rgb(249, 167, 43);
+border-bottom-width: 2px;
+border-radius: px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="placeholderText">
+              <string/>
+             </property>
+            </widget>
+            <widget class="QLabel" name="ClientEmailTitleSearch">
+             <property name="geometry">
+              <rect>
+               <x>290</x>
+               <y>10</y>
+               <width>51</width>
+               <height>17</height>
+              </rect>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>135</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Arial Black</family>
+               <pointsize>9</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255,0);</string>
+             </property>
+             <property name="text">
+              <string>Email</string>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="SearchClientByEmail">
+             <property name="geometry">
+              <rect>
+               <x>350</x>
+               <y>10</y>
+               <width>121</width>
+               <height>21</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Arial Black</family>
+               <pointsize>9</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border: 0px solid rgb(249, 167, 43);
+border-bottom-width: 2px;
+border-radius: px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="placeholderText">
+              <string/>
+             </property>
+            </widget>
+            <widget class="QLabel" name="ClientSubscriptionIdTitleSearch">
+             <property name="geometry">
+              <rect>
+               <x>480</x>
+               <y>10</y>
+               <width>135</width>
+               <height>17</height>
+              </rect>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>135</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>135</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Arial Black</family>
+               <pointsize>9</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255,0);</string>
+             </property>
+             <property name="text">
+              <string>Subscription ID</string>
+             </property>
+            </widget>
+            <widget class="QLineEdit" name="SearchClientBySubscriptionId">
+             <property name="geometry">
+              <rect>
+               <x>620</x>
+               <y>10</y>
+               <width>61</width>
+               <height>21</height>
+              </rect>
+             </property>
+             <property name="font">
+              <font>
+               <family>Arial Black</family>
+               <pointsize>9</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">border: 0px solid rgb(249, 167, 43);
+border-bottom-width: 2px;
+border-radius: px;
+background-color: rgba(255, 255, 255, 0);
+color: rgb(255, 255, 255);</string>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+             <property name="placeholderText">
+              <string/>
+             </property>
+            </widget>
+            <widget class="QDateEdit" name="SearchClientBySubscriptionDate">
+             <property name="geometry">
+              <rect>
+               <x>850</x>
+               <y>10</y>
+               <width>110</width>
+               <height>22</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(255, 255, 255);</string>
+             </property>
+            </widget>
+            <widget class="QLabel" name="ClientSubscriptionDateTitleSearch">
+             <property name="geometry">
+              <rect>
+               <x>790</x>
+               <y>10</y>
+               <width>51</width>
+               <height>20</height>
+              </rect>
+             </property>
+             <property name="minimumSize">
+              <size>
+               <width>0</width>
+               <height>0</height>
+              </size>
+             </property>
+             <property name="maximumSize">
+              <size>
+               <width>6464654</width>
+               <height>16777215</height>
+              </size>
+             </property>
+             <property name="font">
+              <font>
+               <family>Arial Black</family>
+               <pointsize>9</pointsize>
+               <weight>75</weight>
+               <bold>true</bold>
+              </font>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">color: rgb(255, 255, 255);
+background-color: rgba(255, 255, 255,0);</string>
+             </property>
+             <property name="text">
+              <string> Date</string>
+             </property>
+            </widget>
+            <widget class="QPushButton" name="SearchClientButton">
+             <property name="geometry">
+              <rect>
+               <x>380</x>
+               <y>40</y>
+               <width>181</width>
+               <height>21</height>
+              </rect>
+             </property>
+             <property name="styleSheet">
+              <string notr="true">QPushButton
+{
+	background-color:rgb(50, 53, 57);
+	border-style:solid;
+	border-radius:7px;
+	border-width:1px;
+border-color: rgb(50, 53, 57);
+	color:#ffffff;
+	font-size:16px;
+font-family:Calibri;
+}
+
+QPushButton:hover
+{
+	background-color: #00000000;
+	border-color: rgb(30, 227, 0);
+	/*color:rgb(30, 227, 0);*/
+}
+
+QPushButton:focus
+{
+	background-color:  rgb(30, 227, 0);
+	border-color: rgba(30, 227, 0,0);
+	color:rgb(255, 255, 255);
+}
+</string>
+             </property>
+             <property name="text">
+              <string>Search</string>
+             </property>
+            </widget>
+            <widget class="QCheckBox" name="SearchClientBySubscriptionDateCheckBox">
+             <property name="geometry">
+              <rect>
+               <x>770</x>
+               <y>10</y>
+               <width>16</width>
+               <height>20</height>
+              </rect>
+             </property>
+             <property name="text">
+              <string/>
+             </property>
+            </widget>
            </widget>
           </item>
          </layout>
@@ -20943,7 +21295,7 @@ QTabBar::tab:selected
 </string>
         </property>
         <property name="currentIndex">
-         <number>1</number>
+         <number>0</number>
         </property>
         <widget class="QWidget" name="SubscriptionsWidget">
          <attribute name="title">
@@ -22476,10 +22828,10 @@ QTabBar::tab:selected
             <widget class="QWidget" name="PollsArea">
              <property name="geometry">
               <rect>
-               <x>-356</x>
+               <x>0</x>
                <y>0</y>
-               <width>435</width>
-               <height>407</height>
+               <width>965</width>
+               <height>606</height>
               </rect>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_21">

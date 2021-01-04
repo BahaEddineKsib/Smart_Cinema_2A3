@@ -96,6 +96,8 @@ private slots:
 
     void on_SendTicketButton_clicked();
 
+    void on_SearchClientButton_clicked();
+
     void sendMail();
 
     void mailSent(QString);
