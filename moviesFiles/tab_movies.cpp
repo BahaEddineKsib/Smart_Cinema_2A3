@@ -57,50 +57,23 @@ void tab_movies::UndisplayAllMovies()
 void tab_movies::SearchMovies()
 {
     UndisplayAllMovies();
-    movie *MOVIE;
+    movie *MOVIE[100];
     if(database::get()->db.isOpen())
     {
         QSqlQuery qry;
-        if(ui->SearchFilmByIdCheck   ->isChecked())
-        {
-            qry.prepare("SELECT * FROM  movies WHERE id = :id");
-            qry.bindValue(":id",ui->SearchFilmById   ->text());
-        }
-
-        if(ui->SearchFilmByNameCheck ->isChecked())
-        {
-            qry.prepare("SELECT * FROM  movies WHERE name = :name");
-            qry.bindValue(":name", ui->SearchFilmByName ->text() );
-        }
-
-        if(ui->SearchFilmByTypeCheck ->isChecked())
-        {
-            qry.prepare("SELECT * FROM  movies WHERE type = :type");
-            qry.bindValue(":type", ui->SearchFilmByType ->text() );
-        }
-
-        if(ui->SearchFilmByPriceCheck->isChecked())
-        {
-            qry.prepare("SELECT * FROM  movies WHERE price = :price");
-            qry.bindValue(":price",ui->SearchFilmByPrice->text());
-        }
-
-        if(ui->SearchDisplayAll->isChecked())
-        {
-            qry.prepare("SELECT * FROM  movies");
-        }
-
+        qry.prepare("SELECT * FROM  movies");
         if(!qry.exec())
         {
             QMessageBox::information(nullptr,"Error","Failed to exec query");
         }
         else
         {
+            int SearchConditionsNumber=0;
+            int SearchConditionsTests[100];
+            int NumberOfMovies =0;
             while(qry.next())
             {
-
-                qDebug() << qry.value(qry.record().indexOf("id")).toString() << " " << qry.value(qry.record().indexOf("name")).toInt() << " " << qry.value(qry.record().indexOf("type")).toInt() << " " << qry.value(qry.record().indexOf("price")).toInt() << qry.value(qry.record().indexOf("description")).toInt() << qry.value(qry.record().indexOf("imagelink")).toInt() << qry.value(qry.record().indexOf("sub_language")).toString() << qry.value(qry.record().indexOf("sub_language")).toString() << endl;
-                MOVIE = new movie(qry.value(qry.record().indexOf          ("id")).toString(),
+                MOVIE[NumberOfMovies] = new movie(qry.value(qry.record().indexOf       ("id")).toString(),
                                   qry.value(qry.record().indexOf        ("name")).toString(),
                                   qry.value(qry.record().indexOf        ("type")).toString(),
                                   qry.value(qry.record().indexOf       ("price")).toString(),
@@ -109,10 +82,72 @@ void tab_movies::SearchMovies()
                                   qry.value(qry.record().indexOf("sub_language")).toString(),
                                   qry.value(qry.record().indexOf("dub_language")).toString(),
                                   ui);
-                MOVIE->Display();
+                SearchConditionsTests[NumberOfMovies]=0;
+                NumberOfMovies++;
             }
+
+
+                if(ui->SearchFilmById->text() != "" )
+                {
+                    SearchConditionsNumber++;
+                    int i=0;
+                     while (i<NumberOfMovies) {
+                         if(ui->SearchFilmById->text() == MOVIE[i]->id )
+                         {
+                             SearchConditionsTests[i]++;
+                         }
+                         i++;
+                     }
+                }
+
+                if(ui->SearchFilmByName->text() != "" )
+                {
+                    SearchConditionsNumber++;
+                    int i=0;
+                     while (i<NumberOfMovies) {
+                         if(ui->SearchFilmByName->text() == MOVIE[i]->name )
+                         {
+                             SearchConditionsTests[i]++;
+                         }
+                         i++;
+                     }
+                }
+                if(ui->SearchFilmByType->text() != "" )
+                {
+                    SearchConditionsNumber++;
+                    int i=0;
+                     while (i<NumberOfMovies) {
+                         if(ui->SearchFilmByType->text() == MOVIE[i]->type )
+                         {
+                             SearchConditionsTests[i]++;
+                         }
+                         i++;
+                     }
+                }
+                if(ui->SearchFilmByPrice->text() != "" )
+                {
+                    SearchConditionsNumber++;
+                    int i=0;
+                     while (i<NumberOfMovies) {
+                         if(ui->SearchFilmByPrice->text() == MOVIE[i]->price )
+                         {
+                             SearchConditionsTests[i]++;
+                         }
+                         i++;
+                     }
+                }
+                int i=0;
+                 while (i<NumberOfMovies) {
+                     if(SearchConditionsTests[i]==SearchConditionsNumber)
+                     {
+                         MOVIE[i]->Display();
+                     }
+                     i++;
+                }
         }
+
     }
+
 }
 
 void tab_movies::AddMovie()

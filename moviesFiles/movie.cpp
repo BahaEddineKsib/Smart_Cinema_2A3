@@ -35,7 +35,7 @@ int movie::StoreInDatabase()
         if(ID_VERIFICATION == false)
         {QMessageBox::information(nullptr,"ERROR","ID ALREADY EXIST!.");
          return 0;}
-            else if(id == "" || name == "" || type == "" || price == "" || description == "" || ImageLink == "" || SubLaguage == "" || DubLaguage == "" )
+            else if(id == "" || name == "" || type == "" || price == "" || description == "" || SubLaguage == "" || DubLaguage == "" )
                     {QMessageBox::information(nullptr,"ERROR","EMPTY INPUTS!.");
                      return 0;}
                         else
