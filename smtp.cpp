@@ -215,5 +215,5 @@ void Smtp::readyRead()
         state = Close;
         emit status( tr( "Failed to send message" ) );
     }
-    response = "";
+    //response = "";
 }
