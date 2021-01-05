@@ -1338,7 +1338,7 @@ QPushButton:focus
 </string>
       </property>
       <property name="currentIndex">
-       <number>7</number>
+       <number>2</number>
       </property>
       <widget class="QWidget" name="profil">
        <widget class="QLabel" name="ProfilPhoto">
@@ -6725,7 +6725,7 @@ QTabBar::tab:selected
          <enum>QTabWidget::Rounded</enum>
         </property>
         <property name="currentIndex">
-         <number>0</number>
+         <number>2</number>
         </property>
         <property name="elideMode">
          <enum>Qt::ElideRight</enum>
@@ -7504,6 +7504,83 @@ color: rgb(255, 255, 255);
           </item>
          </layout>
         </widget>
+        <widget class="QWidget" name="tab">
+         <attribute name="title">
+          <string>QR CODE</string>
+         </attribute>
+         <widget class="QLabel" name="ProfilPersonelAccessEdit_86">
+          <property name="geometry">
+           <rect>
+            <x>60</x>
+            <y>180</y>
+            <width>501</width>
+            <height>151</height>
+           </rect>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>60</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>6464654</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Candara Light</family>
+            <pointsize>36</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string>LAST TICKET STATE:</string>
+          </property>
+         </widget>
+         <widget class="QLabel" name="LastTicketState">
+          <property name="geometry">
+           <rect>
+            <x>230</x>
+            <y>300</y>
+            <width>641</width>
+            <height>151</height>
+           </rect>
+          </property>
+          <property name="minimumSize">
+           <size>
+            <width>60</width>
+            <height>0</height>
+           </size>
+          </property>
+          <property name="maximumSize">
+           <size>
+            <width>6464654</width>
+            <height>16777215</height>
+           </size>
+          </property>
+          <property name="font">
+           <font>
+            <family>Candara Light</family>
+            <pointsize>36</pointsize>
+            <weight>50</weight>
+            <bold>false</bold>
+           </font>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">color: rgb(255, 255, 255);</string>
+          </property>
+          <property name="text">
+           <string/>
+          </property>
+         </widget>
+        </widget>
        </widget>
       </widget>
       <widget class="QWidget" name="bills">
@@ -7610,7 +7687,7 @@ QTabBar::tab:selected
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>942</width>
+               <width>778</width>
                <height>631</height>
               </rect>
              </property>
@@ -8008,7 +8085,7 @@ QPushButton:focus
                <x>0</x>
                <y>0</y>
                <width>1494</width>
-               <height>584</height>
+               <height>501</height>
               </rect>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_23">
@@ -10199,7 +10276,7 @@ QComboBox QAbstractItemView{
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>944</width>
+               <width>122</width>
                <height>687</height>
               </rect>
              </property>
@@ -16921,8 +16998,8 @@ QPushButton:focus
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>758</width>
-               <height>606</height>
+               <width>46</width>
+               <height>30</height>
               </rect>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_4">

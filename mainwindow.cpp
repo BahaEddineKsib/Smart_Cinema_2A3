@@ -16,6 +16,7 @@
 #include <QDesktopServices>
 #include <QUrl>
 #include "smtp.h"
+#include <arduino/arduino.h>
 MainWindow::MainWindow(QWidget *parent)
     : QMainWindow(parent)
     , ui(new Ui::MainWindow)
@@ -44,6 +45,88 @@ MainWindow::MainWindow(QWidget *parent)
     setup_tabs();
 
 }
+void MainWindow::setup_tabs()
+{
+    login_page = new loginpage(ui);
+    connect(ui->LoginButton, SIGNAL (clicked()),this, SLOT (loginpage_login()));
+
+    //tabs
+    employees = new tab_employees(ui);
+    employees->DisplayAllEmployees();
+
+    theatres = new tab_theatres(ui);
+    connect(ui->btn_show_add_theatre, SIGNAL (clicked()),this, SLOT (tab_theatres_show_add()));
+    connect(ui->btn_add_theatre, SIGNAL (clicked()),this, SLOT (tab_theatres_add_theatre()));
+    connect(ui->btn_cancel_theatre, SIGNAL (clicked()),this, SLOT (tab_theatres_cancel_add()));
+
+    movies = new  tab_movies(ui);
+    movies->DisplayAllMovies();
+
+    tickets = new tab_tickets(ui);
+    tickets->DisplayAllTickets();
+    ui->PrintAndSendWidget->setHidden(true);
+
+    clients = new tab_clients(ui);
+    clients->DisplayAllClients();
+
+    subscriptions = new tab_subscriptions(ui);
+    subscriptions->DisplayAllSubscriptions();
+
+
+
+    int ret = A.connect_arduino();
+    switch(ret){
+    case(0): qDebug() << "arduino is available and connected to :" << A.getarduino_port_name();
+        QObject::connect(A.getserial(),SIGNAL(readyRead()),this,SLOT(update_arduino_qr_code()));
+        break;
+    case(1): qDebug() << "arduino is available and not connected to :" << A.getarduino_port_name();
+        break;
+    case(-1): qDebug() << "arduino is not available" ;
+    }
+
+
+}
+
+void MainWindow::update_arduino_qr_code()
+{
+    data = A.read_from_arduino();
+    qDebug() << data;
+    if(database::get()->db.isOpen())
+    {
+        bool ID_VERIFICATION=true;
+        QSqlQuery qry;
+
+        qry.prepare("SELECT id FROM  tickets");
+        if(!qry.exec())
+        {
+            QMessageBox::information(nullptr,"Error","Failed to exec query");
+        }
+        else
+        {
+            while(qry.next() && ID_VERIFICATION)
+            {
+                if(qry.value(qry.record().indexOf("id")).toInt() == data.toInt())
+                {
+                    ID_VERIFICATION=false;
+                }
+            }
+        }
+
+        if(ID_VERIFICATION == false)
+        {
+            ui->LastTicketState->setText("ID "+data+" VALID");
+            ui->LastTicketState->setStyleSheet(QStringLiteral("color: #00ff00;"));
+            A.write_to_arduino("a");
+        }
+        else
+        {
+            ui->LastTicketState->setText("ID "+data+" NOT IN DATABASE");
+            ui->LastTicketState->setStyleSheet(QStringLiteral("color: #ff0000;"));
+            A.write_to_arduino("b");
+        }
+    }
+}
+
 #include "QrCodeGenerator/QrCode.hpp"
 
 void paintQR(QPainter &painter, const QSize sz, const QString &data, QColor fg)
@@ -78,34 +161,6 @@ MainWindow::~MainWindow()
 }
 
 
-void MainWindow::setup_tabs()
-{
-    login_page = new loginpage(ui);
-    connect(ui->LoginButton, SIGNAL (clicked()),this, SLOT (loginpage_login()));
-
-    //tabs
-    employees = new tab_employees(ui);
-    employees->DisplayAllEmployees();
-
-    theatres = new tab_theatres(ui);
-    connect(ui->btn_show_add_theatre, SIGNAL (clicked()),this, SLOT (tab_theatres_show_add()));
-    connect(ui->btn_add_theatre, SIGNAL (clicked()),this, SLOT (tab_theatres_add_theatre()));
-    connect(ui->btn_cancel_theatre, SIGNAL (clicked()),this, SLOT (tab_theatres_cancel_add()));
-
-    movies = new  tab_movies(ui);
-    movies->DisplayAllMovies();
-
-    tickets = new tab_tickets(ui);
-    tickets->DisplayAllTickets();
-    ui->PrintAndSendWidget->setHidden(true);
-
-    clients = new tab_clients(ui);
-    clients->DisplayAllClients();
-
-    subscriptions = new tab_subscriptions(ui);
-    subscriptions->DisplayAllSubscriptions();
-}
-
 
 void MainWindow::TimeOfWork()
 {
@@ -127,8 +182,6 @@ void MainWindow::TimeOfWork()
 
     QString sec = QString::number(seconds);
     ui->Crnt_seconds->setText(sec);
-
-
 
 }
 
@@ -249,6 +302,7 @@ void MainWindow::tab_theatres_cancel_add()
 {
     theatres->hide_add_theatre();
 }
+
 void MainWindow::on_FilmAddImageButton_clicked()
 {
     qDebug() << "FilmAddImageButton_clicked" << endl;

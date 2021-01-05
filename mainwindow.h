@@ -13,6 +13,7 @@
 #include "ticketsFiles\tab_tickets.h"
 #include "clientsFiles/tab_clients.h"
 #include "subscriptionsFiles/tab_subscriptions.h"
+#include <arduino/arduino.h>
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
 QT_END_NAMESPACE
@@ -35,11 +36,17 @@ public:
     tab_tickets       *tickets;
     tab_clients       *clients;
     tab_subscriptions *subscriptions;
+    QByteArray data;
+    arduino A;
+    QString CatchQrCode="";
+    int QrCodeLength=0;
+    int IForQrCode=0;
 public slots:
     void TimeOfWork();
     void tab_theatres_show_add();
     void tab_theatres_add_theatre();
     void tab_theatres_cancel_add();
+    void update_arduino_qr_code();
 private:
 
     QTimer *timer;

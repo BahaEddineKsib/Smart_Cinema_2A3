@@ -99,7 +99,4 @@ void ticket::Display()
     ui->verticalLayout_tickets->addWidget(DisplayBox);
 }
 
-void ticket::on_FilmIdAdd_textChanged(const QString &arg1)
-{
 
-}

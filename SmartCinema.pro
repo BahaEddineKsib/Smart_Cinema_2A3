@@ -1,4 +1,4 @@
-QT       += core gui charts sql
+QT       += core gui charts sql serialport
 QT       += printsupport network
 greaterThan(QT_MAJOR_VERSION, 4): QT += widgets
 
@@ -10,6 +10,7 @@ CONFIG += c++11
 
 SOURCES += \
     QrCodeGenerator/QrCode.cpp \
+    arduino/arduino.cpp \
     clientsFiles/client.cpp \
     clientsFiles/clientgroupbox.cpp \
     clientsFiles/tab_clients.cpp \
@@ -36,6 +37,7 @@ SOURCES += \
 
 HEADERS += \
     QrCodeGenerator/QrCode.hpp \
+    arduino/arduino.h \
     clientsFiles/client.h \
     clientsFiles/clientgroupbox.h \
     clientsFiles/tab_clients.h \
