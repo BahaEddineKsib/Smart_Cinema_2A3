@@ -111,5 +111,6 @@ private slots:
 
 
     void on_SubscriptionAddButton_clicked();
+    void on_SENDMAILCLIENT_clicked();
 };
 #endif // MAINWINDOW_H

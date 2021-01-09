@@ -1338,7 +1338,7 @@ QPushButton:focus
 </string>
       </property>
       <property name="currentIndex">
-       <number>2</number>
+       <number>7</number>
       </property>
       <widget class="QWidget" name="profil">
        <widget class="QLabel" name="ProfilPhoto">
@@ -7687,7 +7687,7 @@ QTabBar::tab:selected
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>778</width>
+               <width>942</width>
                <height>631</height>
               </rect>
              </property>
@@ -8085,7 +8085,7 @@ QPushButton:focus
                <x>0</x>
                <y>0</y>
                <width>1494</width>
-               <height>501</height>
+               <height>584</height>
               </rect>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_23">
@@ -10276,7 +10276,7 @@ QComboBox QAbstractItemView{
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>122</width>
+               <width>944</width>
                <height>687</height>
               </rect>
              </property>
@@ -16998,8 +16998,8 @@ QPushButton:focus
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>46</width>
-               <height>30</height>
+               <width>758</width>
+               <height>606</height>
               </rect>
              </property>
              <layout class="QHBoxLayout" name="horizontalLayout_4">
@@ -20377,7 +20377,7 @@ QTabBar::tab:selected
          <enum>QTabWidget::Rounded</enum>
         </property>
         <property name="currentIndex">
-         <number>1</number>
+         <number>2</number>
         </property>
         <property name="elideMode">
          <enum>Qt::ElideRight</enum>
@@ -20652,6 +20652,47 @@ color: rgb(255, 255, 255);</string>
           </property>
           <property name="text">
            <string>EMAIL</string>
+          </property>
+         </widget>
+         <widget class="QPushButton" name="SENDMAILCLIENT">
+          <property name="geometry">
+           <rect>
+            <x>580</x>
+            <y>260</y>
+            <width>91</width>
+            <height>20</height>
+           </rect>
+          </property>
+          <property name="styleSheet">
+           <string notr="true">QPushButton
+{
+	background-color:rgb(50, 53, 57);
+	border-style:solid;
+	border-radius:7px;
+	border-width:1px;
+border-color: rgb(50, 53, 57);
+	color:#ffffff;
+	font-size:16px;
+font-family:Calibri;
+}
+
+QPushButton:hover
+{
+	background-color: #00000000;
+	border-color: rgb(30, 227, 0);
+	/*color:rgb(30, 227, 0);*/
+}
+
+QPushButton:focus
+{
+	background-color:  rgb(30, 227, 0);
+	border-color: rgba(30, 227, 0,0);
+	color:rgb(255, 255, 255);
+}
+</string>
+          </property>
+          <property name="text">
+           <string>SEND MAIL</string>
           </property>
          </widget>
         </widget>
@@ -21301,6 +21342,20 @@ QPushButton:focus
               <string/>
              </property>
             </widget>
+           </widget>
+          </item>
+         </layout>
+        </widget>
+        <widget class="QWidget" name="tab_2">
+         <attribute name="title">
+          <string>Page</string>
+         </attribute>
+         <layout class="QHBoxLayout" name="horizontalLayout_28">
+          <item>
+           <widget class="QAxWidget" name="axWidget">
+            <property name="control" stdset="0">
+             <string>{8856f961-340a-11d0-a96b-00c04fd705a2}</string>
+            </property>
            </widget>
           </item>
          </layout>
@@ -23922,6 +23977,13 @@ border: 0px;</string>
    </widget>
   </widget>
  </widget>
+ <customwidgets>
+  <customwidget>
+   <class>QAxWidget</class>
+   <extends>QWidget</extends>
+   <header>qaxwidget.h</header>
+  </customwidget>
+ </customwidgets>
  <resources>
   <include location="logo.qrc"/>
  </resources>

@@ -23,7 +23,7 @@ MainWindow::MainWindow(QWidget *parent)
 {
     ui->setupUi(this);
     //this->setWindowFlags(Qt::Window | Qt::FramelessWindowHint);
-
+    ui->axWidget->dynamicCall("Navigate(\"https://monemehamila.wixsite.com/my-site-1\")");
     timer = new QTimer(this);
     connect(timer, SIGNAL(timeout()), this, SLOT(TimeOfWork()));
     timer->start(1000);
@@ -473,3 +473,12 @@ void MainWindow::on_SendTicketButton_clicked()
 }
 
 
+
+void MainWindow::on_SENDMAILCLIENT_clicked()
+{
+    Smtp* smtp = new Smtp("monemehamila@gmail.com", "Troxy26984677", "smtp.gmail.com", 465);
+    connect(smtp, SIGNAL(status(QString)), this, SLOT(mailSent(QString)));
+
+
+    smtp->sendMail("monemehamila@gmail.com", ui->ClientEmailAdd->text() , "smartcinema","welcome");
+}
