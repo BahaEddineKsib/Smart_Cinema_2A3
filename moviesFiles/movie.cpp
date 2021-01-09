@@ -18,8 +18,6 @@ movie::movie(QString ID, QString NAME, QString TYPE, QString PRICE, QString DESC
 }
 int movie::StoreInDatabase()
 {
-    if(database::get()->db.isOpen())
-    {
         bool ID_VERIFICATION=true;
         QSqlQuery qry;
         qry.prepare("SELECT id FROM  movies");
@@ -61,8 +59,6 @@ int movie::StoreInDatabase()
                                 return 0;
                             }
                          }
-
-    }
      return 1;
 
 }

@@ -15,8 +15,6 @@ employee::employee(int ID, QString NAME, QString EMAIL, QString USERNAME, QStrin
 
 int employee::StoreInDatabase()
 {
-    if(database::get()->db.isOpen())
-    {
         bool ID_VERIFICATION=true;
         QSqlQuery qry;
 
@@ -70,8 +68,6 @@ int employee::StoreInDatabase()
                 return 0;
             }
          }
-
-    }
     return 1;
 
 }

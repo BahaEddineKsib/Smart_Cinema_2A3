@@ -1338,7 +1338,7 @@ QPushButton:focus
 </string>
       </property>
       <property name="currentIndex">
-       <number>7</number>
+       <number>8</number>
       </property>
       <widget class="QWidget" name="profil">
        <widget class="QLabel" name="ProfilPhoto">
@@ -2477,7 +2477,7 @@ QComboBox QAbstractItemView{
               <rect>
                <x>0</x>
                <y>0</y>
-               <width>942</width>
+               <width>100</width>
                <height>660</height>
               </rect>
              </property>

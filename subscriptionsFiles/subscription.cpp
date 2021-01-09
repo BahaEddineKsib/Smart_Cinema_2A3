@@ -12,8 +12,7 @@ subscription::subscription(int ID, QString NAME, int PRICE, int NUMBER_OF_DAYS, 
 }
 int subscription::StoreInDatabase()
 {
-    if(database::get()->db.isOpen())
-    {
+
         bool ID_VERIFICATION=true;
         QSqlQuery qry;
 
@@ -65,8 +64,6 @@ int subscription::StoreInDatabase()
                 return 0;
             }
          }
-
-    }
     return 1;
 
 }

@@ -11,8 +11,6 @@ void tab_tickets::DisplayAllTickets()
 {
     qDebug() << "DISPLAY ALL TICKETS";
     ticket *TICKET;
-    if(database::get()->db.isOpen())
-    {
         QSqlQuery qry;
         qry.prepare("SELECT * FROM  tickets");
         if(!qry.exec())
@@ -39,7 +37,6 @@ void tab_tickets::DisplayAllTickets()
             }
         }
     }
-}
 
 
 void tab_tickets::AddTicket()

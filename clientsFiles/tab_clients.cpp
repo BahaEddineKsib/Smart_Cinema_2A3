@@ -12,8 +12,6 @@ void tab_clients::DisplayAllClients()
 {
     qDebug() << "DISPLAY ALL CLIENTS";
     client *CLIENT;
-    if(database::get()->db.isOpen())
-    {
         QSqlQuery qry;
         qry.prepare("SELECT * FROM  clients");
         if(!qry.exec())
@@ -33,7 +31,6 @@ void tab_clients::DisplayAllClients()
                 CLIENT->Display();
             }
         }
-    }
 }
 
 void tab_clients::UndisplayAllClients()
@@ -68,8 +65,6 @@ void tab_clients::SearchClients()
 {
     UndisplayAllClients();
     client *CLIENT[100];
-    if(database::get()->db.isOpen())
-    {
         QSqlQuery qry;
         qry.prepare("SELECT * FROM  clients");
         if(!qry.exec())
@@ -169,6 +164,4 @@ void tab_clients::SearchClients()
                      i++;
                 }
         }
-
-    }
 }

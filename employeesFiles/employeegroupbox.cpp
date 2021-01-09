@@ -221,8 +221,6 @@ EmployeeGroupBox::EmployeeGroupBox(QWidget *parent) : QWidget(parent)
 void EmployeeGroupBox::UpdateEmployeeSlot()
 {
     qDebug() << "UPDATE EMPLOYEE";
-    if(database::get()->db.isOpen())
-    {
         QSqlQuery qry;
 
         qry.prepare("UPDATE employees SET name=:name, email=:email, username=:username, password=:password, role=:role WHERE id=:id ");
@@ -244,13 +242,9 @@ void EmployeeGroupBox::UpdateEmployeeSlot()
         }
     }
 
-}
-
 void EmployeeGroupBox::DeleteEmployeeSlot()
 {
     qDebug() << "DELETE EMPLOYEE FROM DATA BASE";
-    if(database::get()->db.isOpen())
-    {
         QSqlQuery qry;
         qry.prepare("DELETE FROM employees WHERE id=:id ");
         qry.bindValue(":id",EmployeeId->text());
@@ -263,5 +257,4 @@ void EmployeeGroupBox::DeleteEmployeeSlot()
             QMessageBox::information(nullptr,"DELETE Employee","DONE!");
         }
         delete this;
-    }
 }

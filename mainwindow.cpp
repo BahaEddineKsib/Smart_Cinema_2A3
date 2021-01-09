@@ -91,8 +91,6 @@ void MainWindow::update_arduino_qr_code()
 {
     data = A.read_from_arduino();
     qDebug() << data;
-    if(database::get()->db.isOpen())
-    {
         bool ID_VERIFICATION=true;
         QSqlQuery qry;
 
@@ -124,7 +122,6 @@ void MainWindow::update_arduino_qr_code()
             ui->LastTicketState->setStyleSheet(QStringLiteral("color: #ff0000;"));
             A.write_to_arduino("b");
         }
-    }
 }
 
 #include "QrCodeGenerator/QrCode.hpp"
@@ -192,7 +189,6 @@ void MainWindow::on_ExitButton_clicked()
 
 void MainWindow::on_DashboardButton_clicked()
 {
-
     int x =ui->LeftSideStackedWidget->currentIndex();
     if(x == 0)
     {
@@ -201,10 +197,7 @@ void MainWindow::on_DashboardButton_clicked()
     else
     {
         ui->LeftSideStackedWidget->setCurrentIndex(0);
-
     }
-
-
 }
 
 
@@ -363,8 +356,9 @@ void MainWindow::on_PrintTicketButton_clicked()
 
     QPainter painter(&pdf);
 
-    if(database::get()->db.isOpen())
-    {
+    Connection C;
+
+
         QSqlQuery qry;
         qry.prepare("SELECT * FROM  shows WHERE id = :id");
         qry.bindValue(":id",ui->TicketShowIdAdd->text());
@@ -426,7 +420,6 @@ void MainWindow::on_PrintTicketButton_clicked()
             }
 
         }
-    }
     }
 
     if(ui->TicketVIPseatAdd->isChecked())

@@ -1,3 +1,4 @@
+
 #include "clientgroupbox.h"
 #include "database.h"
 #include <QMessageBox>
@@ -132,8 +133,6 @@ ClientGroupBox::ClientGroupBox(QWidget *parent) : QWidget(parent)
 void ClientGroupBox::UpdateClientSlot()
 {
     qDebug() << "UPDATE CLIENT";
-    if(database::get()->db.isOpen())
-    {
         QSqlQuery qry;
 
         qry.prepare("UPDATE clients SET name=:name, email=:email, subscription_id=:subscription_id, subscription_date=:subscription_date WHERE id=:id ");
@@ -154,13 +153,11 @@ void ClientGroupBox::UpdateClientSlot()
         }
     }
 
-}
+
 
 void ClientGroupBox::DeleteClientSlot()
 {
     qDebug() << "DELETE CLIENT FROM DATA BASE";
-    if(database::get()->db.isOpen())
-    {
         QSqlQuery qry;
         qry.prepare("DELETE FROM clients WHERE id=:id ");
         qry.bindValue(":id",ClientId->text().toInt());
@@ -173,5 +170,4 @@ void ClientGroupBox::DeleteClientSlot()
             QMessageBox::information(nullptr,"DELETE Client","DONE!");
         }
         delete this;
-    }
 }

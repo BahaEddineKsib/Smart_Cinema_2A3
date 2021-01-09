@@ -4,20 +4,13 @@
 #include <QSqlDatabase>
 #include <QtSql>
 
-
-class database
+class Connection
 {
-    static database *Instance; //singleton instance
-    database();
-public:
-    static database *get()
-    {
-        if(!Instance)
-            Instance = new database();
-        return Instance;
-    }
-    virtual ~database();
     QSqlDatabase db;
+public:
+    Connection();
+    bool CreateConnection();
+    void CloseConnection() ;
 };
 
 #endif // DATABASE_H

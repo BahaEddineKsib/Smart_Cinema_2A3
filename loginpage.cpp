@@ -22,7 +22,7 @@ void loginpage::login()
         {
             QMessageBox::information(nullptr,"Notice","Please fill out both forms.");
         }
-        else if(database::get()->db.isOpen())
+        else
         {
 
             bool succ=false;
@@ -67,10 +67,6 @@ void loginpage::login()
                 }
             }
 
-        }
-        else
-        {
-            QMessageBox::information(nullptr,"Error","Failed to connect to DB");
         }
 }
 

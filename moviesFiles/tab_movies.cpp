@@ -13,8 +13,7 @@ void tab_movies::DisplayAllMovies()
 {
     qDebug() << "DISPLAY ALL MOVIES";
     movie *MOVIE;
-    if(database::get()->db.isOpen())
-    {
+
         QSqlQuery qry;
         qry.prepare("SELECT * FROM  movies");
         if(!qry.exec())
@@ -39,7 +38,6 @@ void tab_movies::DisplayAllMovies()
                 MOVIE->Display();
             }
         }
-    }
 }
 
 void tab_movies::UndisplayAllMovies()
@@ -58,8 +56,6 @@ void tab_movies::SearchMovies()
 {
     UndisplayAllMovies();
     movie *MOVIE[100];
-    if(database::get()->db.isOpen())
-    {
         QSqlQuery qry;
         qry.prepare("SELECT * FROM  movies");
         if(!qry.exec())
@@ -147,8 +143,6 @@ void tab_movies::SearchMovies()
         }
 
     }
-
-}
 
 void tab_movies::AddMovie()
 {

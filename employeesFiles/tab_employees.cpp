@@ -12,8 +12,6 @@ void tab_employees::DisplayAllEmployees()
 {
     qDebug() << "DISPLAY ALL Employees";
     employee *EMPLOYEE;
-    if(database::get()->db.open())
-    {
         QSqlQuery qry;
         qry.prepare("SELECT * FROM  employees");
         if(!qry.exec())
@@ -36,7 +34,6 @@ void tab_employees::DisplayAllEmployees()
             }
         }
     }
-}
 void tab_employees::AddEmployee()
 {
     employee* Employee = new employee(ui->EmployeeIdAdd         ->text().toInt(),

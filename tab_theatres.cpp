@@ -14,8 +14,6 @@ void tab_theatres::show_theatres()
 {
     //int x= 84;
     int i=0;
-    if(database::get()->db.open())
-            {
                 QSqlQuery qry;
                 qry.prepare("SELECT * FROM  tab_theatres");
                 if(!qry.exec())
@@ -45,11 +43,6 @@ void tab_theatres::show_theatres()
 
                     }
                 }
-    }
-    else
-    {
-        QMessageBox::information(nullptr,"Error","Failed to connect to DB");
-    }
 }
 
 void tab_theatres::add_theatre()
@@ -63,7 +56,7 @@ void tab_theatres::add_theatre()
         QMessageBox::information(nullptr,"Notice","Please fill out all forms.");
     }
 
-    else if(database::get()->db.isOpen())
+    else
     {
 
         QSqlQuery qry;
@@ -86,11 +79,6 @@ void tab_theatres::add_theatre()
 
 
     }
-    else
-    {
-        QMessageBox::information(nullptr,"Error","Failed to connect to DB");
-    }
-
     ui->add_theatre_widget->hide();
 }
 

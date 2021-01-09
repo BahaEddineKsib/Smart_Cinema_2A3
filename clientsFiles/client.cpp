@@ -14,8 +14,6 @@ client::client(int ID, QString NAME, QString EMAIL, int SUBSCRIPTION_ID, QDate S
 
 int client::StoreInDatabase()
 {
-    if(database::get()->db.isOpen())
-    {
         bool ID_VERIFICATION=true;
         QSqlQuery qry;
 
@@ -67,8 +65,6 @@ int client::StoreInDatabase()
                 return 0;
             }
          }
-
-    }
     return 1;
 
 }

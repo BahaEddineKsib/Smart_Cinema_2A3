@@ -1,23 +1,34 @@
 #include "database.h"
 
-database::database()
-{
 
+
+Connection::Connection(){}
+
+bool Connection::CreateConnection()
+{
     db = QSqlDatabase::addDatabase("QODBC");
+    bool test = false;
     //db.setHostName("sql7.freesqldatabase.com");
     db.setUserName("system");
     db.setPassword("0000");
     db.setDatabaseName("SC_DATA");
 
 
-    if(db.open()){qDebug()<<"Database opened!";}
-    else{qDebug() << db.lastError().text();}
+    if(db.open())
+    {
+        qDebug()<<"Database opened!";
+        test = true;
+    }
+    else
+    {
+        qDebug() << db.lastError().text();
+    }
 
+    return test;
 }
 
-database::~database()
+
+void Connection::CloseConnection()
 {
-
+    db.close();
 }
-
-database *database::Instance = nullptr;

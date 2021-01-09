@@ -11,8 +11,6 @@ void tab_subscriptions::DisplayAllSubscriptions()
 {
     qDebug() << "DISPLAY ALL TICKETS";
     subscription *SUBSCRIPTION;
-    if(database::get()->db.isOpen())
-    {
         QSqlQuery qry;
         qry.prepare("SELECT * FROM  subscriptions");
         if(!qry.exec())
@@ -33,7 +31,6 @@ void tab_subscriptions::DisplayAllSubscriptions()
                 SUBSCRIPTION->Display();
             }
         }
-    }
 }
 
 

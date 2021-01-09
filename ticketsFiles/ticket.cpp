@@ -20,8 +20,6 @@ ticket::ticket(int ID, int SHOWID, int PRICE, bool VIPSEAT, QString BUYEREMAIL, 
 
 int ticket::StoreInDatabase()
 {
-    if(database::get()->db.isOpen())
-    {
         bool ID_VERIFICATION=true;
         QSqlQuery qry;
 
@@ -74,8 +72,6 @@ int ticket::StoreInDatabase()
                 return 0;
             }
          }
-
-    }
     return 1;
 
 }

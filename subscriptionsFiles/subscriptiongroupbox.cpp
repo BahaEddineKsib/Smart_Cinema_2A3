@@ -134,8 +134,6 @@ SubscriptionGroupBox::SubscriptionGroupBox(QWidget *parent) : QWidget(parent)
 void SubscriptionGroupBox::UpdateSubscriptionSlot()
 {
     qDebug() << "UPDATE Subscription";
-    if(database::get()->db.isOpen())
-    {
         QSqlQuery qry;
         qry.prepare("UPDATE Subscriptions SET name=:name, price=:price, number_of_days=:number_of_days, free_food=:free_food WHERE id=:id ");
         int FreeFood = 1;
@@ -157,15 +155,11 @@ void SubscriptionGroupBox::UpdateSubscriptionSlot()
         {
             QMessageBox::information(nullptr,"UPDATE Subscription","DONE!");
         }
-    }
-
 }
 
 void SubscriptionGroupBox::DeleteSubscriptionSlot()
 {
     qDebug() << "DELETE subscription FROM DATA BASE";
-    if(database::get()->db.isOpen())
-    {
         QSqlQuery qry;
         qry.prepare("DELETE FROM subscriptions WHERE id=:id ");
         qry.bindValue(":id",SubscriptionId->text());
@@ -178,5 +172,4 @@ void SubscriptionGroupBox::DeleteSubscriptionSlot()
             QMessageBox::information(nullptr,"DELETE Subscription","DONE!");
         }
         delete this;
-    }
 }
