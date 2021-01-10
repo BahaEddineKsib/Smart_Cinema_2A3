@@ -1932,7 +1932,7 @@ QTabBar::tab:selected
 </string>
         </property>
         <property name="currentIndex">
-         <number>0</number>
+         <number>1</number>
         </property>
         <widget class="QWidget" name="EmployeesTab">
          <property name="styleSheet">
@@ -6725,7 +6725,7 @@ QTabBar::tab:selected
          <enum>QTabWidget::Rounded</enum>
         </property>
         <property name="currentIndex">
-         <number>1</number>
+         <number>0</number>
         </property>
         <property name="elideMode">
          <enum>Qt::ElideRight</enum>
@@ -19100,7 +19100,7 @@ QTabBar::tab:selected
 </string>
         </property>
         <property name="currentIndex">
-         <number>0</number>
+         <number>1</number>
         </property>
         <widget class="QWidget" name="SubscriptionsWidget">
          <attribute name="title">
@@ -19612,7 +19612,7 @@ QTabBar::tab:selected
         </property>
         <widget class="QWidget" name="ShowsWidget">
          <attribute name="title">
-          <string>Movies</string>
+          <string>Shows</string>
          </attribute>
          <layout class="QHBoxLayout" name="horizontalLayout_34">
           <property name="leftMargin">
@@ -20173,69 +20173,12 @@ border: 0px;</string>
           <property name="title">
            <string/>
           </property>
-          <widget class="QLineEdit" name="FilmPriceAdd_2">
-           <property name="geometry">
-            <rect>
-             <x>150</x>
-             <y>98</y>
-             <width>140</width>
-             <height>21</height>
-            </rect>
-           </property>
-           <property name="font">
-            <font>
-             <family>Arial Black</family>
-             <pointsize>9</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">border: 0px solid rgb(249, 167, 43);
-border-bottom-width: 2px;
-border-radius: px;
-background-color: rgba(255, 255, 255, 0);
-color: rgb(255, 255, 255);</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="placeholderText">
-            <string/>
-           </property>
-          </widget>
-          <widget class="QLabel" name="FilmDescriptionTitle_6">
-           <property name="geometry">
-            <rect>
-             <x>1</x>
-             <y>130</y>
-             <width>101</width>
-             <height>17</height>
-            </rect>
-           </property>
-           <property name="font">
-            <font>
-             <family>Arial Black</family>
-             <pointsize>9</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">color: rgb(255, 255, 255);
-background-color: rgba(255, 255, 255, 0);
-border: 0px;</string>
-           </property>
-           <property name="text">
-            <string>Description</string>
-           </property>
-          </widget>
           <widget class="QLabel" name="FilmNameTitle_8">
            <property name="geometry">
             <rect>
              <x>1</x>
              <y>44</y>
-             <width>61</width>
+             <width>131</width>
              <height>17</height>
             </rect>
            </property>
@@ -20253,7 +20196,7 @@ background-color: rgba(255, 255, 255, 0);
 border: 0px;</string>
            </property>
            <property name="text">
-            <string>Name</string>
+            <string>Theatre Id</string>
            </property>
           </widget>
           <widget class="QLabel" name="FilmPriceTitle_8">
@@ -20261,7 +20204,7 @@ border: 0px;</string>
             <rect>
              <x>1</x>
              <y>98</y>
-             <width>51</width>
+             <width>131</width>
              <height>17</height>
             </rect>
            </property>
@@ -20279,33 +20222,7 @@ background-color: rgba(255, 255, 255, 0);
 border: 0px;</string>
            </property>
            <property name="text">
-            <string>Price</string>
-           </property>
-          </widget>
-          <widget class="QLabel" name="FilmDT_6">
-           <property name="geometry">
-            <rect>
-             <x>268</x>
-             <y>98</y>
-             <width>21</width>
-             <height>17</height>
-            </rect>
-           </property>
-           <property name="font">
-            <font>
-             <family>Arial Black</family>
-             <pointsize>9</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">color: rgb(255, 255, 255);
-background-color: rgba(255, 255, 255, 0);
-border: 0px;</string>
-           </property>
-           <property name="text">
-            <string>DT</string>
+            <string>Date</string>
            </property>
           </widget>
           <widget class="QLabel" name="FilmIdTitle_8">
@@ -20332,7 +20249,7 @@ border: 0px;</string>
             <string>ID</string>
            </property>
           </widget>
-          <widget class="QLineEdit" name="FilmIdAdd_2">
+          <widget class="QLineEdit" name="ShowIdAdd">
            <property name="geometry">
             <rect>
              <x>150</x>
@@ -20363,33 +20280,7 @@ color: rgb(255, 255, 255);</string>
             <string/>
            </property>
           </widget>
-          <widget class="QLabel" name="FilmSubtitle_8">
-           <property name="geometry">
-            <rect>
-             <x>0</x>
-             <y>170</y>
-             <width>131</width>
-             <height>17</height>
-            </rect>
-           </property>
-           <property name="font">
-            <font>
-             <family>Arial Black</family>
-             <pointsize>9</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">color: rgb(255, 255, 255);
-background-color: rgba(255, 255, 255, 0);
-border: 0px;</string>
-           </property>
-           <property name="text">
-            <string>Sub Language</string>
-           </property>
-          </widget>
-          <widget class="QLineEdit" name="FilmTypeAdd_2">
+          <widget class="QLineEdit" name="ShowMovieIdAdd">
            <property name="geometry">
             <rect>
              <x>150</x>
@@ -20425,7 +20316,7 @@ color: rgb(255, 255, 255);</string>
             <rect>
              <x>1</x>
              <y>71</y>
-             <width>51</width>
+             <width>121</width>
              <height>17</height>
             </rect>
            </property>
@@ -20443,10 +20334,10 @@ background-color: rgba(255, 255, 255, 0);
 border: 0px;</string>
            </property>
            <property name="text">
-            <string>Type</string>
+            <string>Movie Id</string>
            </property>
           </widget>
-          <widget class="QLineEdit" name="FilmNameAdd_2">
+          <widget class="QLineEdit" name="ShowTheatreIdAdd">
            <property name="geometry">
             <rect>
              <x>150</x>
@@ -20477,11 +20368,11 @@ color: rgb(255, 255, 255);</string>
             <string/>
            </property>
           </widget>
-          <widget class="QPushButton" name="FilmAddButton_2">
+          <widget class="QPushButton" name="ShowAddButton">
            <property name="geometry">
             <rect>
              <x>10</x>
-             <y>270</y>
+             <y>160</y>
              <width>371</width>
              <height>21</height>
             </rect>
@@ -20515,167 +20406,23 @@ QPushButton:focus
 </string>
            </property>
            <property name="text">
-            <string>Add Film</string>
+            <string>Add Show</string>
            </property>
           </widget>
-          <widget class="QLineEdit" name="FilmDescriptionAdd_2">
+          <widget class="QDateTimeEdit" name="ShowStartTimeAdd">
            <property name="geometry">
             <rect>
              <x>150</x>
-             <y>130</y>
-             <width>140</width>
-             <height>21</height>
-            </rect>
-           </property>
-           <property name="font">
-            <font>
-             <family>Arial Black</family>
-             <pointsize>9</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">border: 0px solid rgb(249, 167, 43);
-border-bottom-width: 2px;
-border-radius: px;
-background-color: rgba(255, 255, 255, 0);
-color: rgb(255, 255, 255);</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="placeholderText">
-            <string/>
-           </property>
-          </widget>
-          <widget class="QPushButton" name="FilmAddImageButton_2">
-           <property name="geometry">
-            <rect>
-             <x>150</x>
-             <y>240</y>
+             <y>100</y>
              <width>141</width>
-             <height>21</height>
+             <height>22</height>
             </rect>
            </property>
            <property name="styleSheet">
-            <string notr="true">QPushButton
-{
-	background-color:rgb(50, 53, 57);
-	border-style:solid;
-	border-radius:7px;
-	border-width:1px;
-border-color: rgb(50, 53, 57);
-	color:#ffffff;
-	font-size:16px;
-font-family:Calibri;
-}
-
-QPushButton:hover
-{
-	background-color: #00000000;
-	border-color: rgb(30, 227, 0);
-	/*color:rgb(30, 227, 0);*/
-}
-
-QPushButton:focus
-{
-	background-color:  rgb(30, 227, 0);
-	border-color: rgba(30, 227, 0,0);
-	color:rgb(255, 255, 255);
-}
-</string>
+            <string notr="true">color: rgb(255, 255, 255);</string>
            </property>
-           <property name="text">
-            <string>Add image</string>
-           </property>
-          </widget>
-          <widget class="QLabel" name="FilmSubtitle_9">
-           <property name="geometry">
-            <rect>
-             <x>0</x>
-             <y>200</y>
-             <width>131</width>
-             <height>17</height>
-            </rect>
-           </property>
-           <property name="font">
-            <font>
-             <family>Arial Black</family>
-             <pointsize>9</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">color: rgb(255, 255, 255);
-background-color: rgba(255, 255, 255, 0);
-border: 0px;</string>
-           </property>
-           <property name="text">
-            <string>Sub Language</string>
-           </property>
-          </widget>
-          <widget class="QLineEdit" name="FilmSubLanguageAdd_2">
-           <property name="geometry">
-            <rect>
-             <x>150</x>
-             <y>160</y>
-             <width>140</width>
-             <height>21</height>
-            </rect>
-           </property>
-           <property name="font">
-            <font>
-             <family>Arial Black</family>
-             <pointsize>9</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">border: 0px solid rgb(249, 167, 43);
-border-bottom-width: 2px;
-border-radius: px;
-background-color: rgba(255, 255, 255, 0);
-color: rgb(255, 255, 255);</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="placeholderText">
-            <string/>
-           </property>
-          </widget>
-          <widget class="QLineEdit" name="FilmDubLanguageAdd_2">
-           <property name="geometry">
-            <rect>
-             <x>150</x>
-             <y>190</y>
-             <width>140</width>
-             <height>21</height>
-            </rect>
-           </property>
-           <property name="font">
-            <font>
-             <family>Arial Black</family>
-             <pointsize>9</pointsize>
-             <weight>75</weight>
-             <bold>true</bold>
-            </font>
-           </property>
-           <property name="styleSheet">
-            <string notr="true">border: 0px solid rgb(249, 167, 43);
-border-bottom-width: 2px;
-border-radius: px;
-background-color: rgba(255, 255, 255, 0);
-color: rgb(255, 255, 255);</string>
-           </property>
-           <property name="text">
-            <string/>
-           </property>
-           <property name="placeholderText">
-            <string/>
+           <property name="alignment">
+            <set>Qt::AlignCenter</set>
            </property>
           </widget>
          </widget>
@@ -20747,7 +20494,7 @@ QTabBar::tab:selected
 </string>
         </property>
         <property name="currentIndex">
-         <number>0</number>
+         <number>2</number>
         </property>
         <widget class="QWidget" name="PollsWidget">
          <attribute name="title">
