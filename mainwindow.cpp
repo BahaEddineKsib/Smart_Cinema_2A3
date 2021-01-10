@@ -55,9 +55,7 @@ void MainWindow::setup_tabs()
     employees->DisplayAllEmployees();
 
     theatres = new tab_theatres(ui);
-    connect(ui->btn_show_add_theatre, SIGNAL (clicked()),this, SLOT (tab_theatres_show_add()));
-    connect(ui->btn_add_theatre, SIGNAL (clicked()),this, SLOT (tab_theatres_add_theatre()));
-    connect(ui->btn_cancel_theatre, SIGNAL (clicked()),this, SLOT (tab_theatres_cancel_add()));
+    theatres->DisplayAllTheatres();
 
     movies = new  tab_movies(ui);
     movies->DisplayAllMovies();
@@ -237,17 +235,13 @@ void MainWindow::on_MoviesButton_clicked()
 {
     ui->DashboardPages->setCurrentIndex(5);
     ui->CurrentPageTitle->setText("Movies Management");
-    //MovieGroupBox* m;
-    //m = new MovieGroupBox(ui->MoviesArea);
-    //ui->horizontalLayout_4->add
-   // ui->horizontalLayout_4->removeWidget();
 }
 
 void MainWindow::on_TheatresButton_clicked()
 {
     ui->DashboardPages->setCurrentIndex(6);
     ui->CurrentPageTitle->setText("Theatres Management");
-    theatres->show_theatres();
+
 }
 
 void MainWindow::on_ClientsButton_clicked()
@@ -281,20 +275,6 @@ void MainWindow::loginpage_login()
 }
 
 
-void MainWindow::tab_theatres_show_add()
-{
-    theatres->show_add_theatre();
-}
-
-void MainWindow::tab_theatres_add_theatre()
-{
-    theatres->add_theatre();
-}
-
-void MainWindow::tab_theatres_cancel_add()
-{
-    theatres->hide_add_theatre();
-}
 
 void MainWindow::on_FilmAddImageButton_clicked()
 {
@@ -334,6 +314,11 @@ void MainWindow::on_EmployeeAddButton_clicked()
 void MainWindow::on_SubscriptionAddButton_clicked()
 {
     subscriptions->AddSubscription();
+}
+
+void MainWindow::on_TheatreAddButton_clicked()
+{
+    theatres->AddTheatre();
 }
 
 void MainWindow::on_EmployeeImageAddButton_clicked()
@@ -475,3 +460,5 @@ void MainWindow::on_SENDMAILCLIENT_clicked()
 
     smtp->sendMail("monemehamila@gmail.com", ui->ClientEmailAdd->text() , "smartcinema","welcome");
 }
+
+

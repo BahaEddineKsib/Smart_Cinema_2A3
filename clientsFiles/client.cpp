@@ -12,6 +12,7 @@ client::client(int ID, QString NAME, QString EMAIL, int SUBSCRIPTION_ID, QDate S
 
 }
 
+
 int client::StoreInDatabase()
 {
         bool ID_VERIFICATION=true;

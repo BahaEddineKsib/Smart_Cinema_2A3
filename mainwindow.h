@@ -8,11 +8,11 @@
 #include "smtp.h"
 #include "loginpage.h"
 #include "employeesFiles\tab_employees.h"
-#include "tab_theatres.h"
 #include "moviesFiles\tab_movies.h"
 #include "ticketsFiles\tab_tickets.h"
 #include "clientsFiles/tab_clients.h"
 #include "subscriptionsFiles/tab_subscriptions.h"
+#include "theatresFiles/tab_theatres.h"
 #include <arduino/arduino.h>
 QT_BEGIN_NAMESPACE
 namespace Ui { class MainWindow; }
@@ -31,11 +31,12 @@ public:
 
     //dashboard tabs
     tab_employees     *employees;
-    tab_theatres      *theatres;
     tab_movies        *movies;
     tab_tickets       *tickets;
     tab_clients       *clients;
     tab_subscriptions *subscriptions;
+    tab_theatres      *theatres;
+
     QByteArray data;
     arduino A;
     QString CatchQrCode="";
@@ -43,9 +44,6 @@ public:
     int IForQrCode=0;
 public slots:
     void TimeOfWork();
-    void tab_theatres_show_add();
-    void tab_theatres_add_theatre();
-    void tab_theatres_cancel_add();
     void update_arduino_qr_code();
 private:
 
@@ -112,5 +110,6 @@ private slots:
 
     void on_SubscriptionAddButton_clicked();
     void on_SENDMAILCLIENT_clicked();
+    void on_TheatreAddButton_clicked();
 };
 #endif // MAINWINDOW_H

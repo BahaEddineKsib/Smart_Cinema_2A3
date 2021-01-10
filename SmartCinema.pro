@@ -30,7 +30,9 @@ SOURCES += \
     subscriptionsFiles/subscription.cpp \
     subscriptionsFiles/subscriptiongroupbox.cpp \
     subscriptionsFiles/tab_subscriptions.cpp \
-    tab_theatres.cpp \
+    theatresFiles/tab_theatres.cpp \
+    theatresFiles/theatre.cpp \
+    theatresFiles/theatregroupbox.cpp \
     ticketsFiles\tab_tickets.cpp \
     ticketsFiles\ticket.cpp \
     ticketsFiles\ticketgroupbox.cpp
@@ -56,7 +58,9 @@ HEADERS += \
     subscriptionsFiles/subscription.h \
     subscriptionsFiles/subscriptiongroupbox.h \
     subscriptionsFiles/tab_subscriptions.h \
-    tab_theatres.h \
+    theatresFiles/tab_theatres.h \
+    theatresFiles/theatre.h \
+    theatresFiles/theatregroupbox.h \
     ticketsFiles\tab_tickets.h \
     ticketsFiles\ticket.h \
     ticketsFiles\ticketgroupbox.h
