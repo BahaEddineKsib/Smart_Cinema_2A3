@@ -1,21 +1,6 @@
 # SmartCinema
 
-# Database tables
+don't forget to import "export.sql" in oracle.
 
-TABLE NAME: MOVIES
-![](imgs/readmeimages/moviestable.PNG)
 
-TABLE NAME: TAB_THEATRES
-![](imgs/readmeimages/theatrestable.PNG)
-
-TABLE NAME: USERS
-![](imgs/readmeimages/userstable.PNG)
-
-TABLE NAME: EMPLOYEES
-![](imgs/readmeimages/employeestable.PNG)
-
-TABLE NAME: SHOWS
-![](imgs/readmeimages/showstable.PNG)
-
-TABLE NAME: TICKETS
-![](imgs/readmeimages/ticketstable.PNG)
+if u find an error just contact me "there is alot of errors in that point x)"
