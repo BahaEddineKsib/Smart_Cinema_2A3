@@ -40,7 +40,7 @@ MainWindow::MainWindow(QWidget *parent)
     /**///ui->label->setPixmap(ProfilIcon.scaled(100,100,Qt::KeepAspectRatio));
     /**********************************************************************/
 
-    //ui->BigStack->setCurrentIndex(0);       //default page set to loginpage
+    ui->BigStack->setCurrentIndex(0);       //default page set to loginpage
     ui->DashboardPages->setCurrentIndex(0); //default Dashboard page set to profil
     setup_tabs();
 
